@@ -49,6 +49,11 @@ on:
         description: 'Optional reviewed JSON in this repo; title/brief must match'
         type: string
         required: false
+      parallel_jobs:
+        description: 'Optional runner concurrency; leave 2 unless the account supports more'
+        type: choice
+        default: '2'
+        options: ['2', '4', '10']
       source_notes_path:
         description: 'Optional JSON source notes in this repo; otherwise clearly fictional'
         type: string

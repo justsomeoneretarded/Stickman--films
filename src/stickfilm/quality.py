@@ -23,7 +23,7 @@ def motion_report(plan,fps=60,benchmark=False):
         for i in range(math.ceil(scene.duration*fps)):
             t=i/fps
             if benchmark:
-                from .benchmark import benchmark_pose
+                from .benchmark import benchmark_pose,benchmark_camera
                 poses=[benchmark_pose(t)]
             else:poses=[pose(a,t,scene.duration,ground=650+60*a.depth) for a in scene.actors]
             for n,p in enumerate(poses):
@@ -40,7 +40,7 @@ def motion_report(plan,fps=60,benchmark=False):
                 oldroot=previous.get((n,"root"))
                 if oldroot:jumps.append(math.dist(p.root,oldroot)*fps)
                 previous[(n,"root")]=p.root
-            cx,cy,z=camera(scene,t,scene.duration,poses[0].root[0]) if not benchmark else (max(0,poses[0].root[0]-550),450,1)
+            cx,cy,z=camera(scene,t,scene.duration,poses[0].root[0]) if not benchmark else benchmark_camera(t,poses[0].root[0])
             cur=np.array([cx,cy,z*100])
             if prev_camera is not None:
                 velocity=(cur-prev_camera)*fps

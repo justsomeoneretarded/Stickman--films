@@ -1,6 +1,6 @@
 """A single continuous performance, not a sequence of unrelated pose cards."""
 from .schema import Actor, Scene, Plan, NICHES
-from .motion import pose, smooth, ik
+from .motion import pose, smooth, smoother, ik
 
 DURATION=22
 
@@ -47,3 +47,8 @@ def benchmark_pose(t):
 def benchmark_plan():
     s=Scene(id="benchmark",beat="hook",label="A LITTLE MOMENTUM",environment="forest",actors=[Actor(action="run",x=290,travel=700)],camera="tracking",music="wonder",duration=DURATION,start=0,end=DURATION)
     return Plan(title="A Little Momentum — Animation Benchmark",brief="Continuous idle, walk, acceleration, run, deceleration, turn, pickup and surprise in a layered forest.",niche=NICHES[5],requested_minutes=DURATION/60,provenance="authored-example",factual_status="fiction",scenes=[s])
+
+
+def benchmark_camera(t,focus):
+    pan=.8*(focus-290)*smoother((t-2)/4)
+    return 800+pan,450,1

@@ -51,7 +51,8 @@ preserve diagnostics. Artifacts expire after 14 days (failure details: 7 days).
 No generated videos are committed to this repository.
 
 Repository variables: `MAX_MINUTES=10`, `COMPARISON_MINUTES=1.25`, `MAX_PARALLEL=2`.
-Set concurrency up to 10 if your account supports it; queued runners are normal.
+The optional parallel_jobs input selects 2, 4 or 10 jobs (default 2) and takes
+precedence over MAX_PARALLEL. Queued runners are normal.
 Changing comparison duration significantly requires rewriting sample scripts. The
 pipeline fails instead of stretching the same content to arbitrary length.
 

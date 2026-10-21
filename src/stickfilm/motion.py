@@ -111,12 +111,11 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
         h=(hip[0]+offset,hip[1])
         if locomotion:
             ankle,contact,_=foot(abs(distance),cycle,side,actor.x,ground,direction,
-                                 stance=.60,lift=31+22*running)
-            # Phase feet start planted. Ease from an initial natural stance over
-            # the first 2% of travel, before any appreciable body movement.
-            settle=smooth(abs(distance)/5)
-            ankle=(mix(actor.x+(-20 if side==0 else 24),ankle[0],settle),ankle[1])
-            contact=contact and settle>=1
+                                 stance=.44 if action in ("run","sprint") else .60,
+                                 lift=(31+22*running)*smooth(speed/45))
+            # A run has a genuine flight interval. Lift amplitude goes to zero
+            # with speed, so an idle/start/stop never holds a foot in the air.
+            contact=contact or speed<.001
         else:
             ankle=(x+(-24 if side==0 else 27),ground)
             contact=action not in ("jump","fall") or not .24<u<.73

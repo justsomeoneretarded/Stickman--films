@@ -27,19 +27,30 @@
           "depth": 1.0
         }
       ],
-      "prop": "book",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "letter",
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 0.45,
+          "label": "",
+          "attach_to": "right-hand",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "establishing",
       "transition": "cut",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -64,18 +75,14 @@
         }
       ],
       "prop": "flag",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "over-shoulder",
       "transition": "cut",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -109,18 +116,14 @@
         }
       ],
       "prop": "door",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "pan",
       "transition": "cut",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -144,19 +147,15 @@
           "depth": 1.0
         }
       ],
-      "prop": "water",
+      "prop": "pump",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "dissolve",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -190,18 +189,14 @@
         }
       ],
       "prop": "water",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "close-up",
       "transition": "cut",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -226,18 +221,14 @@
         }
       ],
       "prop": "book",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "cut",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -261,19 +252,30 @@
           "depth": 1.0
         }
       ],
-      "prop": "clock",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "letter",
+          "x": 0.0,
+          "y": 0.0,
+          "scale": 0.45,
+          "label": "",
+          "attach_to": "right-hand",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "tracking",
       "transition": "cut",
       "lighting": "day",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -306,7 +308,9 @@
           "depth": 0.87
         }
       ],
-      "prop": "water",
+      "prop": "pump",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-out",
       "transition": "dissolve",
@@ -314,9 +318,9 @@
       "music": "tense",
       "cues": [
         {
-          "at": 0.52,
+          "at": 0.55,
           "kind": "chime",
-          "gain": 0.2
+          "gain": 0.18
         }
       ],
       "pause": 0.35,

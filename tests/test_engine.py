@@ -58,6 +58,7 @@ def test_benchmark_world_contacts_and_bone_lengths():
     assert r['max_leg_reach_error_px']==0
     assert r['max_leg_length_error_px']<.01
     assert r['passes_contact_gate']
+    assert r['max_camera_acceleration_design_units_s2']<300
 
 @pytest.mark.parametrize('action',['walk','run','sprint'])
 @pytest.mark.parametrize('direction',[-1,1])
@@ -84,3 +85,25 @@ def test_benchmark_keeps_object_after_pickup():
 def test_sanitized_output_name_cannot_escape_directory():
     assert '/' not in slug('../../hello $(touch file)')
     assert slug('Why Your Brain Hates Hard Things')=='why-your-brain-hates-hard-things'
+
+
+def test_running_has_flight_and_stops_with_both_feet_down():
+    flight=[]
+    for i in range(9*60,12*60):
+        p=benchmark_pose(i/60)
+        if not any(p.contacts.values()):
+            flight.append(p)
+            assert all(p.joints['ankle_'+s][1]<p.ground for s in ('left','right'))
+    assert flight, 'Running needs a flight interval, unlike walking'
+    stopped=benchmark_pose(15.1)
+    assert all(stopped.contacts.values())
+    assert all(abs(stopped.joints['ankle_'+s][1]-stopped.ground)<.01 for s in ('left','right'))
+
+@pytest.mark.parametrize('kind',__import__('stickfilm.schema',fromlist=['PROPS']).PROPS)
+def test_prop_vocabulary_has_renderable_assets(kind):
+    import cairocffi as cairo
+    from stickfilm.drawing import draw_prop
+    surface=cairo.ImageSurface(cairo.FORMAT_ARGB32,320,240)
+    context=cairo.Context(surface)
+    draw_prop(context,kind,160,200,t=1,progress=.5,label=kind)
+    assert len(surface.get_data())==320*240*4

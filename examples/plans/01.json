@@ -25,21 +25,26 @@
           "facing": 1,
           "emotion": "neutral",
           "depth": 1.0
+        },
+        {
+          "character": "crowd",
+          "action": "idle",
+          "x": 250.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 0.9
         }
       ],
       "prop": "flag",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "establishing",
       "transition": "cut",
       "lighting": "day",
       "music": "comic",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -61,21 +66,26 @@
           "facing": 1,
           "emotion": "neutral",
           "depth": 1.0
+        },
+        {
+          "character": "crowd",
+          "action": "idle",
+          "x": 250.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 0.9
         }
       ],
       "prop": "flag",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "tracking",
       "transition": "cut",
       "lighting": "day",
       "music": "comic",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -106,21 +116,26 @@
           "facing": -1,
           "emotion": "neutral",
           "depth": 0.87
+        },
+        {
+          "character": "crowd",
+          "action": "idle",
+          "x": 250.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 0.9
         }
       ],
       "prop": "book",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "over-shoulder",
       "transition": "cut",
       "lighting": "day",
       "music": "comic",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -145,6 +160,8 @@
         }
       ],
       "prop": "box",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "dissolve",
@@ -190,18 +207,14 @@
         }
       ],
       "prop": "evidence",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "close-up",
       "transition": "cut",
       "lighting": "day",
       "music": "comic",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -226,18 +239,14 @@
         }
       ],
       "prop": "box",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "pan",
       "transition": "cut",
       "lighting": "day",
       "music": "comic",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -262,6 +271,8 @@
         }
       ],
       "prop": "phone",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "cut",
@@ -307,6 +318,8 @@
         }
       ],
       "prop": "box",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-out",
       "transition": "dissolve",
@@ -314,9 +327,9 @@
       "music": "comic",
       "cues": [
         {
-          "at": 0.52,
+          "at": 0.55,
           "kind": "chime",
-          "gain": 0.2
+          "gain": 0.18
         }
       ],
       "pause": 0.55,

@@ -32,19 +32,30 @@
           "depth": 1.0
         }
       ],
-      "prop": "ball",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "ball",
+          "x": 1040.0,
+          "y": 500.0,
+          "scale": 1.0,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "drop",
+          "start_at": 0.2,
+          "end_at": 0.6,
+          "travel": 0.0,
+          "travel_y": 210.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-in",
       "transition": "cut",
       "lighting": "day",
       "music": "wonder",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -69,18 +80,14 @@
         }
       ],
       "prop": "planet",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "cut",
       "lighting": "day",
       "music": "wonder",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -114,18 +121,14 @@
         }
       ],
       "prop": "ball",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "close-up",
       "transition": "cut",
       "lighting": "day",
       "music": "wonder",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -149,19 +152,44 @@
           "depth": 1.0
         }
       ],
-      "prop": "planet",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "ball",
+          "x": 990.0,
+          "y": 470.0,
+          "scale": 1.0,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "drop",
+          "start_at": 0.15,
+          "end_at": 0.7,
+          "travel": 0.0,
+          "travel_y": 240.0
+        },
+        {
+          "kind": "ball",
+          "x": 1150.0,
+          "y": 470.0,
+          "scale": 0.7,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "drop",
+          "start_at": 0.15,
+          "end_at": 0.7,
+          "travel": 0.0,
+          "travel_y": 240.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "dissolve",
       "lighting": "day",
       "music": "wonder",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -195,18 +223,14 @@
         }
       ],
       "prop": "book",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "over-shoulder",
       "transition": "cut",
       "lighting": "day",
       "music": "wonder",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -231,6 +255,8 @@
         }
       ],
       "prop": "clock",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "pan",
       "transition": "cut",
@@ -266,19 +292,44 @@
           "depth": 1.0
         }
       ],
-      "prop": "ball",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "desk",
+          "x": 1040.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        },
+        {
+          "kind": "ball",
+          "x": 1040.0,
+          "y": 590.0,
+          "scale": 1.0,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "cut",
       "lighting": "day",
       "music": "wonder",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -311,7 +362,38 @@
           "depth": 0.87
         }
       ],
-      "prop": "ball",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "desk",
+          "x": 1040.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        },
+        {
+          "kind": "ball",
+          "x": 1040.0,
+          "y": 590.0,
+          "scale": 1.0,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "drop",
+          "start_at": 0.25,
+          "end_at": 0.65,
+          "travel": 190.0,
+          "travel_y": 120.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-out",
       "transition": "dissolve",
@@ -319,9 +401,9 @@
       "music": "wonder",
       "cues": [
         {
-          "at": 0.52,
+          "at": 0.55,
           "kind": "chime",
-          "gain": 0.2
+          "gain": 0.18
         }
       ],
       "pause": 0.35,

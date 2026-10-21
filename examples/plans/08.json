@@ -37,18 +37,14 @@
         }
       ],
       "prop": "door",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-in",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -73,18 +69,14 @@
         }
       ],
       "prop": "book",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "close-up",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -118,18 +110,14 @@
         }
       ],
       "prop": "lock",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -154,6 +142,8 @@
         }
       ],
       "prop": "phone",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "tracking",
       "transition": "dissolve",
@@ -199,18 +189,14 @@
         }
       ],
       "prop": "door",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "over-shoulder",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -235,18 +221,14 @@
         }
       ],
       "prop": "evidence",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -271,18 +253,14 @@
         }
       ],
       "prop": "lock",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "pan",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -316,6 +294,8 @@
         }
       ],
       "prop": "lock",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-out",
       "transition": "dissolve",
@@ -323,9 +303,9 @@
       "music": "curious",
       "cues": [
         {
-          "at": 0.52,
+          "at": 0.55,
           "kind": "chime",
-          "gain": 0.2
+          "gain": 0.18
         }
       ],
       "pause": 0.35,

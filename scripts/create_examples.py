@@ -1,7 +1,7 @@
 """Codex-authored reviewable sample scripts. NOT the automatic writer backend."""
 import json
 from pathlib import Path
-from stickfilm.schema import Plan,Scene,Actor,Cue,NICHES
+from stickfilm.schema import Plan,Scene,Actor,Cue,Prop,NICHES
 
 # Narration, setting, action, prop, camera, editorial label. Each story has its
 # own conflict and visual progression. These fixtures intentionally do not adapt
@@ -113,6 +113,46 @@ def main():
             scenes.append(Scene(id=f's{i+1:02}',beat=beat,narration=words,environment=env,actors=actors,prop=prop,camera=cam,label=label,
                 music=mood,transition='dissolve' if i in (3,7) else 'cut',lighting='dramatic' if index in (3,9) and i<6 else 'day',
                 pause=.55 if index in (1,5,9) else .35,cues=[Cue(at=.52,kind=kind,gain=.2)]))
+        # Explicit visual direction: props have ground/hand anchors and timed
+        # motion. This is authored sample staging, not a generic AI capability.
+        if index==0:
+            scenes[0].prop="none";scenes[0].actors[0].x=790;scenes[0].actors[0].action="sit"
+            scenes[0].props=[Prop(kind="chair",x=790,y=710),Prop(kind="desk",x=1040,y=710),Prop(kind="laptop",x=1040,y=590,scale=.8)]
+            scenes[2].prop="mountain"
+        if index==1:
+            for z in (0,1,2):
+                scenes[z].actors.append(Actor(character="crowd",action="idle",x=250,depth=.9))
+        if index==2:
+            scenes[1].prop="none";scenes[1].actors[0].x=620;scenes[1].actors[0].action="point"
+            scenes[1].props=[Prop(kind="receipt",x=930+j*130,y=710,label=label) for j,label in enumerate(["PAPER","BINDING","DELIVERY"])]
+            scenes[3].prop="none";scenes[3].actors[0].x=540;scenes[3].actors[0].action="point"
+            scenes[3].props=[Prop(kind="box",x=850+j*180,y=710,label=label) for j,label in enumerate(["SUPPLIES","BILLS","REMAINS"])]
+        if index==3:
+            for z in (0,6):
+                scenes[z].prop="none";scenes[z].props=[Prop(kind="letter",x=0,y=0,scale=.45,attach_to="right-hand")]
+            scenes[3].prop="pump";scenes[7].prop="pump"
+        if index==4:
+            scenes[1].prop="boat";scenes[2].props=[Prop(kind="bottle",x=1200,y=710)]
+            scenes[3].props=[Prop(kind="umbrella",x=820,y=660,scale=1.3)]
+        if index==5:
+            for z in (0,6):
+                scenes[z].prop="none";scenes[z].props=[Prop(kind="box",x=5,y=25,scale=.65,attach_to="right-hand")]
+        if index==6:
+            scenes[0].prop="none";scenes[0].props=[Prop(kind="ball",x=1040,y=500,motion="drop",travel_y=210,start_at=.2,end_at=.60)]
+            scenes[3].prop="none";scenes[3].props=[Prop(kind="ball",x=990,y=470,motion="drop",travel_y=240,start_at=.15,end_at=.7),Prop(kind="ball",x=1150,y=470,motion="drop",travel_y=240,start_at=.15,end_at=.7,scale=.7)]
+            scenes[6].prop="none";scenes[6].props=[Prop(kind="desk",x=1040,y=710),Prop(kind="ball",x=1040,y=590)]
+            scenes[7].prop="none";scenes[7].props=[Prop(kind="desk",x=1040,y=710),Prop(kind="ball",x=1040,y=590,motion="drop",travel=190,travel_y=120,start_at=.25,end_at=.65)]
+        if index==7:
+            scenes[2].prop="shoe";scenes[3].props=[Prop(kind="shoe",x=830,y=710)]
+            scenes[6].prop="door";scenes[6].props=[Prop(kind="shoe",x=950,y=710)]
+            scenes[7].prop="door";scenes[7].prop_motion="open"
+        # No arbitrary tick under every sentence: reserve foley for visible events.
+        for sc in scenes:
+            if sc.prop=="clock":sc.cues=[Cue(at=.52,kind="tick",gain=.2)]
+            elif sc.prop=="phone":sc.cues=[Cue(at=.52,kind="click",gain=.2)]
+            elif sc.actors[0].action=="pickup":sc.cues=[Cue(at=.52,kind="pickup",gain=.2)]
+            elif sc.beat=="payoff":sc.cues=[Cue(at=.55,kind="chime",gain=.18)]
+            else:sc.cues=[]
         sources=[]
         if index==6:sources=[{'url':'https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/free-falling-objects/','claim':'In the absence of air resistance, free-fall acceleration does not depend on mass; drag changes real trajectories.'}]
         if index==8:sources=[{'url':'https://www.cisa.gov/secure-our-world/turn-mfa','claim':'MFA adds authentication protection; phishing-resistant MFA offers stronger protection than some other methods.'},{'url':'https://www.cisa.gov/secure-our-world/recognize-and-report-phishing','claim':'Recognize suspicious urgent messages, avoid suspicious links, and report phishing.'}]

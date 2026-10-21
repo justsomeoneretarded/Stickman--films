@@ -19,27 +19,66 @@
       "actors": [
         {
           "character": "hero",
-          "action": "think",
-          "x": 490.0,
+          "action": "sit",
+          "x": 790.0,
           "travel": 0.0,
           "facing": 1,
           "emotion": "neutral",
           "depth": 1.0
         }
       ],
-      "prop": "book",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "chair",
+          "x": 790.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        },
+        {
+          "kind": "desk",
+          "x": 1040.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        },
+        {
+          "kind": "laptop",
+          "x": 1040.0,
+          "y": 590.0,
+          "scale": 0.8,
+          "label": "",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-in",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -64,6 +103,8 @@
         }
       ],
       "prop": "phone",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "over-shoulder",
       "transition": "cut",
@@ -108,19 +149,15 @@
           "depth": 0.87
         }
       ],
-      "prop": "box",
+      "prop": "mountain",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -145,18 +182,14 @@
         }
       ],
       "prop": "box",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "dissolve",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -190,18 +223,14 @@
         }
       ],
       "prop": "book",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "close-up",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -226,18 +255,14 @@
         }
       ],
       "prop": "plant",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-out",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -262,6 +287,8 @@
         }
       ],
       "prop": "phone",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "follow",
       "transition": "cut",
@@ -307,6 +334,8 @@
         }
       ],
       "prop": "book",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "dissolve",
@@ -314,9 +343,9 @@
       "music": "curious",
       "cues": [
         {
-          "at": 0.52,
+          "at": 0.55,
           "kind": "chime",
-          "gain": 0.2
+          "gain": 0.18
         }
       ],
       "pause": 0.35,

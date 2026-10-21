@@ -10,6 +10,7 @@ NICHES = ["Psychology & Human Behavior", "Relatable Comedy", "Money & Business",
           "Science Explained", "Self-improvement", "Technology & Cybersecurity", "Mysteries & Scams"]
 ENVIRONMENTS = ["bedroom", "classroom", "office", "city", "restaurant", "bank", "forest", "desert", "island", "laboratory", "battlefield", "abstract", "digital"]
 ACTIONS = ["idle", "walk", "run", "sprint", "turn", "reach", "pickup", "surprise", "think", "fear", "happy", "angry", "embarrassed", "sad", "excited", "frustrated", "hesitate", "jump", "fall", "stairs", "sit", "stand", "crouch", "point", "celebrate", "shield", "exchange", "inspect"]
+PROPS = ["none", "phone", "clock", "box", "coin", "book", "plant", "door", "lock", "planet", "flag", "water", "evidence", "ball", "steps", "laptop", "desk", "chair", "letter", "mountain", "bridge", "umbrella", "receipt", "bottle", "shoe", "pump", "boat"]
 CAMERAS = ["wide", "follow", "dolly-in", "dolly-out", "pan", "tilt", "zoom", "reveal", "establishing", "over-shoulder", "close-up", "tracking"]
 
 class Strict(BaseModel):
@@ -34,6 +35,24 @@ class Actor(Strict):
         if v not in ACTIONS: raise ValueError(f"Unknown action {v}; use {ACTIONS}")
         return v
 
+class Prop(Strict):
+    kind: Literal[tuple(PROPS)]
+    x: float = Field(default=1040, ge=-1000, le=4000)
+    y: float = Field(default=710, ge=0, le=1000)
+    scale: float = Field(default=1, ge=.1, le=5)
+    label: str = Field(default="", max_length=35)
+    attach_to: Literal["world", "left-hand", "right-hand"] = "world"
+    actor_index: int = Field(default=0, ge=0, le=3)
+    motion: Literal["still", "reveal", "open", "grow", "slide", "drop"] = "still"
+    start_at: float = Field(default=0, ge=0, le=1)
+    end_at: float = Field(default=1, ge=0, le=1)
+    travel: float = Field(default=0, ge=-1000, le=1000)
+    travel_y: float = Field(default=0, ge=-1000, le=1000)
+    @model_validator(mode="after")
+    def interval(self):
+        if self.end_at<=self.start_at:raise ValueError("Prop end_at must follow start_at")
+        return self
+
 class Scene(Strict):
     id: str = Field(pattern=r"^[a-zA-Z0-9_-]{1,60}$")
     beat: Literal["hook", "setup", "progression", "conflict", "discovery", "payoff", "closing"]
@@ -42,7 +61,9 @@ class Scene(Strict):
     label: str = Field(default="", max_length=65)
     environment: str = "abstract"
     actors: list[Actor] = Field(min_length=1, max_length=4)
-    prop: Literal["none", "phone", "clock", "box", "coin", "book", "plant", "door", "lock", "planet", "flag", "water", "evidence", "ball", "steps"] = "none"
+    prop: Literal[tuple(PROPS)] = "none"
+    props: list[Prop] = Field(default_factory=list, max_length=16)
+    prop_motion: Literal["still", "open", "reveal", "grow"] = "still"
     prop_label: str = Field(default="", max_length=35)
     camera: str = "wide"
     transition: Literal["cut", "dissolve", "wipe", "match"] = "cut"
@@ -53,6 +74,10 @@ class Scene(Strict):
     duration: float = Field(default=0, ge=0, le=45)
     start: float = Field(default=0, ge=0)
     end: float = Field(default=0, ge=0)
+    @model_validator(mode="after")
+    def attached_actors_exist(self):
+        if any(p.attach_to!="world" and p.actor_index>=len(self.actors) for p in self.props):raise ValueError("Attached prop references missing actor")
+        return self
     @field_validator("environment")
     @classmethod
     def env_known(cls, v):

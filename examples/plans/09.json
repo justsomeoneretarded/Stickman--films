@@ -33,6 +33,8 @@
         }
       ],
       "prop": "phone",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-in",
       "transition": "cut",
@@ -69,18 +71,14 @@
         }
       ],
       "prop": "box",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "close-up",
       "transition": "cut",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -114,18 +112,14 @@
         }
       ],
       "prop": "evidence",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "cut",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -150,6 +144,8 @@
         }
       ],
       "prop": "clock",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "over-shoulder",
       "transition": "dissolve",
@@ -195,6 +191,8 @@
         }
       ],
       "prop": "phone",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "cut",
@@ -231,18 +229,14 @@
         }
       ],
       "prop": "coin",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "cut",
       "lighting": "dramatic",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -267,18 +261,14 @@
         }
       ],
       "prop": "lock",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "pan",
       "transition": "cut",
       "lighting": "day",
       "music": "tense",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.55,
       "duration": 0.0,
       "start": 0.0,
@@ -312,6 +302,8 @@
         }
       ],
       "prop": "box",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-out",
       "transition": "dissolve",
@@ -319,9 +311,9 @@
       "music": "tense",
       "cues": [
         {
-          "at": 0.52,
+          "at": 0.55,
           "kind": "chime",
-          "gain": 0.2
+          "gain": 0.18
         }
       ],
       "pause": 0.55,

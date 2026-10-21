@@ -21,12 +21,12 @@ def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
     c=cairo.Context(surface);c.scale(width/1600,height/900)
     duration=scene.duration;u=min(1,t/max(duration,.001))
     if benchmark:
-        from .benchmark import benchmark_pose
+        from .benchmark import benchmark_pose,benchmark_camera
         poses=[benchmark_pose(t)]
         focus=poses[0].root[0]
         # Hold the establish, then gently pick up the tracking camera.
-        pan=max(0,focus-550)*smooth((t-3)/3)
-        cx=800+pan;cy=450;zoom=1
+        cx,cy,zoom=benchmark_camera(t,focus)
+        pan=cx-800
     else:
         poses=[pose(a,t,duration,ground=650+60*a.depth) for a in scene.actors]
         focus=poses[0].root[0]
@@ -43,7 +43,18 @@ def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
         w=primary.pickup
         prop_x=prop_x*(1-w)+(primary.prop_hand[0])*w
         prop_y=prop_y*(1-w)+(primary.prop_hand[1]+30)*w
-    if not benchmark or t>14:draw_prop(c,kind,prop_x,prop_y,t,scale=.75 if benchmark else 1.1,label=scene.prop_label,progress=u)
+    main_scale=.75 if benchmark else 1.1
+    if scene.prop_motion in ("grow","reveal"):main_scale*=max(.001,smooth((u-.15)/.6))
+    if not benchmark or t>14:draw_prop(c,kind,prop_x,prop_y,t,scale=main_scale,label=scene.prop_label,progress=smooth((u-.25)/.45) if scene.prop_motion=="open" else 0)
+    for obj in scene.props:
+        q=smooth((u-obj.start_at)/max(.001,obj.end_at-obj.start_at))
+        if obj.motion=="reveal" and q<=0:continue
+        scale=obj.scale*(max(.001,q) if obj.motion in ("reveal","grow") else 1)
+        ox,oy=obj.x,obj.y
+        if obj.attach_to!="world":
+            hand=poses[obj.actor_index].joints["wrist_"+("left" if obj.attach_to=="left-hand" else "right")]
+            ox+=hand[0];oy+=hand[1]
+        draw_prop(c,obj.kind,ox+obj.travel*q,oy+obj.travel_y*(min(1,max(0,(u-obj.start_at)/(obj.end_at-obj.start_at)))**2 if obj.motion=="drop" else q),t,scale=scale,label=obj.label,progress=q if obj.motion=="open" else 0)
     for a,p in sorted(zip(scene.actors,poses),key=lambda v:v[0].depth):
         c.save()
         # A depth plane scales a whole rig around its ground anchor.
@@ -57,9 +68,10 @@ def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
     label=scene.label
     if benchmark:
         label=next((v for limit,v in [(2,"01 / FIND YOUR BALANCE"),(7,"02 / ONE STEP AT A TIME"),(9,"03 / BUILD MOMENTUM"),(12,"04 / RUN WITH IT"),(15,"05 / LAND THE STOP"),(17,"06 / CHANGE YOUR MIND"),(20.3,"07 / PICK UP SOMETHING NEW"),(23,"08 / WELL, HELLO THERE")] if t<limit),"")
-    text(c,"SMALL WORLDS  /  ORIGINAL ANIMATION",80,74,16,INK,True)
+    header_color=PAPER if scene.lighting in ("night","dramatic") else INK
+    text(c,"SMALL WORLDS  /  ORIGINAL ANIMATION",80,74,16,header_color,True)
     if label:
-        for i,v in enumerate(wrap(c,label,1120,38,2)):text(c,v,80,135+i*47,38,INK,True)
+        for i,v in enumerate(wrap(c,label,1120,38,2)):text(c,v,80,135+i*47,38,header_color,True)
     if scene.narration:
         words=scene.narration.split()
         # Segment-level timing is measured, word positions are explicitly estimates.

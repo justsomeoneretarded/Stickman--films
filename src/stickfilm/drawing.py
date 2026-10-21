@@ -160,7 +160,7 @@ def draw_prop(c,kind,x,y,t=0,scale=1,label="",progress=0):
         for side,dy in [(-1,-78),(1,-108),(-1,-127)]:ellipse(c,side*18,dy,24,10,MINT)
     elif kind in ("door","lock"):
         if kind=="door":
-            rect(c,-49,-185,98,195,"#587c80",4,INK,4);rect(c,-38,-175,76,171,"#a0b6a4",3);ellipse(c,25,-81,6,6,GOLD)
+            rect(c,-49,-185,98,195,"#587c80",4,INK,4);poly(c,[(-38,-175),(38*(1-progress)-38*progress,-175+20*progress),(38*(1-progress)-38*progress,-4-14*progress),(-38,-4)],"#a0b6a4");ellipse(c,25-60*progress,-81,6,6,GOLD)
         else:
             c.new_path();c.arc(0,-80,32,math.pi,2*math.pi);color(c,INK);c.set_line_width(12);c.stroke()
             rect(c,-45,-84,90,82,GOLD,9,INK,3);ellipse(c,0,-53,8,9,INK);rect(c,-3,-49,6,19,INK)
@@ -172,9 +172,57 @@ def draw_prop(c,kind,x,y,t=0,scale=1,label="",progress=0):
         line(c,[(-29,7),(-29,-163)],INK,6);poly(c,[(-26,-163),(55,-145),(-26,-108)],CORAL)
     elif kind=="water":
         rect(c,-38,-115,76,124,PAPER,9,INK,3);rect(c,-31,-72+25*progress,62,72-25*progress,"#80b5bd",4)
-    elif kind=="ball":ellipse(c,0,-27-abs(math.sin(t*2))*42,27,27,CORAL,INK,3)
+    elif kind=="ball":ellipse(c,0,-27,27,27,CORAL,INK,3)
     elif kind=="steps":
         for i in range(3):rect(c,-65+i*45,-(i+1)*29,45,(i+1)*29,"#779b99",2,INK,2)
+    elif kind=="desk":
+        poly(c,[(-135,-119),(111,-134),(140,-112),(-112,-96)],"#a98058")
+        line(c,[(-115,-103),(-115,2)],INK,9);line(c,[(120,-113),(120,2)],INK,9)
+        line(c,[(-115,-96),(120,-111)],INK,8)
+    elif kind=="chair":
+        line(c,[(-33,3),(-33,-169),(24,-169),(24,-68)],"#657f7a",10)
+        rect(c,-39,-72,83,14,"#9eb3a0",5,INK,3)
+        line(c,[(34,-58),(34,3)],INK,8)
+    elif kind=="laptop":
+        rect(c,-55,-79,110,74,INK,5);rect(c,-48,-72,96,58,"#9dc6b8",3)
+        for i in range(3):line(c,[(-35,-60+i*16),(30+8*math.sin(t+i),-60+i*16)],PAPER,3)
+        poly(c,[(-55,-5),(55,-5),(75,8),(-75,8)],"#728c92")
+    elif kind=="letter":
+        rect(c,-57,-75,114,73,PAPER,4,INK,3)
+        line(c,[(-53,-72),(0,-32),(53,-72)],"#9a9c8c",3)
+        ellipse(c,1,-30,10,10,CORAL)
+    elif kind=="receipt":
+        poly(c,[(-33,-125),(34,-125),(34,0),(21,-7),(10,0),(0,-7),(-11,0),(-23,-7),(-33,0)],PAPER)
+        for i in range(5):line(c,[(-20,-110+i*18),(20,-110+i*18)],"#8b998e",3)
+    elif kind=="mountain":
+        poly(c,[(-137,7),(-20,-225),(136,7)],"#688e8e")
+        poly(c,[(-20,-225),(17,-166),(-10,-181),(-37,-150),(-51,-166)],PAPER)
+        poly(c,[(-137,7),(-20,-225),(-48,7)],"#7fa39b")
+    elif kind=="bridge":
+        line(c,[(-150,-29),(150,-29)],"#8b7d66",15)
+        for side in (-1,1):
+            line(c,[(side*118,0),(side*118,-137)],INK,7)
+            line(c,[(side*118,-137),(0,-48)],INK,3)
+        for i in range(9):line(c,[(-120+i*30,-35),(-120+i*30,-69)],INK,3)
+    elif kind=="umbrella":
+        line(c,[(0,-15),(0,-151)],INK,5)
+        c.new_path();c.arc(0,-144,87,math.pi,2*math.pi);c.close_path();color(c,CORAL);c.fill()
+        for dx in (-43,43):line(c,[(0,-231),(dx,-144)],PAPER,2)
+        c.new_path();c.arc(-9,-17,9,0,math.pi);color(c,INK);c.set_line_width(5);c.stroke()
+    elif kind=="bottle":
+        rect(c,-15,-145,30,20,INK,4);rect(c,-24,-126,48,127,"#b4d6ca",9,INK,3)
+        rect(c,-19,-73,38,66,"#76adb6",6);line(c,[(-13,-111),(-13,-88)],PAPER,4)
+    elif kind=="shoe":
+        poly(c,[(-47,-31),(-7,-31),(9,-16),(49,-9),(52,4),(-50,4)],CORAL)
+        line(c,[(-49,5),(51,5)],INK,6)
+        for i in range(3):line(c,[(-14+i*13,-24),(-22+i*13,-12)],PAPER,3)
+    elif kind=="pump":
+        rect(c,-18,-103,36,107,"#789c92",6,INK,3);line(c,[(0,-93),(49,-93),(49,-66)],INK,8)
+        line(c,[(-3,-107),(-43,-151)],INK,7);ellipse(c,-48,-156,10,7,CORAL)
+        ellipse(c,0,9,37,9,INK,alpha=.22)
+    elif kind=="boat":
+        poly(c,[(-118,-37),(118,-37),(78,9),(-79,9)],"#a5815c")
+        line(c,[(0,-38),(0,-192)],INK,5);poly(c,[(6,-186),(6,-54),(98,-54)],PAPER)
     if label:
         lines=wrap(c,label,200,17,2)
         for i,v in enumerate(lines):text(c,v,-min(90,len(v)*4.6),42+i*23,17,INK,True)

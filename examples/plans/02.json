@@ -28,18 +28,14 @@
         }
       ],
       "prop": "coin",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-in",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -55,27 +51,66 @@
       "actors": [
         {
           "character": "business",
-          "action": "inspect",
-          "x": 940.0,
+          "action": "point",
+          "x": 620.0,
           "travel": 0.0,
           "facing": 1,
           "emotion": "neutral",
           "depth": 1.0
         }
       ],
-      "prop": "book",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "receipt",
+          "x": 930.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "PAPER",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        },
+        {
+          "kind": "receipt",
+          "x": 1060.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "BINDING",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        },
+        {
+          "kind": "receipt",
+          "x": 1190.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "DELIVERY",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -109,18 +144,14 @@
         }
       ],
       "prop": "coin",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "close-up",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -136,27 +167,66 @@
       "actors": [
         {
           "character": "business",
-          "action": "pickup",
-          "x": 940.0,
+          "action": "point",
+          "x": 540.0,
           "travel": 0.0,
           "facing": 1,
           "emotion": "neutral",
           "depth": 1.0
         }
       ],
-      "prop": "box",
+      "prop": "none",
+      "props": [
+        {
+          "kind": "box",
+          "x": 850.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "SUPPLIES",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        },
+        {
+          "kind": "box",
+          "x": 1030.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "BILLS",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        },
+        {
+          "kind": "box",
+          "x": 1210.0,
+          "y": 710.0,
+          "scale": 1.0,
+          "label": "REMAINS",
+          "attach_to": "world",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "wide",
       "transition": "dissolve",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "pickup",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -190,18 +260,14 @@
         }
       ],
       "prop": "box",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "over-shoulder",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -226,6 +292,8 @@
         }
       ],
       "prop": "clock",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "reveal",
       "transition": "cut",
@@ -262,18 +330,14 @@
         }
       ],
       "prop": "book",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "follow",
       "transition": "cut",
       "lighting": "day",
       "music": "curious",
-      "cues": [
-        {
-          "at": 0.52,
-          "kind": "tick",
-          "gain": 0.2
-        }
-      ],
+      "cues": [],
       "pause": 0.35,
       "duration": 0.0,
       "start": 0.0,
@@ -307,6 +371,8 @@
         }
       ],
       "prop": "coin",
+      "props": [],
+      "prop_motion": "still",
       "prop_label": "",
       "camera": "dolly-out",
       "transition": "dissolve",
@@ -314,9 +380,9 @@
       "music": "curious",
       "cues": [
         {
-          "at": 0.52,
+          "at": 0.55,
           "kind": "chime",
-          "gain": 0.2
+          "gain": 0.18
         }
       ],
       "pause": 0.35,
