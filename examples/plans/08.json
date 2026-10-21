@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "title": "The Password Guard Took a Day Off",
+  "brief": "Fictional cybersecurity metaphor grounded in CISA guidance about MFA and phishing.",
+  "niche": "Technology & Cybersecurity",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "source-grounded",
+  "sources": [
+    {
+      "url": "https://www.cisa.gov/secure-our-world/turn-mfa",
+      "claim": "MFA adds authentication protection; phishing-resistant MFA offers stronger protection than some other methods."
+    },
+    {
+      "url": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing",
+      "claim": "Recognize suspicious urgent messages, avoid suspicious links, and report phishing."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Milo guards a digital doorway with one password. He has made it very long. He is delighted. Across the corridor, Ada asks what happens if somebody steals it.",
+      "dialogue": [],
+      "label": "ONE LOCK. ONE SECRET.",
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "door",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "Milo adds a second copy of the same password. Ada looks at him. Two identical secrets do not become two independent checks just because you write them twice.",
+      "dialogue": [],
+      "label": "A COPY IS STILL A COPY",
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "embarrassed",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "Multi-factor authentication asks for another kind of proof. A password plus an appropriate authenticator can make an account harder to enter with only a stolen password.",
+      "dialogue": [],
+      "label": "ANOTHER KIND OF PROOF",
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "shield",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "lock",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "Then an urgent message arrives. Your account expires in four minutes. Click here immediately. Milo starts running toward the button before he has checked who sent it.",
+      "dialogue": [],
+      "label": "URGENCY IS NOT EVIDENCE",
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "run",
+          "x": 490.0,
+          "travel": 520.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "prop_label": "",
+      "camera": "tracking",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "click",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "Ada stops him beside the doorway. Unexpected links deserve a pause. They open the service through a known route instead of trusting the message's convenient little shortcut.",
+      "dialogue": [],
+      "label": "TAKE A KNOWN ROUTE",
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "hesitate",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "door",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "The service reports no emergency. The message was our fictional attacker's invitation to hand over access. A convincing-looking request was still only a request.",
+      "dialogue": [],
+      "label": "THE STORY THE MESSAGE WANTED TO TELL",
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "inspect",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "evidence",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "MFA is useful protection, not a magic shield against every attack. The method matters. Some options resist phishing better than codes that people can accidentally share.",
+      "dialogue": [],
+      "label": "PROTECTION HAS LEVELS",
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "lock",
+      "prop_label": "",
+      "camera": "pan",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "Milo keeps the long password, enables the strongest available MFA, and reports the message. The doorway is quieter now. He spends the saved four minutes having lunch.",
+      "dialogue": [],
+      "label": "PAUSE. CHECK. PROTECT.",
+      "environment": "restaurant",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "lock",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

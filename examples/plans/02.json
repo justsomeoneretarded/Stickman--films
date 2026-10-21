@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "title": "The Shop That Sold Its Lunch",
+  "brief": "A fictional small-business cash-flow story using simple invented transactions, not financial advice.",
+  "niche": "Money & Business",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "fiction",
+  "sources": [],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Milo sells his first handmade notebook. He holds the coin like a tiny golden trophy. At last, he says, the shop is making money.",
+      "dialogue": [],
+      "label": "THE FIRST SALE",
+      "environment": "bank",
+      "actors": [
+        {
+          "character": "business",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "coin",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "Ada asks about the paper. Milo points to a receipt. The binding? Another receipt. The delivery? He produces a third receipt with considerably less ceremony.",
+      "dialogue": [],
+      "label": "A SALE HAS COMPANY",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "business",
+          "action": "inspect",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "The coin is real. So are the costs. Their imaginary shop has sold something, but that does not mean every coin in the drawer belongs to lunch.",
+      "dialogue": [],
+      "label": "REVENUE IS NOT THE WHOLE STORY",
+      "environment": "bank",
+      "actors": [
+        {
+          "character": "business",
+          "action": "think",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "coin",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "Milo makes three boxes. One holds money for supplies. One holds money for other bills. The last holds what remains after this little example's costs.",
+      "dialogue": [],
+      "label": "GIVE EVERY COIN A JOB",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "business",
+          "action": "pickup",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "pickup",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "Then a customer promises to pay next week. Milo celebrates another sale. Ada points at the empty drawer. A promise cannot buy paper at the counter today.",
+      "dialogue": [],
+      "label": "SOLD TODAY. PAID LATER.",
+      "environment": "bank",
+      "actors": [
+        {
+          "character": "business",
+          "action": "surprise",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "They write the payment date beside the supplier's deadline. The dates do not match. Their problem has moved from how much to when it arrives.",
+      "dialogue": [],
+      "label": "TIMING CHANGES THE PICTURE",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "business",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "clock",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "For this fictional shop, they choose a smaller order they can pay for now. There is less impressive stacking, and considerably less panicked running between counters.",
+      "dialogue": [],
+      "label": "SMALLER CAN BE MORE MANAGEABLE",
+      "environment": "bank",
+      "actors": [
+        {
+          "character": "business",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "At closing time, Milo buys lunch with money they have actually set aside. The notebook business is still tiny. His understanding of the drawer is larger.",
+      "dialogue": [],
+      "label": "COUNT WHAT REMAINS. CHECK WHEN IT ARRIVES.",
+      "environment": "restaurant",
+      "actors": [
+        {
+          "character": "business",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "coin",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

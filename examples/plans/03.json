@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "title": "A Courier, Two Borders, One Missing Stamp",
+  "brief": "Clearly fictional historical-inspired border story; no real war, country, date or event is represented.",
+  "niche": "History & Geopolitics",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "fiction",
+  "sources": [],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "In an invented border town, a courier named Ada carries a letter that must arrive before the bridge closes. The envelope looks disappointingly ordinary.",
+      "dialogue": [],
+      "label": "A FICTIONAL BORDER TALE",
+      "environment": "battlefield",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "establishing",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "At the first checkpoint, a guard asks for a blue stamp. Ada has a red one. The guard explains that red stamps are perfectly valid, elsewhere.",
+      "dialogue": [],
+      "label": "VALID. SOMEWHERE ELSE.",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "hesitate",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "flag",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "She visits the office beside the gate. It needs a signature from the office across the bridge. That office, she discovers, needs permission from this gate.",
+      "dialogue": [],
+      "label": "THE MAP HAS BECOME A CIRCLE",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "frustrated",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "door",
+      "prop_label": "",
+      "camera": "pan",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "The letter is not a secret military order. It is a request to reopen the town's shared water pump. Both sides have been carrying buckets all morning.",
+      "dialogue": [],
+      "label": "ONE PUMP. TWO SIDES.",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "inspect",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "water",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "dissolve",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "Ada stops arguing about the envelope and points to the water. The guard's boots are wet. His own family has been using the same broken pump.",
+      "dialogue": [],
+      "label": "A SHARED PROBLEM",
+      "environment": "battlefield",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "water",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "He cannot erase the border. He can summon the clerk. The clerk cannot fix the pump. She can send the maintenance request through the correct office.",
+      "dialogue": [],
+      "label": "SMALL POWERS, USED TOGETHER",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "exchange",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "The bridge bell rings as Ada crosses. She has not defeated a kingdom. She has found a person willing to carry one useful piece of the problem.",
+      "dialogue": [],
+      "label": "BEFORE THE GATE CLOSES",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "run",
+          "x": 490.0,
+          "travel": 520.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "clock",
+      "prop_label": "",
+      "camera": "tracking",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "That evening, two neighbors meet beside the pump with tools. Our invented town still has two borders on its map. It finally has one conversation at the water.",
+      "dialogue": [],
+      "label": "FICTION. NOT A HISTORICAL ACCOUNT.",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "water",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

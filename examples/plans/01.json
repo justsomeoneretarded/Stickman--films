@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "title": "The Queue for Absolutely Nothing",
+  "brief": "An original escalating comedy about two friends and an unexplained queue.",
+  "niche": "Relatable Comedy",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "fiction",
+  "sources": [],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Ada finds Milo standing in a queue. What are we waiting for? she asks. No idea, he says. But the man ahead looks extremely confident.",
+      "dialogue": [],
+      "label": "IT MUST BE SOMETHING GOOD",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "flag",
+      "prop_label": "",
+      "camera": "establishing",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "The queue advances one step. Everyone looks relieved. Nobody has received anything, but movement feels like progress, and progress deserves a small celebration.",
+      "dialogue": [],
+      "label": "ONE WHOLE STEP",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "flag",
+      "prop_label": "",
+      "camera": "tracking",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "A businessperson arrives with a clipboard. How long is the wait? Milo says twenty minutes. He has been here three, but twenty sounds professionally disappointing.",
+      "dialogue": [],
+      "label": "A HIGHLY QUALIFIED GUESS",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "Ada walks to the front. There is a box. Inside the box is a sign. The sign says please keep this doorway clear at all times.",
+      "dialogue": [],
+      "label": "THE BIG REVEAL",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "pickup",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "pickup",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "She carries the evidence back. Milo studies it carefully. Perhaps, he suggests, the queue is waiting for somebody to move the box out of the doorway.",
+      "dialogue": [],
+      "label": "A SECOND THEORY",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "inspect",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "evidence",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "Ada moves the box. Everyone follows her. She stops. They stop. She takes one cautious step sideways. The entire queue takes one cautious step sideways.",
+      "dialogue": [],
+      "label": "CONGRATULATIONS. YOU ARE THE FRONT.",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "pan",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "Ada finally announces that there is no queue. People nod respectfully, then ask whether they need a reservation for the next available no queue.",
+      "dialogue": [],
+      "label": "RESERVATIONS ARE CLOSED",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "frustrated",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "click",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "Milo and Ada leave for lunch. Behind them, somebody places the empty box beside the wall. One man stops to look. Another man stands behind him.",
+      "dialogue": [],
+      "label": "SOMEWHERE, A NEW QUEUE BEGINS",
+      "environment": "restaurant",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

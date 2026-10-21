@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "title": "The Two-Minute Door",
+  "brief": "A fictional practical habit story; no promised health or productivity outcomes.",
+  "niche": "Self-improvement",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "fiction",
+  "sources": [],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Milo buys a beautiful notebook for his new morning routine. On the first page, he writes become a completely different person. Then he closes it, exhausted.",
+      "dialogue": [],
+      "label": "AN AMBITIOUS FIRST PAGE",
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sad",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "Ada asks what a different person would actually do tomorrow. Milo describes twelve impressive habits and a breakfast that requires considerably more washing up than breakfast should.",
+      "dialogue": [],
+      "label": "TWELVE HABITS. ONE MORNING.",
+      "environment": "restaurant",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "excited",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "They choose one small action instead. Put on shoes and step outside. The notebook objects by looking expensive, but it does not get a vote.",
+      "dialogue": [],
+      "label": "ONE OBSERVABLE ACTION",
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "door",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "The next morning, Milo stands at the door. He does not feel transformed. He feels like Milo, wearing shoes, with an unusually demanding relationship to a handle.",
+      "dialogue": [],
+      "label": "STILL MILO. NOW WITH SHOES.",
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "hesitate",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "door",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "He opens it and walks down the path. The walk is short. There is no montage of instant success, because this story has only reached Tuesday.",
+      "dialogue": [],
+      "label": "IT IS ONLY TUESDAY",
+      "environment": "forest",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "plant",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "On Wednesday he forgets. He almost crosses out the entire plan. Ada points to Thursday, which remains stubbornly available despite Wednesday's disappointing performance.",
+      "dialogue": [],
+      "label": "THURSDAY IS STILL AVAILABLE",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "frustrated",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "clock",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "He leaves the shoes beside the door. For Milo, that makes the next choice easier to notice. It is an experiment in his own routine, not a universal guarantee.",
+      "dialogue": [],
+      "label": "DESIGN FOR THE NEXT TRY",
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "reach",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "door",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "A week later, the notebook has one ordinary sentence on its first page. Open the door. Milo reads it, puts on his shoes, and goes to see what is outside.",
+      "dialogue": [],
+      "label": "OPEN THE DOOR",
+      "environment": "forest",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

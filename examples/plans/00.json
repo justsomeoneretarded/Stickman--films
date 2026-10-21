@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "title": "The Deadline Has a Sofa",
+  "brief": "A fictional office comedy about avoiding an intimidating assignment; no neuroscience claims.",
+  "niche": "Psychology & Human Behavior",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "fiction",
+  "sources": [],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Milo has forty minutes to finish one page. He opens the document, takes a brave breath, and decides the desk needs cleaning first.",
+      "dialogue": [],
+      "label": "ONE PAGE. FORTY MINUTES.",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "The desk was already clean. That is inconvenient. Luckily, his phone has discovered a video about a man organizing an even cleaner desk.",
+      "dialogue": [],
+      "label": "VERY IMPORTANT RESEARCH",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "reach",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "click",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "Across the room, his friend Ada asks what the assignment actually needs. Milo describes it as an enormous, shapeless mountain of professional doom.",
+      "dialogue": [],
+      "label": "THE MOUNTAIN",
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "fear",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "Ada gives the mountain a name. Write the first sentence. Suddenly the monster is small enough to fit inside a very ordinary box.",
+      "dialogue": [],
+      "label": "MAKE THE NEXT MOVE SMALL",
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "inspect",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "Milo reaches for the box, then hesitates. What if the sentence is bad? Ada points out that the current sentence is exceptionally invisible.",
+      "dialogue": [],
+      "label": "THE INVISIBLE FIRST DRAFT",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "hesitate",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "He types a terrible sentence. Nothing explodes. He writes another. The little plant beside his screen receives less attention, but the page receives more.",
+      "dialogue": [],
+      "label": "NOTHING EXPLODED",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "plant",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "His phone lights up again. Milo moves it across the room. The phone remains fascinating. It is simply fascinating somewhere he cannot reach without standing.",
+      "dialogue": [],
+      "label": "LET TEMPTATION TAKE THE LONG WAY",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "click",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "The page is not perfect. It exists. With five minutes left, Milo finally cleans the desk. This time, there is something on it worth keeping.",
+      "dialogue": [],
+      "label": "A PAGE THAT EXISTS",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

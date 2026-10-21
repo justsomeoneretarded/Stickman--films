@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "title": "The Mystery of the Guaranteed Prize",
+  "brief": "A fictional scam investigation grounded in FTC prize-scam guidance; invented people and incident.",
+  "niche": "Mysteries & Scams",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "source-grounded",
+  "sources": [
+    {
+      "url": "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams",
+      "claim": "Real prizes are free; requests for money to collect an unexpected prize are a scam warning."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Ada receives a message saying she has won a magnificent prize. There is just one small delivery fee. She cannot remember entering a competition. The message seems untroubled.",
+      "dialogue": [],
+      "label": "A PRIZE SHE NEVER ENTERED TO WIN",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "surprise",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "click",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "Milo spots a gold badge on the screen. Official, he says. Ada draws the same badge on a box. The box does not immediately become a government department.",
+      "dialogue": [],
+      "label": "A BADGE IS EASY TO DRAW",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "inspect",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "They list the claims. A prize exists. The sender controls it. Payment will release it. So far, every piece of evidence came from the person asking for money.",
+      "dialogue": [],
+      "label": "FOLLOW THE SOURCE OF THE CLAIM",
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "evidence",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "A second message arrives. Pay now or lose everything. The prize has become more urgent without becoming more verified. Milo puts his hand back in his pocket.",
+      "dialogue": [],
+      "label": "THE DEADLINE IS DOING THE SELLING",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "fear",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "clock",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "dissolve",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "Ada checks the alleged organization through contact details she finds independently. She does not call the number supplied in the suspicious message and ask the sender to verify itself.",
+      "dialogue": [],
+      "label": "CHECK OUTSIDE THE MESSAGE",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "reach",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "phone",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "click",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "In our invented case, the organization knows nothing about the offer. The supposed delivery fee was the product. The magnificent prize was merely its advertising.",
+      "dialogue": [],
+      "label": "THE FEE WAS THE PRODUCT",
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "surprise",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "coin",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "dramatic",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "The FTC warns that real prizes do not require payment to collect them. Unexpected prize claims asking for money or sensitive information deserve suspicion, not a rushed transfer.",
+      "dialogue": [],
+      "label": "A VERIFIED WARNING",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "shield",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "lock",
+      "prop_label": "",
+      "camera": "pan",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "Ada reports and deletes the message. Milo keeps the decorated box. It now contains their receipts, which are less magnificent than a prize and considerably more likely to exist.",
+      "dialogue": [],
+      "label": "MYSTERY SOLVED. WALLET INTACT.",
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

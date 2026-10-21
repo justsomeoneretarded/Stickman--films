@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "title": "Gravity Did Not Read Your Schedule",
+  "brief": "A fictional laboratory demonstration of gravity. Simplified physics; no invented measurements.",
+  "niche": "Science Explained",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "source-grounded",
+  "sources": [
+    {
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/free-falling-objects/",
+      "claim": "In the absence of air resistance, free-fall acceleration does not depend on mass; drag changes real trajectories."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "In our imaginary laboratory, Milo tells a ball to wait until he finishes his presentation. The ball declines to comment and heads toward the floor.",
+      "dialogue": [],
+      "label": "GRAVITY IS NOT TAKING APPOINTMENTS",
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "scientist",
+          "action": "surprise",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "ball",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "Ada explains that Earth's gravity pulls objects toward Earth. Holding the ball up requires a supporting force. Removing that support changes what happens next.",
+      "dialogue": [],
+      "label": "REMOVE THE SUPPORT",
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "scientist",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "planet",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "Milo offers a heavier ball a stern warning. Weight changes how hard he must hold it, but a warning is still not a force in his diagram.",
+      "dialogue": [],
+      "label": "A WARNING IS NOT A FORCE",
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "scientist",
+          "action": "frustrated",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "ball",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "For an ideal comparison, Ada asks us to imagine no air resistance. Objects dropped together from rest share the same gravitational acceleration at the same location.",
+      "dialogue": [],
+      "label": "AN IDEALIZED COMPARISON",
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "scientist",
+          "action": "think",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "planet",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "A sheet of paper in real air complicates the experiment. Air pushes back as objects move through it. Shape and orientation can change that resistance considerably.",
+      "dialogue": [],
+      "label": "THE AIR JOINS THE EXPERIMENT",
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "scientist",
+          "action": "inspect",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "That is why a useful demonstration says what it leaves out. Our drawings simplify size and time. They illustrate the question, rather than supplying measured experimental data.",
+      "dialogue": [],
+      "label": "A MODEL HAS LIMITS",
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "scientist",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "clock",
+      "prop_label": "",
+      "camera": "pan",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "Milo finally places the ball on a stand. It stays there. Gravity has not switched off. The support now supplies a force that balances the downward pull.",
+      "dialogue": [],
+      "label": "STILL DOES NOT MEAN FORCE-FREE",
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "scientist",
+          "action": "reach",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "ball",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "He bows. The presentation is finished. The ball rolls off the stand, and Milo discovers one final principle: it helps to watch your own demonstration.",
+      "dialogue": [],
+      "label": "WATCH THE DEMONSTRATION",
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "scientist",
+          "action": "surprise",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "ball",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "title": "The Box Nobody Wanted to Carry",
+  "brief": "An original fictional short about accepting help, with an emotional payoff.",
+  "niche": "Storytelling & Life Lessons",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "fiction",
+  "sources": [],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Every morning, Milo carries a box across the courtyard. Every morning, Ada offers to help. Every morning, he says it is lighter than it looks.",
+      "dialogue": [],
+      "label": "LIGHTER THAN IT LOOKS",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "tracking",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "One wet afternoon, he sits beside it instead. The box has not grown. His arms simply have no impressive explanation left to give the pavement.",
+      "dialogue": [],
+      "label": "AN ORDINARY BAD AFTERNOON",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sit",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "Ada sits nearby without asking what is inside. Milo tells her anyway. Old drawings. Unfinished ideas. A letter he never sent. Things he meant to sort out.",
+      "dialogue": [],
+      "label": "THE THINGS WE KEEP",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sad",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "She does not offer a speech. She asks where the box needs to go. Milo points to a little room on the far side of the courtyard.",
+      "dialogue": [],
+      "label": "WHERE DOES IT NEED TO GO?",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "door",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "They each take one side. The box tips, and a drawing slips out. It shows the courtyard years earlier, before the tree was taller than the roof.",
+      "dialogue": [],
+      "label": "SOMETHING WORTH KEEPING",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "pickup",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "pickup",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "Ada recognizes the tree. Milo recognizes the tiny figure he drew beside it. For a moment, neither of them tries to make the afternoon useful.",
+      "dialogue": [],
+      "label": "A MOMENT WITHOUT AN ANSWER",
+      "environment": "forest",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "plant",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "They carry the box into the room. Nothing inside has been solved. The letter remains unsent. The difference is smaller, and perhaps more believable than that.",
+      "dialogue": [],
+      "label": "ONE SIDE EACH",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "The next morning, Ada arrives carrying a box of her own. Milo starts to ask whether it is heavy. Then he takes one side and asks where they are going.",
+      "dialogue": [],
+      "label": "WHERE ARE WE GOING?",
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "happy",
+          "x": 1210.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

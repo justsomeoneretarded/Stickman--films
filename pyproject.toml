@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stickfilm"
+version = "0.1.0"
+description = "CPU cinematic stick animation with measured narration and honest QA"
+requires-python = ">=3.11,<3.14"
+dependencies = ["cairocffi==1.7.1", "Pillow==12.3.0", "numpy==2.3.5", "pydantic==2.12.3", "kokoro-onnx==0.4.9", "psutil==7.1.1"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "PyYAML==6.0.3"]
+local = ["llama-cpp-python==0.3.23"]
+
+[project.scripts]
+stickfilm = "stickfilm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

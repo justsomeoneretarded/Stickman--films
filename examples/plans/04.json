@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "title": "The Island with One Excellent Plan",
+  "brief": "A fictional survival scenario; entertainment, not emergency survival instructions.",
+  "niche": "What-if & Survival",
+  "requested_minutes": 1.25,
+  "seed": 42,
+  "provenance": "authored-example",
+  "factual_status": "fiction",
+  "sources": [],
+  "scenes": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "narration": "Milo wakes on an imaginary island with a box, a bottle, and the confidence of somebody who has watched exactly half a survival documentary.",
+      "dialogue": [],
+      "label": "AN IMAGINARY ISLAND",
+      "environment": "island",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "surprise",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "establishing",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s02",
+      "beat": "setup",
+      "narration": "His first plan is enormous. Build a boat, sail home, open a restaurant, and name the soup after this experience. Ada asks about the next hour.",
+      "dialogue": [],
+      "label": "THE PLAN IS VERY LARGE",
+      "environment": "island",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "excited",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "water",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s03",
+      "beat": "progression",
+      "narration": "They inspect what they actually have. The bottle holds a little water. The box holds a book. The book is about organizing meetings. This feels personal.",
+      "dialogue": [],
+      "label": "INVENTORY HAS ENTERED THE CHAT",
+      "environment": "island",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "pickup",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "pickup",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s04",
+      "beat": "discovery",
+      "narration": "A dark cloud slides across the shore. Milo begins a dramatic speech about courage. Ada moves the box under cover and asks him to help carry it.",
+      "dialogue": [],
+      "label": "THE WEATHER DOES NOT WAIT FOR SPEECHES",
+      "environment": "island",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 490.0,
+          "travel": 360.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "tracking",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s05",
+      "beat": "conflict",
+      "narration": "In their fictional predicament, useful work starts smaller than the grand escape. They mark where they landed, keep their things together, and agree to stay together.",
+      "dialogue": [],
+      "label": "MAKE THE SITUATION EASIER TO UNDERSTAND",
+      "environment": "island",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "flag",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s06",
+      "beat": "progression",
+      "narration": "Milo spots something bright beyond the trees and starts running. Ada calls him back. A mysterious sparkle is not yet evidence that help is waiting there.",
+      "dialogue": [],
+      "label": "HOPE STILL NEEDS A SECOND LOOK",
+      "environment": "forest",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "run",
+          "x": 490.0,
+          "travel": 520.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "evidence",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s07",
+      "beat": "discovery",
+      "narration": "The sparkle is a second bottle. Empty. Milo looks defeated, then notices the cap fits their first bottle. Even a small discovery can change the next decision.",
+      "dialogue": [],
+      "label": "SMALL DOES NOT MEAN USELESS",
+      "environment": "island",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "inspect",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "water",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "tick",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "s08",
+      "beat": "payoff",
+      "narration": "Their story ends before a rescue arrives. The soup restaurant remains imaginary. What changed is their plan: fewer heroic speeches, more checking what the next step needs.",
+      "dialogue": [],
+      "label": "A STORY ABOUT DECISIONS, NOT A SURVIVAL GUIDE",
+      "environment": "island",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 490.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.52,
+          "kind": "chime",
+          "gain": 0.2
+        }
+      ],
+      "pause": 0.35,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

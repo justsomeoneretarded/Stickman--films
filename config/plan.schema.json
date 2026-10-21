@@ -1,0 +1,390 @@
+{
+  "$defs": {
+    "Actor": {
+      "additionalProperties": false,
+      "properties": {
+        "character": {
+          "default": "hero",
+          "enum": [
+            "hero",
+            "friend",
+            "office",
+            "student",
+            "scientist",
+            "business",
+            "antagonist",
+            "crowd"
+          ],
+          "title": "Character",
+          "type": "string"
+        },
+        "action": {
+          "default": "think",
+          "title": "Action",
+          "type": "string"
+        },
+        "x": {
+          "default": 520,
+          "maximum": 4000,
+          "minimum": -1000,
+          "title": "X",
+          "type": "number"
+        },
+        "travel": {
+          "default": 0,
+          "maximum": 800,
+          "minimum": -800,
+          "title": "Travel",
+          "type": "number"
+        },
+        "facing": {
+          "default": 1,
+          "enum": [
+            -1,
+            1
+          ],
+          "title": "Facing",
+          "type": "integer"
+        },
+        "emotion": {
+          "default": "neutral",
+          "enum": [
+            "neutral",
+            "surprise",
+            "confused",
+            "fear",
+            "happy",
+            "angry",
+            "embarrassed",
+            "sad",
+            "excited",
+            "thinking",
+            "frustrated",
+            "hesitant"
+          ],
+          "title": "Emotion",
+          "type": "string"
+        },
+        "depth": {
+          "default": 1,
+          "maximum": 1.15,
+          "minimum": 0.65,
+          "title": "Depth",
+          "type": "number"
+        }
+      },
+      "title": "Actor",
+      "type": "object"
+    },
+    "Cue": {
+      "additionalProperties": false,
+      "properties": {
+        "at": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "At",
+          "type": "number"
+        },
+        "kind": {
+          "enum": [
+            "step",
+            "impact",
+            "click",
+            "chime",
+            "whoosh",
+            "tick",
+            "pickup"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "gain": {
+          "default": 0.4,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Gain",
+          "type": "number"
+        }
+      },
+      "required": [
+        "at",
+        "kind"
+      ],
+      "title": "Cue",
+      "type": "object"
+    },
+    "Scene": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-zA-Z0-9_-]{1,60}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "beat": {
+          "enum": [
+            "hook",
+            "setup",
+            "progression",
+            "conflict",
+            "discovery",
+            "payoff",
+            "closing"
+          ],
+          "title": "Beat",
+          "type": "string"
+        },
+        "narration": {
+          "default": "",
+          "maxLength": 1600,
+          "title": "Narration",
+          "type": "string"
+        },
+        "dialogue": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Dialogue",
+          "type": "array"
+        },
+        "label": {
+          "default": "",
+          "maxLength": 65,
+          "title": "Label",
+          "type": "string"
+        },
+        "environment": {
+          "default": "abstract",
+          "title": "Environment",
+          "type": "string"
+        },
+        "actors": {
+          "items": {
+            "$ref": "#/$defs/Actor"
+          },
+          "maxItems": 4,
+          "minItems": 1,
+          "title": "Actors",
+          "type": "array"
+        },
+        "prop": {
+          "default": "none",
+          "enum": [
+            "none",
+            "phone",
+            "clock",
+            "box",
+            "coin",
+            "book",
+            "plant",
+            "door",
+            "lock",
+            "planet",
+            "flag",
+            "water",
+            "evidence",
+            "ball",
+            "steps"
+          ],
+          "title": "Prop",
+          "type": "string"
+        },
+        "prop_label": {
+          "default": "",
+          "maxLength": 35,
+          "title": "Prop Label",
+          "type": "string"
+        },
+        "camera": {
+          "default": "wide",
+          "title": "Camera",
+          "type": "string"
+        },
+        "transition": {
+          "default": "cut",
+          "enum": [
+            "cut",
+            "dissolve",
+            "wipe",
+            "match"
+          ],
+          "title": "Transition",
+          "type": "string"
+        },
+        "lighting": {
+          "default": "day",
+          "enum": [
+            "day",
+            "night",
+            "warm",
+            "dramatic"
+          ],
+          "title": "Lighting",
+          "type": "string"
+        },
+        "music": {
+          "default": "curious",
+          "enum": [
+            "curious",
+            "comic",
+            "tense",
+            "warm",
+            "wonder",
+            "silence"
+          ],
+          "title": "Music",
+          "type": "string"
+        },
+        "cues": {
+          "items": {
+            "$ref": "#/$defs/Cue"
+          },
+          "maxItems": 20,
+          "title": "Cues",
+          "type": "array"
+        },
+        "pause": {
+          "default": 0.45,
+          "maximum": 2,
+          "minimum": 0.1,
+          "title": "Pause",
+          "type": "number"
+        },
+        "duration": {
+          "default": 0,
+          "maximum": 45,
+          "minimum": 0,
+          "title": "Duration",
+          "type": "number"
+        },
+        "start": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Start",
+          "type": "number"
+        },
+        "end": {
+          "default": 0,
+          "minimum": 0,
+          "title": "End",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "beat",
+        "actors"
+      ],
+      "title": "Scene",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "maxLength": 700,
+          "pattern": "^https://",
+          "title": "Url",
+          "type": "string"
+        },
+        "claim": {
+          "maxLength": 1200,
+          "minLength": 10,
+          "title": "Claim",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "claim"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1,
+      "default": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "title": {
+      "maxLength": 180,
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "brief": {
+      "maxLength": 4000,
+      "minLength": 1,
+      "title": "Brief",
+      "type": "string"
+    },
+    "niche": {
+      "title": "Niche",
+      "type": "string"
+    },
+    "requested_minutes": {
+      "exclusiveMinimum": 0,
+      "maximum": 30,
+      "title": "Requested Minutes",
+      "type": "number"
+    },
+    "seed": {
+      "default": 42,
+      "maximum": 2147483647,
+      "minimum": 0,
+      "title": "Seed",
+      "type": "integer"
+    },
+    "provenance": {
+      "enum": [
+        "authored-example",
+        "reviewed-plan",
+        "local-model"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    },
+    "factual_status": {
+      "enum": [
+        "fiction",
+        "source-grounded",
+        "unverified"
+      ],
+      "title": "Factual Status",
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "maxItems": 30,
+      "title": "Sources",
+      "type": "array"
+    },
+    "scenes": {
+      "items": {
+        "$ref": "#/$defs/Scene"
+      },
+      "maxItems": 200,
+      "minItems": 1,
+      "title": "Scenes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "title",
+    "brief",
+    "niche",
+    "requested_minutes",
+    "provenance",
+    "factual_status",
+    "scenes"
+  ],
+  "title": "Plan",
+  "type": "object"
+}
