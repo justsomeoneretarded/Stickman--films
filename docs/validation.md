@@ -1,14 +1,66 @@
 # Validation record
 
-Development on a 3-vCPU Linux CPU environment, Python 3.12.14, FFmpeg 7.1.5.
-Results below will be finalized after the rendered outputs and hosted workflow runs
-are inspected. No professional artistic readiness is claimed.
+Development: 3-vCPU Linux, Python 3.12.14, FFmpeg 7.1.5. Hosted tests run on
+ubuntu-24.04. Technical acceptance is separate from professional artistic acceptance.
 
-- Original 22-second benchmark rendered at 1920×1080, 60 FPS.
-- Real codec/decode, audio, duration and freeze/black tests are implemented.
-- Every implemented action is rendered by unit tests, including its midpoint.
-- Ten comparison plans are authored fixtures, not generated arbitrary-title results.
-- Single-title local Qwen writing is tested separately from these fixtures.
+## Benchmark
 
-See each delivered artifact's `quality-report.json`, `resources.json`,
-`contact-sheet.jpg` and `motion-preview.mp4` for measured results.
+[Corrected production run](https://github.com/justsomeoneretarded/Stickman--films/actions/runs/39580002572)
+[1080p60 benchmark artifact](https://github.com/justsomeoneretarded/Stickman--films/actions/runs/39580002572/artifacts/12336570119)
+
+The hosted benchmark measures **22.00 seconds**, 1920×1080, 60 FPS, H.264/yuv420p,
+stereo AAC 48 kHz. It passes all technical gates: full decode, duration, contiguous
+timeline, black/freeze detection and headroom. At 60 motion samples/second:
+
+- Maximum planted-foot speed: **0.00 design pixels/second**.
+- Leg reach error and ground penetration: **0.00 pixels**.
+- Maximum leg length error: less than **0.000001 pixels**.
+- Peak camera acceleration: **76.0 design units/second²** (after fixing tracking onset).
+- The run includes a flight interval and finishes with both feet down.
+
+Contact sheets and a 12-frame stride sequence were visually inspected. This checks
+composition, proportions, contacts and prop continuity; it is not a claim of full
+human playback/listening review. The rig remains stylized, with limited head-turn
+projection and relatively restrained secondary motion. The final output is ready
+for artistic evaluation, not automatically certified professional animation.
+
+## Tests
+
+82 tests pass locally, including actual MP4 encoding/decoding, every action and prop,
+strict plan validation, duration bounds, continuous speed ramps, bone lengths,
+foot contacts, running flight, stopping, camera acceleration and narration guards.
+The production and test workflow YAMLs pass actionlint 1.7.12. Hosted CI also passed.
+The current workflow run links will be finalized after all production jobs complete.
+
+## Complete media and writing
+
+An initial 75-second reviewed psychology fixture rendered to **73.416667 seconds**
+at 1080p60 and passed all technical gates. Its storyboard was inspected and improved
+with a seated desk composition and a visible mountain metaphor.
+
+Ten distinct authored comparison scripts are reviewed fixtures, not arbitrary-title
+writer output. They use separate narration, voices, moods, actions and shot choices.
+The corrected production comparison is rendering; delivered reports are authoritative.
+
+The first small Qwen2.5-1.5B trials showed repetitive/unresolved storytelling. Those
+failures motivated outline planning, bounded JSON lengths and repetition/completeness
+guards, plus a trial of a larger free Apache-2.0 Qwen3-4B model. No model is described
+as a professionally qualified writer. Single-title writing is evaluated separately
+from the ten reviewed fixtures.
+
+## Renderer cost probe
+
+Three 1080p Cairo frames including PNG output took **1.08 seconds**. Three simple
+mesh proxy frames in CPU Cycles, four samples, one thread, took **51.60 seconds**.
+The proxy scene is not equivalent art, and this is a tiny CPU cost probe, not a full
+Blender-versus-vector quality or throughput study. Reproduce the optional Blender
+probe with `blender -b -t 1 -P scripts/blender_cost_probe.py -- work/blender-probe`.
+Actual cold/warm encode timings are recorded in each artifact's resources.json.
+
+## Remaining evaluation
+
+No human listening panel, ASR fidelity gate, audience study, autonomous source
+entailment checker, general collision system or universal scene compiler is claimed.
+Word timings are estimates within measured utterances. Factual scripts need source
+review; the history/survival fixtures are explicitly fictional. Complex science,
+historical maps, combat and elaborate interactions need additional authored clips.

@@ -137,6 +137,9 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
         if action in ("reach","pickup","exchange") and side==1:
             a=math.sin(math.pi*smooth(u))**.7
             wrist=(shoulder[0]+facing*mix(25,91,a),shoulder[1]+mix(74,113,a))
+        if action=="knock" and side==1:
+            a=smooth(u/.15);knock=math.sin(min(1,u/.6)*6*math.pi)*8*(1-smooth((u-.6)/.2))
+            wrist=(shoulder[0]+facing*mix(25,96+knock,a),shoulder[1]+mix(74,3,a))
         if action in ("point","shield") and side==1:
             a=smooth(u/.25)
             wrist=(shoulder[0]+facing*mix(25,99,a),shoulder[1]+mix(74,-10,a))

@@ -11,7 +11,7 @@ Reviewed 2026-10-21:
 |---|---|---|
 | Kokoro-82M v1.0 weights/voices | Apache-2.0, [model card](https://huggingface.co/hexgrad/Kokoro-82M/blob/f3ff3571791e39611d31c381e3a41a3af07b4987/README.md) | Local narrator; stock voices, no cloning |
 | kokoro-onnx 0.4.9 | MIT, [source](https://github.com/thewh1teagle/kokoro-onnx) | ONNX runtime adapter |
-| Qwen2.5-1.5B-Instruct GGUF | Apache-2.0, [pinned repository](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/tree/91cad51170dc346986eccefdc2dd33a9da36ead9) | Optional CPU story writer |
+| Qwen3-4B-Instruct-2507 GGUF | Apache-2.0, [pinned repository](https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/tree/a06e946bb6b655725eafa393f4a9745d460374c9) | Optional CPU story writer |
 | llama-cpp-python | MIT | CPU inference |
 | Cairo | LGPL-2.1/MPL-1.1 dual terms | System rendering library |
 | FFmpeg | LGPL/GPL depending build; libx264 build is GPL | Encoding executable; not distributed here |
@@ -33,3 +33,7 @@ Kokoro offers voice identity and speaking-rate controls here, not convincing rel
 emotional direction. Compare delivered samples by listening before commercial use.
 Narrative sources are listed separately in each plan and do not license unrelated
 assets. Generated outputs need user factual and artistic review before publishing.
+
+The upstream Qwen3-4B-Instruct-2507 model also declares Apache-2.0 at revision
+`cdbee75f17c01a7cc42f958dc650907174af0554`. The quantized conversion declares
+the same license; its exact file checksum is pinned in config/models.json.

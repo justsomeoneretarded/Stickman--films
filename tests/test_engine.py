@@ -107,3 +107,27 @@ def test_prop_vocabulary_has_renderable_assets(kind):
     context=cairo.Context(surface)
     draw_prop(context,kind,160,200,t=1,progress=.5,label=kind)
     assert len(surface.get_data())==320*240*4
+
+
+def test_writer_rejects_truncation_but_allows_fictional_identifiers():
+    from stickfilm.writer import validate_spoken_text
+    validate_spoken_text("Milo filed ticket 1203, then took his sandwich to lunch.")
+    with pytest.raises(ValueError,match="truncated"):
+        validate_spoken_text("Milo arrived just after, s")
+    with pytest.raises(ValueError,match="Unsourced"):
+        validate_spoken_text("Research shows everyone needs this habit.")
+
+
+def test_literal_direction_preserves_door_state_and_actor_identity():
+    from stickfilm.direction import refine
+    p=benchmark_plan();base=p.scenes[0]
+    p.scenes=[]
+    for i,words in enumerate(["Milo says the door won't open.","Ada pulls the handle, and the door swings open.","Milo stares at the now-open door."]):
+        s=base.model_copy(deep=True);s.id=f's{i}';s.narration=words;s.prop='door'
+        s.actors[0].action='sprint';p.scenes.append(s)
+    refine(p)
+    assert p.scenes[0].prop_motion=='still'
+    assert p.scenes[0].actors[0].action=='think'
+    assert p.scenes[1].prop_motion=='open'
+    assert p.scenes[1].actors[0].character=='friend'
+    assert p.scenes[2].prop_state=='open'

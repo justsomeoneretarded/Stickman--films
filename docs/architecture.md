@@ -25,12 +25,16 @@ without frame PNGs or a disk-heavy intermediate. H.264 CRF18, yuv420p, 60 FPS an
 192 kb/s are the production targets. Interpolation is in the animation timeline;
 optical flow is not used to hide bad motion. A development quality preset is explicit.
 
-The local writer uses Apache-2.0 Qwen2.5-1.5B Q4_K_M with JSON grammar constraints.
+The local writer uses Apache-2.0 Qwen3-4B-Instruct-2507 Q4_K_M with JSON grammar constraints.
 It generates new narration and executable shot choices for title/brief. The small
 CPU model is not an expert screenwriter or researcher. Bounded scene batches keep
 context/memory requirements practical; every generated scene passes the same strict
 schema. The fixed comparison examples are separate and identify their provenance.
 A reviewed-plan path is the practical higher-quality alternative without paid APIs.
+The 1.5B baseline was rejected for repetition and weak payoffs; the pinned 4B
+model improves instruction following but remains a constrained CPU writer.
+A small literal-event director corrects common mismatches (knocking, laughing,
+surprise and opening-door continuity). It is not a general natural-language scene compiler.
 
 Kokoro ONNX INT8 is the chosen speech backend: modest memory, fast CPU inference and
 upstream Apache-2.0 weights. Segment durations are measured from the real WAVs.
@@ -49,3 +53,17 @@ Blender is available in development but is not required in Actions. Full mesh li
 free 3D camera or physically simulated props could justify a Blender backend. The
 current renderer targets restrained drawn storytelling with low startup/RAM costs.
 See `docs/validation.md` for measured rendering work rather than an assumed throughput.
+
+## Explicit prop direction
+
+Reviewed scenes can add `props` with world coordinates, scale, label and timed
+motion. `attach_to` anchors a prop to the left/right wrist of `actor_index`; its x/y
+then become offsets from that wrist. World props support reveal/grow, opening doors,
+slide, or a quadratic vertical drop with `travel_y`. These authored instructions
+support concrete visual demonstrations; the local writer currently selects one main
+prop per shot and does not automatically infer multi-object demonstrations.
+
+The updated sample set includes a seated desk composition, actual carried envelopes
+and boxes, a three-bucket cash illustration, an opening door and paired gravity drops.
+Those are reviewed fixtures, not a claim that arbitrary science demonstrations can
+be inferred correctly by a small model. All prop kinds have a render regression test.

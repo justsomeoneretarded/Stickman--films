@@ -9,7 +9,7 @@ NICHES = ["Psychology & Human Behavior", "Relatable Comedy", "Money & Business",
           "History & Geopolitics", "What-if & Survival", "Storytelling & Life Lessons",
           "Science Explained", "Self-improvement", "Technology & Cybersecurity", "Mysteries & Scams"]
 ENVIRONMENTS = ["bedroom", "classroom", "office", "city", "restaurant", "bank", "forest", "desert", "island", "laboratory", "battlefield", "abstract", "digital"]
-ACTIONS = ["idle", "walk", "run", "sprint", "turn", "reach", "pickup", "surprise", "think", "fear", "happy", "angry", "embarrassed", "sad", "excited", "frustrated", "hesitate", "jump", "fall", "stairs", "sit", "stand", "crouch", "point", "celebrate", "shield", "exchange", "inspect"]
+ACTIONS = ["idle", "walk", "run", "sprint", "turn", "reach", "pickup", "surprise", "think", "fear", "happy", "angry", "embarrassed", "sad", "excited", "frustrated", "hesitate", "jump", "fall", "stairs", "sit", "stand", "crouch", "point", "celebrate", "shield", "exchange", "inspect", "knock"]
 PROPS = ["none", "phone", "clock", "box", "coin", "book", "plant", "door", "lock", "planet", "flag", "water", "evidence", "ball", "steps", "laptop", "desk", "chair", "letter", "mountain", "bridge", "umbrella", "receipt", "bottle", "shoe", "pump", "boat"]
 CAMERAS = ["wide", "follow", "dolly-in", "dolly-out", "pan", "tilt", "zoom", "reveal", "establishing", "over-shoulder", "close-up", "tracking"]
 
@@ -63,6 +63,7 @@ class Scene(Strict):
     actors: list[Actor] = Field(min_length=1, max_length=4)
     prop: Literal[tuple(PROPS)] = "none"
     props: list[Prop] = Field(default_factory=list, max_length=16)
+    prop_state: Literal["closed", "open"] = "closed"
     prop_motion: Literal["still", "open", "reveal", "grow"] = "still"
     prop_label: str = Field(default="", max_length=35)
     camera: str = "wide"

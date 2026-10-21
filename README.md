@@ -21,7 +21,7 @@ Open **Actions → Cinematic Stickman Video Generator → Run workflow**.
    draft is 640×360 / 24 FPS. The mandatory benchmark always runs at 1080p60.
 5. Download the artifacts near the bottom of the completed run.
 
-**Single Video** uses a genuine local Qwen2.5-1.5B quantized model, not a fixed script
+**Single Video** uses a genuine local Qwen3-4B-Instruct-2507 quantized model, not a fixed script
 lookup. No paid API, account, key or credit card is required by the engine. The small
 model's writing quality is limited, and it can fail validation. A bounded rewrite is
 attempted if measured narration cannot fit the duration. No audio stretching or filler.
@@ -82,7 +82,7 @@ stickfilm produce --title 'The Door That Only Opened After Lunch' \
   --minutes 0.6 --niche 'Relatable Comedy' --out output/door --preset preview
 ```
 
-The local writer's 1.1 GB model and 115 MB speech models are versioned and checksum
+The local writer's approximately 2.5 GB model and 115 MB speech models are versioned and checksum
 verified, cached in Actions, never checked into Git. The writer runs on two CPU
 threads; larger models may improve writing but are not assumed available on hosted runners.
 
@@ -101,3 +101,12 @@ threads; larger models may improve writing but are not assumed available on host
 
 [Architecture](docs/architecture.md) · [Setup](docs/setup.md) ·
 [Troubleshooting](docs/troubleshooting.md) · [Licenses](assets/licenses/README.md)
+
+## Rendered frame review
+
+![Original character staging, meaningful props and night readability](docs/images/staging-review.jpg)
+
+These frames demonstrate the implemented visual vocabulary, not professional
+artistic qualification. The Actions artifacts contain actual playable MP4s.
+
+![Benchmark contact sheet](docs/images/benchmark-contact-sheet.jpg)

@@ -12,6 +12,7 @@ from .render import PRESETS,render_scene,assemble
 from .voice import narrate,write_wav
 from .audio import sound_mix
 from .quality import assess
+from .resources import Monitor
 import numpy as np
 
 
@@ -19,6 +20,7 @@ def produce(plan: Plan,out,model_dir,preset="production",benchmark=False):
     started=time.monotonic();out=Path(out);out.mkdir(parents=True,exist_ok=True)
     w,h,fps=PRESETS[preset];requested=plan.requested_minutes*60
     if shutil.disk_usage(out).free<1024**3:raise RuntimeError("Need at least 1 GiB of free disk")
+    monitor=Monitor(out)
     try:
         if benchmark:
             (out/'voice').mkdir(exist_ok=True)
@@ -58,3 +60,5 @@ def produce(plan: Plan,out,model_dir,preset="production",benchmark=False):
     except BaseException as e:
         (out/'failure.json').write_text(json.dumps({"type":type(e).__name__,"message":str(e),"traceback":traceback.format_exc()},indent=2))
         raise
+    finally:
+        monitor.stop()

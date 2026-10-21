@@ -42,7 +42,9 @@ def generate(title,brief,minutes,niche,model_dir,out,seed=42,sources=None,word_f
     from llama_cpp import Llama,LlamaGrammar
     out=Path(out);out.mkdir(parents=True,exist_ok=True)
     sources=sources or []
-    model=Path(os.getenv('WRITER_MODEL',str(Path(model_dir)/'qwen2.5-1.5b-instruct-q4_k_m.gguf')))
+    from .models import ROOT
+    filename=json.loads((ROOT/'config/models.json').read_text())['writer']['file']
+    model=Path(os.getenv('WRITER_MODEL',str(Path(model_dir)/filename)))
     if not model.exists():raise FileNotFoundError('Missing local writer model; run stickfilm models --local. Alternatively pass --plan with a reviewed JSON plan.')
     llm=Llama(model_path=str(model),n_ctx=8192,n_threads=2,n_batch=256,seed=seed,verbose=False,chat_format='chatml')
 
@@ -51,7 +53,7 @@ def generate(title,brief,minutes,niche,model_dir,out,seed=42,sources=None,word_f
     words_per_scene=max(13,round(minutes*155*word_factor/count))
     allshots=[];raws=[]
     outline_grammar=LlamaGrammar.from_json_schema(json.dumps(Outline.model_json_schema()),verbose=False)
-    outline_result=llm.create_chat_completion(messages=[{'role':'system','content':'You write original fictional stories. Return JSON with hook, conflict, discovery, ending. Every story needs a concrete resolved ending with a visible change. No repeated failed attempts as an ending. No factual claims without source notes.'},{'role':'user','content':f'Title: {title}. Brief: {brief}. Niche: {niche}. Create a short story arc using Milo and Ada. Source context: {json.dumps(sources)}'}],grammar=outline_grammar,temperature=.55,max_tokens=900,seed=seed,repeat_penalty=1.12)
+    outline_result=llm.create_chat_completion(messages=[{'role':'system','content':'You write original fictional stories. Return JSON with hook, conflict, discovery, ending. Each field is ONE complete short sentence of at most 20 words. Follow the brief directly; do not add an unrelated mystery or extraneous characters. Every story needs a concrete resolved ending with a visible change. No repeated failed attempts as an ending. No factual claims without source notes.'},{'role':'user','content':f'Title: {title}. Brief: {brief}. Niche: {niche}. Create a short story arc using Milo and Ada. Source context: {json.dumps(sources)}'}],grammar=outline_grammar,temperature=.55,max_tokens=900,seed=seed,repeat_penalty=1.12)
     outline=Outline.model_validate_json(outline_result['choices'][0]['message']['content'])
     (out/'writer-outline.json').write_text(outline.model_dump_json(indent=2))
     if sources:
@@ -63,7 +65,7 @@ Niche: {niche}. Title: {title}. Brief: {brief}.
 {policy}
 The story must satisfy the brief within those limits. Start with an intriguing concrete situation, build a conflict, discover something, end with a payoff. No generic introduction, no presenter, no references to watching a video.
 Each scene has narration (about {words_per_scene} words), a brief editorial label (max 50 characters), environment, character action, prop, camera, and music mood.
-Write narration that can be spoken naturally, not stage directions. Every shot should use its action and prop to show what is being said. Hero Milo and friend Ada are available. Avoid impossible actions: a finite procedural animation engine executes these scenes.
+Write narration that can be spoken naturally, not stage directions. Each narration must be a COMPLETE short sentence or two, ending in punctuation. Stay close to the requested word count. Do not copy the outline phrasing or include every detail of it. Every shot should use its action and prop to show what is being said. Hero Milo and friend Ada are available. Avoid impossible actions: a finite procedural animation engine executes these scenes.
 Use prop_motion=open when a door actually opens; otherwise still. Choose different actions, settings and cameras when useful. Do not repeat scenes or sentences. No subtitles or JSON examples inside narration.
 Mandatory story arc: {outline.model_dump_json()}
 Source notes: {json.dumps(sources) if sources else 'NONE — fiction only'}'''
@@ -87,7 +89,7 @@ Source notes: {json.dumps(sources) if sources else 'NONE — fiction only'}'''
     scenes=[]
     for i,s in enumerate(allshots):
         if len(s.narration.split())<8:raise ValueError('Local writer returned an empty/short narration; use a reviewed plan')
-        if re.search(r'\b\d{4}\b|\d+\s*%',s.narration) and not sources:raise ValueError('Unsourced date/statistic in local script; supply reviewed source notes')
+        validate_spoken_text(s.narration,sources)
         action=s.action
         beat='hook' if i==0 else 'setup' if i==1 else 'payoff' if i==len(allshots)-1 else 'conflict' if i<len(allshots)/2 else 'discovery'
         actor=Actor(action=action,x=940 if action in ('reach','pickup','inspect') else 480,travel=350 if action in ('walk','stairs') else 520 if action in ('run','sprint') else 0)
@@ -101,6 +103,15 @@ Source notes: {json.dumps(sources) if sources else 'NONE — fiction only'}'''
             if overlap>.80:raise ValueError(f'Writer repeated substantially the same narration in {a.id}/{b.id}; revise with a reviewed plan or a larger model')
     if not sources:scenes[0].label='FICTIONAL STORY / '+scenes[0].label[:45]
     p=Plan(title=title,brief=brief,niche=niche,requested_minutes=minutes,seed=seed,provenance='local-model',factual_status='source-grounded' if sources else 'fiction',sources=sources,scenes=scenes)
+    from .direction import refine
+    p=refine(p)
     (out/'generated-plan.json').write_text(p.model_dump_json(indent=2))
     del llm
     return p
+
+
+def validate_spoken_text(text,sources=None):
+    if not re.search(r"[.!?][\"'”’]?$",text.strip()):
+        raise ValueError("Writer returned truncated or unfinished narration; raw output preserved. Use a reviewed plan or rewrite with shorter complete sentences.")
+    if not sources and re.search(r"\b(research (shows|proves)|studies (show|prove)|scientists (found|discovered)|\d+\s*% of (people|patients|adults))\b",text,re.I):
+        raise ValueError("Unsourced factual claim in local script; supply reviewed source notes")

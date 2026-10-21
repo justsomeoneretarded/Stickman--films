@@ -338,6 +338,15 @@
           "title": "Props",
           "type": "array"
         },
+        "prop_state": {
+          "default": "closed",
+          "enum": [
+            "closed",
+            "open"
+          ],
+          "title": "Prop State",
+          "type": "string"
+        },
         "prop_motion": {
           "default": "still",
           "enum": [

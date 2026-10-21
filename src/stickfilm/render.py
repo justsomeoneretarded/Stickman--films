@@ -45,7 +45,7 @@ def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
         prop_y=prop_y*(1-w)+(primary.prop_hand[1]+30)*w
     main_scale=.75 if benchmark else 1.1
     if scene.prop_motion in ("grow","reveal"):main_scale*=max(.001,smooth((u-.15)/.6))
-    if not benchmark or t>14:draw_prop(c,kind,prop_x,prop_y,t,scale=main_scale,label=scene.prop_label,progress=smooth((u-.25)/.45) if scene.prop_motion=="open" else 0)
+    if not benchmark or t>14:draw_prop(c,kind,prop_x,prop_y,t,scale=main_scale,label=scene.prop_label,progress=1 if scene.prop_state=="open" else smooth((u-.25)/.45) if scene.prop_motion=="open" else 0)
     for obj in scene.props:
         q=smooth((u-obj.start_at)/max(.001,obj.end_at-obj.start_at))
         if obj.motion=="reveal" and q<=0:continue
