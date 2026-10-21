@@ -68,3 +68,14 @@ Intermediate scene MP4s and voice WAVs are retained locally for reruns. Scene ke
 include content, renderer sources, resolution and FPS. They are decode-checked before
 reuse. GitHub's model cache survives separate runs; scene caches currently do not.
 Only model/dependency caches are restored automatically on fresh Actions runners.
+
+## Repair and consolidation
+
+If one niche fails, correct its plan or voice and launch a Single Video run with
+that reviewed plan's exact title/brief. Run **Consolidate Comparison Reports**,
+entering the original comparison run ID and the newer repair run ID. It downloads
+read-only artifacts, prefers the explicitly supplied repair, and fails unless all
+ten niches have passing quality reports. The original failure remains visible.
+
+Authored action-only scenes can set an explicit scene duration with empty narration;
+that directed timing is retained. They are not automatically padded to a target.

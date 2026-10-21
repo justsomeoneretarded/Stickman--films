@@ -65,7 +65,10 @@ def narrate(plan,model_dir,out,fps=60,rate_factor=1.):
     for scene in plan.scenes:
         samples,sr=n.speak(voice_text(scene),out/f'{scene.id}.wav',voice,base_speed*rate_factor)
         audio_seconds=len(samples)/sr
-        scene.duration=round((audio_seconds+scene.pause)*fps)/fps
+        # Authored action-only sequences retain their directed timing.
+        # They are not filler and do not inherit a fake narration duration.
+        timing=scene.duration if not voice_text(scene) and scene.duration>0 else audio_seconds+scene.pause
+        scene.duration=round(timing*fps)/fps
         if scene.duration>45:raise ValueError(f"Scene {scene.id} too long ({scene.duration:.1f}s); split its narration")
         scene.start=offset;scene.end=offset+scene.duration;offset=scene.end
         segments.append({"scene":scene.id,"start":scene.start,"audio_seconds":audio_seconds,"end":scene.end,"voice":voice,"speed":base_speed*rate_factor,"text":voice_text(scene),"path":str(out/f'{scene.id}.wav')})

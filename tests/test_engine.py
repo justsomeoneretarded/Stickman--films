@@ -148,3 +148,19 @@ def test_comparison_requires_ten_results_and_prefers_explicit_repairs(tmp_path):
     data=json.loads((tmp_path/'result.json').read_text())
     assert len(data)==10 and all(x['technical_pass'] for x in data.values())
     assert data[NICHES[6]]['actual_seconds']==81.58
+
+
+def test_measured_narration_does_not_collapse_authored_action_only_scene(tmp_path,monkeypatch):
+    import numpy as np
+    import stickfilm.voice as voice
+    class SilentTestNarrator:
+        def __init__(self,model_dir):pass
+        def speak(self,text,path,identity,speed):
+            samples=np.zeros(2400,dtype=np.float32);voice.write_wav(path,samples)
+            return samples,24000
+    monkeypatch.setattr(voice,'Narrator',SilentTestNarrator)
+    p=benchmark_plan();p.scenes[0].duration=4
+    segments=voice.narrate(p,'unused',tmp_path)
+    assert p.scenes[0].duration==4
+    assert segments[0]['audio_seconds']==.1
+    assert segments[0]['end']==4

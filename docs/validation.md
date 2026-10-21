@@ -26,11 +26,11 @@ for artistic evaluation, not automatically certified professional animation.
 
 ## Tests
 
-82 tests pass locally, including actual MP4 encoding/decoding, every action and prop,
+86 tests pass locally, including actual MP4 encoding/decoding, every action and prop,
 strict plan validation, duration bounds, continuous speed ramps, bone lengths,
 foot contacts, running flight, stopping, camera acceleration and narration guards.
 The production and test workflow YAMLs pass actionlint 1.7.12. Hosted CI also passed.
-The current workflow run links will be finalized after all production jobs complete.
+The final download links and per-niche results are in [deliverables.md](deliverables.md).
 
 ## Complete media and writing
 
@@ -40,13 +40,15 @@ with a seated desk composition and a visible mountain metaphor.
 
 Ten distinct authored comparison scripts are reviewed fixtures, not arbitrary-title
 writer output. They use separate narration, voices, moods, actions and shot choices.
-The corrected production comparison is rendering; delivered reports are authoritative.
+All ten final niche videos pass after one separately documented science-voice repair.
+The consolidated report workflow passed. See [the final artifact index](deliverables.md).
 
 The first small Qwen2.5-1.5B trials showed repetitive/unresolved storytelling. Those
 failures motivated outline planning, bounded JSON lengths and repetition/completeness
-guards, plus a trial of a larger free Apache-2.0 Qwen3-4B model. No model is described
-as a professionally qualified writer. Single-title writing is evaluated separately
-from the ten reviewed fixtures.
+guards, and adoption of a larger free Apache-2.0 Qwen3-4B model. No model is described
+as a professionally qualified writer. Single-title writing was tested separately on GitHub: the generated office story
+passes at 29.50 seconds against 36 requested (1080p60). Human creative/listening review
+and longer automatic productions remain unqualified.
 
 ## Renderer cost probe
 

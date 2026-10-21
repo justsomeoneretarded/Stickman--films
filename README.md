@@ -9,6 +9,8 @@ The finite action library cannot visualize every arbitrary brief. Technical acce
 and professional artistic acceptance are deliberately separate. See
 [quality standards](docs/quality-standards.md) and [validation results](docs/validation.md).
 
+[Download the benchmark, ten niche videos, automatic-writing example and reports](docs/deliverables.md).
+
 ## Run on GitHub
 
 Open **Actions → Cinematic Stickman Video Generator → Run workflow**.
