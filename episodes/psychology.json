@@ -1,0 +1,1050 @@
+{
+  "version": 1,
+  "title": "Your Brain Isn't Lazy\u2014Your Goals Might Be the Problem",
+  "brief": "An original, research-informed five-minute story about Milo, who mistakes borrowed ambitions for personal failure. Ada helps him question a wall of impossible goals, choose one meaningful project and build a specific first step. Warm, tactile 2.5D visual metaphors: a goal wall, a backpack of expectations, a rope tied to a mountain, notifications, a tiny staircase and a forgiving progress calendar. Empathetic, provocative, never diagnostic; distinguish poor goal fit from time, health and material constraints. End with one imperfect page, not a miraculous life transformation.",
+  "niche": "Psychology & Human Behavior",
+  "requested_minutes": 5.0,
+  "seed": 412,
+  "provenance": "reviewed-plan",
+  "factual_status": "source-grounded",
+  "sources": [
+    {
+      "url": "https://selfdeterminationtheory.org/SDT/documents/1999_SheldonElliot.pdf",
+      "claim": "Sheldon & Elliot (1999), DOI 10.1037/0022-3514.76.3.482: self-concordant goals were associated with sustained effort and attainment. This does not diagnose laziness or guarantee success. The characters and their outcomes are fictional."
+    },
+    {
+      "url": "https://prospectivepsych.org/sites/default/files/pictures/Gollwitzer_Implementation-intentions-1999.pdf",
+      "claim": "Gollwitzer (1999), DOI 10.1037/0003-066X.54.7.493: review of implementation intentions linking anticipated situations to goal-directed responses. The tea-and-writing example is an original fictional illustration, not a tested treatment."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "psychology-01",
+      "beat": "hook",
+      "narration": "Milo has five alarms, six ambitious goals, and one private theory: he is lazy. But look closely. He is working extremely hard at feeling like a failure. What if the problem isn't his brain? What if some of these goals were never really his?",
+      "dialogue": [],
+      "label": "THE HARDEST WORK: FEELING BEHIND",
+      "design": "psychology",
+      "setpiece": "goal_wall",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "surprise",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "frustrated",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "frustrated",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-02",
+      "beat": "setup",
+      "narration": "At six, the plan looks beautiful. Learn a language. Build a business. Get fit. Become the calm person in every argument. By breakfast, Milo has already failed to become four different people. The day hasn't started, but the verdict has.",
+      "dialogue": [],
+      "label": "SIX GOALS. ONE HUMAN.",
+      "design": "psychology",
+      "setpiece": "goal_wall",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "surprise",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "surprise",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-03",
+      "beat": "setup",
+      "narration": "He packs those expectations for work. A colleague gets promoted; another box lands on his back. A stranger posts a perfect morning; another arrives. None of these people ordered him to compete. Somehow, he still signed himself up.",
+      "dialogue": [],
+      "label": "BORROWED EXPECTATIONS HAVE WEIGHT",
+      "design": "psychology",
+      "setpiece": "goal_backpack",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 270.0,
+          "travel": 420.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-04",
+      "beat": "setup",
+      "narration": "That evening, his friend Ada finds him reorganizing the same list. Again. New colors, new app, same dread. She asks a rude little question: if nobody could see you achieving this, which goal would you still want?",
+      "dialogue": [],
+      "label": "THE QUESTION THAT RUINS THE LIST",
+      "design": "psychology",
+      "setpiece": "goal_wall",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-05",
+      "beat": "progression",
+      "narration": "Milo points to the business first. Then stops. He likes the picture of announcing it. He hates the actual work. The language is different: he wants to speak with his grandmother. Both goals look impressive on paper. Only one has a person inside it.",
+      "dialogue": [],
+      "label": "APPLAUSE, OR A REASON?",
+      "design": "psychology",
+      "setpiece": "identity_mirror",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "point",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "dissolve",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-06",
+      "beat": "discovery",
+      "narration": "Researchers call one version of this distinction self-concordance: how well a goal fits your interests and values. Sheldon and Elliot's research linked more self-concordant goals with sustained effort and attainment. That is evidence about motivation, not a guarantee that meaningful goals become easy.",
+      "dialogue": [],
+      "label": "DOES THE GOAL FIT YOUR VALUES?",
+      "design": "psychology",
+      "setpiece": "tug_of_war",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-07",
+      "beat": "conflict",
+      "narration": "And this needs a boundary. Exhaustion, illness, depression, money, care work, and an impossible schedule can all limit what someone can do. A better goal cannot manufacture sleep or childcare. Calling every struggle a mindset problem would just be another unfair box.",
+      "dialogue": [],
+      "label": "CONSTRAINTS ARE REAL",
+      "design": "psychology",
+      "setpiece": "goal_backpack",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sad",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "sad",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-08",
+      "beat": "progression",
+      "narration": "For Milo, though, there is something he can change. He crosses out the business for now. Not because business is bad. Because pursuing somebody else's version of success is an expensive way to avoid deciding what he actually wants.",
+      "dialogue": [],
+      "label": "A CHOICE, NOT A MORAL VERDICT",
+      "design": "psychology",
+      "setpiece": "goal_wall",
+      "setpiece_variant": 1,
+      "acting": [],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-09",
+      "beat": "conflict",
+      "narration": "Then he notices an uncomfortable exception. The story he wants to write is absolutely his. He has talked about it for years. Yet the blank page still scares him. So a meaningful goal can survive the first question and still need a better method.",
+      "dialogue": [],
+      "label": "WANTING IT ISN'T THE WHOLE METHOD",
+      "design": "psychology",
+      "setpiece": "writing_desk",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "write",
+          "x": 620,
+          "travel": 0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-10",
+      "beat": "conflict",
+      "narration": "In his imagination, writing a story means dragging an entire mountain into his apartment. Plot. Style. Dialogue. Being good enough. His first step isn't a step. It's a final exam he has invented before writing a single sentence.",
+      "dialogue": [],
+      "label": "HE TURNED THE START INTO AN EXAM",
+      "design": "psychology",
+      "setpiece": "tug_of_war",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-11",
+      "beat": "discovery",
+      "narration": "Ada doesn't tell him to dream smaller. She asks him to make the entrance smaller. Opening a file is not the finished story. It is the door through which a finished story might eventually arrive. Those are different jobs.",
+      "dialogue": [],
+      "label": "KEEP THE AMBITION. LOWER THE ENTRY STEP.",
+      "design": "psychology",
+      "setpiece": "tiny_staircase",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "point",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "dissolve",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-12",
+      "beat": "discovery",
+      "narration": "They replace write a brilliant story with a specific plan: after I put down my evening tea, I open the document and write one rough line. One line can be bad. In fact, being allowed to be bad is part of the plan.",
+      "dialogue": [],
+      "label": "AFTER TEA: ONE ROUGH LINE",
+      "design": "psychology",
+      "setpiece": "writing_desk",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "write",
+          "x": 620,
+          "travel": 0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-13",
+      "beat": "discovery",
+      "narration": "That kind of if-then plan is called an implementation intention. Research reviewed by Peter Gollwitzer describes how linking a situation to an action can help translate intentions into behavior. It is a tool, not a promise, and the chosen action still has to be feasible.",
+      "dialogue": [],
+      "label": "A CUE CONNECTED TO AN ACTION",
+      "design": "psychology",
+      "setpiece": "progress_meter",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-14",
+      "beat": "conflict",
+      "narration": "The next evening, tea lands on the desk. So does a message. Milo reaches for the phone before the document. The old loop has a very convenient entrance too. Apparently, distractions have excellent project management.",
+      "dialogue": [],
+      "label": "THE OTHER PLAN ALREADY HAS A CUE",
+      "design": "psychology",
+      "setpiece": "attention_loop",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "surprise",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "surprise",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "surprise",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "click",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-15",
+      "beat": "discovery",
+      "narration": "He puts the phone across the room and leaves the document open before making tea. This isn't proof of superior discipline. He is changing what is easiest to do next. A tiny environmental change can make his own plan less easy to forget.",
+      "dialogue": [],
+      "label": "MAKE THE NEXT ACTION VISIBLE",
+      "design": "psychology",
+      "setpiece": "writing_desk",
+      "setpiece_variant": 1,
+      "acting": [],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "write",
+          "x": 620,
+          "travel": 0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-16",
+      "beat": "conflict",
+      "narration": "On Tuesday, one line becomes five. On Wednesday, it stays one. On Thursday, a late shift eats the evening. Milo sees the empty square and feels the old verdict returning. There it is: lazy. His brain reaches for a familiar story about itself.",
+      "dialogue": [],
+      "label": "ONE MISSED DAY ISN'T AN IDENTITY",
+      "design": "psychology",
+      "setpiece": "progress_meter",
+      "setpiece_variant": 1,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sad",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "sad",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-17",
+      "beat": "progression",
+      "narration": "But the calendar isn't a courtroom. The useful question is what happened. He needed rest after work. Tomorrow's plan becomes smaller, not more punishing. No midnight repayment session. No heroic restart speech. Just the next reasonable opportunity to return.",
+      "dialogue": [],
+      "label": "INVESTIGATE THE OBSTACLE",
+      "design": "psychology",
+      "setpiece": "progress_meter",
+      "setpiece_variant": 1,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-18",
+      "beat": "payoff",
+      "narration": "A week later, his apartment looks disappointingly normal. No new empire. No perfect morning. One unfinished page sits on the desk. Milo reads a clumsy sentence, laughs, and changes it. For once, his effort is touching the actual thing he cares about.",
+      "dialogue": [],
+      "label": "ONE IMPERFECT PAGE EXISTS",
+      "design": "psychology",
+      "setpiece": "writing_desk",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "write",
+          "x": 620,
+          "travel": 0,
+          "facing": 1,
+          "emotion": "happy",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "dissolve",
+      "lighting": "warm",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-19",
+      "beat": "payoff",
+      "narration": "There is still a mountain. Some days will still be hard. The change is that he can name why he wants to climb it, where the first foothold is, and what support he might need. He has stopped treating every obstacle as evidence against his character.",
+      "dialogue": [],
+      "label": "A REASON. A FIRST STEP. SUPPORT.",
+      "design": "psychology",
+      "setpiece": "tiny_staircase",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "forest",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 270.0,
+          "travel": 420.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "psychology-20",
+      "beat": "closing",
+      "narration": "So before you call yourself lazy, inspect the goal you're carrying. Would you choose it without an audience? Is the first action concrete? Are your constraints being taken seriously? You may need help, rest, a different method, or a different goal. You don't need another box of shame.",
+      "dialogue": [],
+      "label": "WHOSE GOAL ARE YOU CARRYING?",
+      "design": "psychology",
+      "setpiece": "goal_backpack",
+      "setpiece_variant": 2,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "cut",
+      "lighting": "warm",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

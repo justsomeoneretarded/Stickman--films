@@ -30,6 +30,8 @@ def benchmark_pose(t):
         local=t-17 if action=="pickup" else t-20.3 if action=="surprise" else t-15
         duration=3.3 if action=="pickup" else 1.7 if action=="surprise" else 2
         q=pose(Actor(action=action,x=1650,facing=-1),max(0,local),duration)
+        # Retain the broad planted end stance while the upper body turns.
+        for key in q.joints:q.joints[key]=(q.joints[key][0],q.joints[key][1]+10)
         # Blend body transforms over the settling interval; no root jump.
         blend=smooth((t-15)/.65)
         for key in q.joints:

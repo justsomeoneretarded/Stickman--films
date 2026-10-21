@@ -1,5 +1,63 @@
 {
   "$defs": {
+    "ActingBeat": {
+      "additionalProperties": false,
+      "properties": {
+        "at": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "At",
+          "type": "number"
+        },
+        "action": {
+          "enum": [
+            "idle",
+            "think",
+            "surprise",
+            "fear",
+            "happy",
+            "angry",
+            "embarrassed",
+            "sad",
+            "excited",
+            "frustrated",
+            "hesitate",
+            "point",
+            "celebrate",
+            "shield",
+            "write",
+            "phone"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "emotion": {
+          "default": "neutral",
+          "enum": [
+            "neutral",
+            "surprise",
+            "confused",
+            "fear",
+            "happy",
+            "angry",
+            "embarrassed",
+            "sad",
+            "excited",
+            "thinking",
+            "frustrated",
+            "hesitant"
+          ],
+          "title": "Emotion",
+          "type": "string"
+        }
+      },
+      "required": [
+        "at",
+        "action"
+      ],
+      "title": "ActingBeat",
+      "type": "object"
+    },
     "Actor": {
       "additionalProperties": false,
       "properties": {
@@ -281,6 +339,36 @@
           "maxLength": 65,
           "title": "Label",
           "type": "string"
+        },
+        "design": {
+          "default": "classic",
+          "enum": [
+            "classic",
+            "psychology",
+            "outage"
+          ],
+          "title": "Design",
+          "type": "string"
+        },
+        "setpiece": {
+          "default": "none",
+          "title": "Setpiece",
+          "type": "string"
+        },
+        "setpiece_variant": {
+          "default": 0,
+          "maximum": 3,
+          "minimum": 0,
+          "title": "Setpiece Variant",
+          "type": "integer"
+        },
+        "acting": {
+          "items": {
+            "$ref": "#/$defs/ActingBeat"
+          },
+          "maxItems": 8,
+          "title": "Acting",
+          "type": "array"
         },
         "environment": {
           "default": "abstract",

@@ -1,0 +1,22 @@
+{
+  "psychology": [
+    {
+      "url": "https://selfdeterminationtheory.org/SDT/documents/1999_SheldonElliot.pdf",
+      "claim": "Sheldon & Elliot (1999), DOI 10.1037/0022-3514.76.3.482: self-concordant goals were associated with sustained effort and attainment. This does not diagnose laziness or guarantee success. The characters and their outcomes are fictional."
+    },
+    {
+      "url": "https://prospectivepsych.org/sites/default/files/pictures/Gollwitzer_Implementation-intentions-1999.pdf",
+      "claim": "Gollwitzer (1999), DOI 10.1037/0003-066X.54.7.493: review of implementation intentions linking anticipated situations to goal-directed responses. The tea-and-writing example is an original fictional illustration, not a tested treatment."
+    }
+  ],
+  "what-if": {
+    "status": "fiction",
+    "assumptions": [
+      "Public Internet data cannot route for thirty days",
+      "Electricity and local networking remain",
+      "Radio remains possible",
+      "Telephone service varies by system"
+    ],
+    "scope": "No claimed probability, universal payment behavior, guaranteed telephone availability, or real single global kill switch. Day numbers are invented narrative stages."
+  }
+}

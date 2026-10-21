@@ -11,7 +11,8 @@ import cairocffi as cairo
 import numpy as np
 from .drawing import *
 from .world import background,ground,foreground,camera
-from .motion import pose,smooth
+from .motion import scene_poses,smooth
+from .setpieces import draw_setpiece
 
 PRESETS={"draft":(640,360,24),"preview":(1280,720,24),"production":(1920,1080,60)}
 
@@ -28,13 +29,14 @@ def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
         cx,cy,zoom=benchmark_camera(t,focus)
         pan=cx-800
     else:
-        poses=[pose(a,t,duration,ground=650+60*a.depth) for a in scene.actors]
+        poses=scene_poses(scene,t)
         focus=poses[0].root[0]
         cx,cy,zoom=camera(scene,t,duration,focus)
         pan=cx-800
-    background(c,scene.environment,scene.lighting,t,pan)
+    background(c,scene.environment,scene.lighting,t,pan,scene.design)
     c.save();c.translate(800,450);c.scale(zoom,zoom);c.translate(-cx,-cy)
-    ground(c,scene.environment,t,pan)
+    ground(c,scene.environment,t,pan,scene.design)
+    draw_setpiece(c,scene.setpiece,t,duration,poses,scene.setpiece_variant)
     prop_x=1040 if not benchmark else 1570
     prop_y=710
     kind=scene.prop if not benchmark else "box"
@@ -62,14 +64,14 @@ def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
         talking=.45*max(0,math.sin(t*16)) if scene.dialogue else 0
         draw_character(c,p,a.character,talking)
         c.restore()
-    foreground(c,scene.environment,t,pan)
+    foreground(c,scene.environment,t,pan,scene.design)
     c.restore()
     # Graphic typography belongs to screen space. It is never the main action.
     label=scene.label
     if benchmark:
         label=next((v for limit,v in [(2,"01 / FIND YOUR BALANCE"),(7,"02 / ONE STEP AT A TIME"),(9,"03 / BUILD MOMENTUM"),(12,"04 / RUN WITH IT"),(15,"05 / LAND THE STOP"),(17,"06 / CHANGE YOUR MIND"),(20.3,"07 / PICK UP SOMETHING NEW"),(23,"08 / WELL, HELLO THERE")] if t<limit),"")
     header_color=PAPER if scene.lighting in ("night","dramatic") else INK
-    text(c,"SMALL WORLDS  /  ORIGINAL ANIMATION",80,74,16,header_color,True)
+    text(c,("SMALL WORLDS / THE INNER ARGUMENT" if scene.design=="psychology" else "SMALL WORLDS / THIRTY DAYS OFFLINE" if scene.design=="outage" else "SMALL WORLDS  /  ORIGINAL ANIMATION"),80,74,16,header_color,True)
     if label:
         for i,v in enumerate(wrap(c,label,1120,38,2)):text(c,v,80,135+i*47,38,header_color,True)
     if scene.narration:
@@ -96,7 +98,7 @@ def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
 def render_scene(scene,path,width,height,fps,benchmark=False,revision="v1"):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
     # Revision also hashes renderer sources: edits cannot reuse stale scene files.
-    source_hash=hashlib.sha256(b"".join((Path(__file__).parent/n).read_bytes() for n in ["render.py","drawing.py","world.py","motion.py","benchmark.py"])).hexdigest()
+    source_hash=hashlib.sha256(b"".join((Path(__file__).parent/n).read_bytes() for n in ["render.py","drawing.py","world.py","motion.py","benchmark.py","setpieces.py"])).hexdigest()
     key=hashlib.sha256(json.dumps([scene.model_dump(),width,height,fps,benchmark,revision,source_hash],sort_keys=True).encode()).hexdigest()
     meta=path.with_suffix(".cache.json")
     if path.exists() and meta.exists() and json.loads(meta.read_text()).get("key")==key:

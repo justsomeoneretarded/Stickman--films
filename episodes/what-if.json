@@ -1,0 +1,1130 @@
+{
+  "version": 1,
+  "title": "What If the Internet Disappeared for 30 Days? Cash Isn't Enough",
+  "brief": "A self-contained fictional five-minute scenario following delivery worker Ada and shopkeeper Milo through thirty days without routable public Internet. Electricity and local networks remain; radio can work, while telephone availability varies by system. Clearly label the premise as hypothetical, not a forecast or a realistic single kill switch. Follow failed orders, payment friction, supply coordination, paper routes, verified notice boards and community radio, then a gradual reconnection. Cool layered city, physical network links and packets, an offline checkout, animated supply chain and radio desk. Suspenseful but humane; the surprise is that coordination matters as much as cash.",
+  "niche": "What-if & Survival",
+  "requested_minutes": 5.0,
+  "seed": 903,
+  "provenance": "reviewed-plan",
+  "factual_status": "fiction",
+  "sources": [
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc1958",
+      "claim": "Architectural Principles of the Internet: interconnection of networks and end-to-end design. This supports the narrow premise explanation; no RFC predicts the invented thirty-day timeline or its social consequences."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "what-if-01",
+      "beat": "hook",
+      "narration": "Day one. Ada's delivery app goes blank. She refreshes. Nothing. Around her, the city is still glowing. Traffic lights work. The bakery smells normal. Then the shopkeeper asks how she's paying, and the queue becomes very quiet. Cash helps. But cash is not the whole problem.",
+      "dialogue": [],
+      "label": "DAY 1 / THE LIGHTS ARE STILL ON",
+      "design": "outage",
+      "setpiece": "city_network",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "surprise",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "surprise",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "surprise",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-02",
+      "beat": "setup",
+      "narration": "Here's our fictional experiment: for thirty days, the public Internet cannot route data. Electricity stays on. Local networks and stored files can still work. Radio hasn't magically disappeared. Telephone service depends on the system. This is a hypothetical rule, not a prediction of a real global kill switch.",
+      "dialogue": [],
+      "label": "THE RULE: NO PUBLIC INTERNET FOR 30 DAYS",
+      "design": "outage",
+      "setpiece": "cable_cut",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-03",
+      "beat": "setup",
+      "narration": "The real Internet joins many networks; it isn't one cable waiting for a villain's scissors. We're imagining the outcome so we can follow the consequences. Ada doesn't know the cause. What she knows is simpler: her next job was on a server she cannot reach.",
+      "dialogue": [],
+      "label": "MANY NETWORKS. ONE FICTIONAL INTERRUPTION.",
+      "design": "outage",
+      "setpiece": "city_network",
+      "setpiece_variant": 1,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-04",
+      "beat": "setup",
+      "narration": "She checks her phone. Yesterday's photo is there. A downloaded map opens. The cloud document doesn't. Local and online are suddenly very different words. A device can be fully charged, beautifully expensive, and unable to fetch the one fact needed to finish a task.",
+      "dialogue": [],
+      "label": "CHARGED DOESN'T MEAN CONNECTED",
+      "design": "outage",
+      "setpiece": "paper_map",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "phone",
+          "x": 620,
+          "travel": 0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [
+        {
+          "kind": "phone",
+          "x": 0,
+          "y": 24,
+          "scale": 0.35,
+          "attach_to": "right-hand"
+        }
+      ],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-05",
+      "beat": "progression",
+      "narration": "At Milo's shop, a payment terminal reports offline. Some systems have limited fallback options; his doesn't. A customer produces notes like a magician. Great. That sale can happen. Then Milo tries to reorder bread, and discovers the supplier portal is also gone.",
+      "dialogue": [],
+      "label": "CASH SOLVES THIS SALE",
+      "design": "outage",
+      "setpiece": "offline_checkout",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "restaurant",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "exchange",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "click",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-06",
+      "beat": "discovery",
+      "narration": "He has money. He has customers. The bakery has flour. Yet the order that normally connects them is missing. This is the hidden service people forget to put on a receipt: coordination. Who needs what, where it should go, and when somebody will be there.",
+      "dialogue": [],
+      "label": "WHO NEEDS WHAT, WHERE, AND WHEN?",
+      "design": "outage",
+      "setpiece": "supply_chain",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-07",
+      "beat": "conflict",
+      "narration": "Ada rides to the bakery with a handwritten order. One shop, one route, one person. It works. On the way back, she passes three other riders asking the same questions. Replacing a small digital task is possible. Replacing thousands at once is a different job.",
+      "dialogue": [],
+      "label": "A WORKAROUND CAN WORK\u2014AND STILL BE SLOW",
+      "design": "outage",
+      "setpiece": "paper_map",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "run",
+          "x": 270.0,
+          "travel": 650.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [
+        {
+          "kind": "box",
+          "x": -4.0,
+          "y": 28.0,
+          "scale": 0.42,
+          "label": "",
+          "attach_to": "left-hand",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "tracking",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-08",
+      "beat": "progression",
+      "narration": "By the third day of our story, the problem isn't that every shelf is empty. It is unevenness. Too much stock sits in one place while another runs short. Nobody has the live picture they used to trust, and yesterday's information is getting older by the hour.",
+      "dialogue": [],
+      "label": "DAY 3 / THE WRONG THINGS, IN THE WRONG PLACE",
+      "design": "outage",
+      "setpiece": "supply_chain",
+      "setpiece_variant": 1,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-09",
+      "beat": "conflict",
+      "narration": "For a birthday parcel, that is frustrating. For temperature-sensitive medicine, a delayed delivery can matter much more. Our characters can't repair healthcare with a clever montage. They can make a modest contribution: bring an accurate request to the people responsible, and avoid inventing answers.",
+      "dialogue": [],
+      "label": "SOME DELAYS MATTER MORE",
+      "design": "outage",
+      "setpiece": "paper_map",
+      "setpiece_variant": 1,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "walk",
+          "x": 270.0,
+          "travel": 420.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [
+        {
+          "kind": "box",
+          "x": -4.0,
+          "y": 28.0,
+          "scale": 0.42,
+          "label": "",
+          "attach_to": "left-hand",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-10",
+      "beat": "conflict",
+      "narration": "Milo puts up a notice board. At first it is chaos: offers, requests, rumors, a missing cat. Ada adds three boring fields. Who posted this? When was it checked? Where can someone confirm it? Suddenly, the board becomes more useful than the loudest person in the queue.",
+      "dialogue": [],
+      "label": "WHO SAID IT? WHEN? CONFIRM WHERE?",
+      "design": "outage",
+      "setpiece": "notice_board",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "restaurant",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-11",
+      "beat": "discovery",
+      "narration": "A handwritten message is not automatically trustworthy because a screen is gone. Someone claims a bridge has closed. Someone else says all payments will be restored tomorrow. Neither can give a source. The danger isn't only missing information. It's confident information that nobody has checked.",
+      "dialogue": [],
+      "label": "OFFLINE RUMORS ARE STILL RUMORS",
+      "design": "outage",
+      "setpiece": "notice_board",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "think",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "fear",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "fear",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "dissolve",
+      "lighting": "night",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-12",
+      "beat": "discovery",
+      "narration": "A community radio volunteer offers a scheduled bulletin. Not an all-knowing replacement Internet: a small, reachable channel with a named presenter and a time for corrections. Ada brings verified local updates. People learn when to listen instead of repeating every exciting scrap they hear.",
+      "dialogue": [],
+      "label": "A SMALL CHANNEL WITH ACCOUNTABILITY",
+      "design": "outage",
+      "setpiece": "radio_desk",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-13",
+      "beat": "discovery",
+      "narration": "Day seven. Routes are on paper. Orders have duplicate copies. The bakery and Milo agree on a meeting time, so Ada stops making three wasted trips. Nothing here is futuristic. The improvement is a shared procedure, and the patience to use it consistently.",
+      "dialogue": [],
+      "label": "DAY 7 / A ROUTINE REPLACES THE REFRESH BUTTON",
+      "design": "outage",
+      "setpiece": "paper_map",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "walk",
+          "x": 270.0,
+          "travel": 420.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [
+        {
+          "kind": "box",
+          "x": -4.0,
+          "y": 28.0,
+          "scale": 0.42,
+          "label": "",
+          "attach_to": "left-hand",
+          "actor_index": 0,
+          "motion": "still",
+          "start_at": 0.0,
+          "end_at": 1.0,
+          "travel": 0.0,
+          "travel_y": 0.0
+        }
+      ],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "follow",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-14",
+      "beat": "conflict",
+      "narration": "But the workaround is not equally available to everyone. A person with savings, transport, and nearby friends has more options than someone without them. A cheerful story about everyone enjoying a digital detox would hide who is paying the highest price for this interruption.",
+      "dialogue": [],
+      "label": "A DIGITAL DETOX ISN'T THE SAME AS AN OUTAGE",
+      "design": "outage",
+      "setpiece": "offline_checkout",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "surprise",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "sad",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "sad",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-out",
+      "transition": "cut",
+      "lighting": "night",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "click",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-15",
+      "beat": "discovery",
+      "narration": "Ada misses more than entertainment. She misses a conversation with her sister across the ocean. The local radio cannot replace that. A postcard might eventually travel, but not at the speed of a voice saying, I'm here. Some connections are valuable precisely because they cross the distance.",
+      "dialogue": [],
+      "label": "DISTANCE FEELS LARGE AGAIN",
+      "design": "outage",
+      "setpiece": "city_network",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "phone",
+          "x": 620,
+          "travel": 0,
+          "facing": 1,
+          "emotion": "sad",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [
+        {
+          "kind": "phone",
+          "x": 0,
+          "y": 24,
+          "scale": 0.35,
+          "attach_to": "right-hand"
+        }
+      ],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "night",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-16",
+      "beat": "conflict",
+      "narration": "Halfway through the month, Milo finds an old printed supplier list. Half the numbers are stale. Backups are useful only if someone maintains them and knows how to use them. An emergency folder that nobody has opened is mostly a comforting object on a shelf.",
+      "dialogue": [],
+      "label": "DAY 15 / A BACKUP NEEDS PRACTICE",
+      "design": "outage",
+      "setpiece": "calendar",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "point",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [
+        {
+          "kind": "letter",
+          "x": 0,
+          "y": 25,
+          "scale": 0.45,
+          "attach_to": "left-hand"
+        }
+      ],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-17",
+      "beat": "progression",
+      "narration": "They update their list, write down a fallback ordering process, and rehearse a delivery with the screens covered. It is awkward and slower. That's the point of rehearsing now. They are finding the missing details while there is time to fix the procedure.",
+      "dialogue": [],
+      "label": "PRACTICE EXPOSES THE MISSING DETAILS",
+      "design": "outage",
+      "setpiece": "supply_chain",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "restaurant",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "exchange",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-18",
+      "beat": "payoff",
+      "narration": "Day thirty. A connection returns. One message arrives, then a flood. In this story, restoration comes in patches. A working connection doesn't instantly reconcile every order, duplicate payment, or outdated record. Milo checks what actually arrived before trusting the glowing green status light.",
+      "dialogue": [],
+      "label": "DAY 30 / ONLINE ISN'T THE SAME AS RECONCILED",
+      "design": "outage",
+      "setpiece": "repair_links",
+      "setpiece_variant": 1,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "happy",
+          "emotion": "happy"
+        }
+      ],
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "surprise",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "surprise",
+          "depth": 1.0
+        },
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 720,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 1
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "reveal",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-19",
+      "beat": "payoff",
+      "narration": "Ada finally hears her sister. Then she accepts a delivery through the app, with a paper address tucked beside it. She isn't choosing between technology and community. The month has shown her why she wants both: systems that scale, and people who can respond when those systems fail.",
+      "dialogue": [],
+      "label": "KEEP THE NETWORK. KEEP A FALLBACK.",
+      "design": "outage",
+      "setpiece": "repair_links",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "phone",
+          "x": 620,
+          "travel": 0,
+          "facing": 1,
+          "emotion": "happy",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [
+        {
+          "kind": "phone",
+          "x": 0,
+          "y": 24,
+          "scale": 0.35,
+          "attach_to": "right-hand"
+        }
+      ],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "id": "what-if-20",
+      "beat": "closing",
+      "narration": "So what disappears when the Internet disappears? Not just videos and messages. A vast amount of invisible coordination. Cash can help with a purchase. It cannot tell a city where everything needs to go. Our fictional month ends with a better question: which connection would you know how to replace?",
+      "dialogue": [],
+      "label": "WHICH CONNECTION COULD YOU REPLACE?",
+      "design": "outage",
+      "setpiece": "supply_chain",
+      "setpiece_variant": 0,
+      "acting": [
+        {
+          "at": 0.35,
+          "action": "point",
+          "emotion": "thinking"
+        },
+        {
+          "at": 0.75,
+          "action": "think",
+          "emotion": "thinking"
+        }
+      ],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 460.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "thinking",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.25,
+          "kind": "whoosh",
+          "gain": 0.1
+        }
+      ],
+      "pause": 0.55,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

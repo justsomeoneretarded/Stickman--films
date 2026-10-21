@@ -7,7 +7,7 @@ import re
 import subprocess
 import numpy as np
 from PIL import Image,ImageDraw
-from .motion import pose
+from .motion import scene_poses
 from .world import camera
 from .voice import read_wav
 
@@ -25,7 +25,7 @@ def motion_report(plan,fps=60,benchmark=False):
             if benchmark:
                 from .benchmark import benchmark_pose,benchmark_camera
                 poses=[benchmark_pose(t)]
-            else:poses=[pose(a,t,scene.duration,ground=650+60*a.depth) for a in scene.actors]
+            else:poses=scene_poses(scene,t)
             for n,p in enumerate(poses):
                 reaches.append(p.reach_error)
                 for side in ("left","right"):

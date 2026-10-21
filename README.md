@@ -11,52 +11,38 @@ and professional artistic acceptance are deliberately separate. See
 
 [Download the benchmark, ten niche videos, automatic-writing example and reports](docs/deliverables.md).
 
-## Run on GitHub
+## Run the two independent workflows
 
-Open **Actions → Cinematic Stickman Video Generator → Run workflow**.
+Open **Actions → Psychology — Independent Film** or **What-if Scenarios — Independent Film**.
+Each has its own title, creative brief, duration, run, voice, story, storyboard, visuals and artifact.
+Launch both workflows to run both niches concurrently. Neither waits for the other.
+They share rendering code and immutable model downloads, never creative inputs or outputs.
 
-1. Enter **video_title**, **video_description** (your creative brief), and **minutes**.
-   Decimals such as `1.5`, `2.5`, `7.5` are accepted; default is 3, safe maximum 10.
-2. Leave **niche** at Auto-detect or choose one of ten niches.
-3. Choose **Single Video**, **Ten-Niche Comparison**, or **Animation Quality Test**.
-4. Keep **quality: production** for 1920×1080 / 60 FPS. Preview is 1280×720 / 24 FPS;
-   draft is 640×360 / 24 FPS. The mandatory benchmark always runs at 1080p60.
-5. Download the artifacts near the bottom of the completed run.
+The first two films are separately authored and directed in [episodes/](episodes/), with
+[scripts and source notes](docs/episodes/). Both target five minutes, with an enforced
+four-to-six-minute finish. Production renders are 1920×1080 at 60 FPS, with narration,
+original procedural music and foley. Final artifacts contain the MP4, measured script,
+storyboard, contact sheet, motion excerpt and technical QA report.
 
-**Single Video** uses a genuine local Qwen3-4B-Instruct-2507 quantized model, not a fixed script
-lookup. No paid API, account, key or credit card is required by the engine. The small
-model's writing quality is limited, and it can fail validation. A bounded rewrite is
-attempted if measured narration cannot fit the duration. No audio stretching or filler.
-GitHub account Actions quotas and artifact storage limits still apply.
+1. Enter this workflow's **video_title**, **video_description**, and **minutes** (default `5`).
+2. Keep **quality: production** for the final render.
+3. For a new story, leave **reviewed_plan_path** blank: the free local Qwen writer creates
+   a new plan from those inputs. Supply reviewed **source_notes_path** for factual scripts;
+   otherwise the generated story is labelled fiction. Small-model writing needs review.
+4. To reproduce the first directed film, use `episodes/psychology.json` in the psychology
+   workflow, or `episodes/what-if.json` in the what-if workflow. Keep that plan's exact
+   title and description; the engine rejects mismatched inputs instead of relabelling it.
+5. Download that run's film artifact at the bottom of its run page. Retention is 30 days.
 
-Without source notes the writer creates a **clearly labelled fictional story**. It does
-not pretend to know real historical/scientific facts. For factual material, commit a
-reviewed source-notes JSON file and supply **source_notes_path**, or use a reviewed full
-plan via **plan_path**. Sources are supplied context, not an autonomous fact-checker.
-Review any factual output before publication.
+Each niche has its own concurrency group. A later run of the same niche may queue;
+psychology and what-if never serialize one another. Actual simultaneous execution also
+requires two available GitHub runners. The tests workflow is separate infrastructure.
+The previous comparison workflows are archived under `docs/archive/workflows/` and no
+longer appear as production choices in Actions. Previous short samples are historical.
 
-**Reviewed plan:** commit your `Plan` JSON and enter its relative path in `plan_path`.
-Title and brief must match the plan exactly; its story is not relabelled to masquerade
-as newly generated content. The duration input is still measured and enforced.
-See [setup](docs/setup.md) for an exact runnable example.
-
-**Ten-Niche Comparison** runs ten independent matrix jobs, using the **ten distinct,
-Codex-authored review fixtures** in `examples/plans/`. Title and brief are ignored in this
-mode, and duration defaults to **75 seconds each**, configured separately from the
-single-video duration. These examples qualify rendering, not arbitrary-title writing.
-The history/survival stories are fiction, not real events or emergency instructions.
-The science/security/scam examples include reviewed source notes.
-
-Each successful job supplies the final MP4, six-second motion preview, contact sheet,
-measured plan, narration manifest, technical report and resource report. Failed jobs
-preserve diagnostics. Artifacts expire after 14 days (failure details: 7 days).
-No generated videos are committed to this repository.
-
-Repository variables: `MAX_MINUTES=10`, `COMPARISON_MINUTES=1.25`, `MAX_PARALLEL=2`.
-The optional parallel_jobs input selects 2, 4 or 10 jobs (default 2) and takes
-precedence over MAX_PARALLEL. Queued runners are normal.
-Changing comparison duration significantly requires rewriting sample scripts. The
-pipeline fails instead of stretching the same content to arbitrary length.
+No paid API is required. GitHub account Actions minutes and storage quotas still apply.
+Technical checks cannot certify storytelling or artistic quality; inspect the rendered
+film before publication. Sources are reviewed context, not an automatic fact checker.
 
 ## Local setup
 

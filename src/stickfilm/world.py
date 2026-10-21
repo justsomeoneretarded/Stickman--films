@@ -7,10 +7,12 @@ from .motion import smooth
 OUTDOOR={"city","forest","desert","island","battlefield"}
 
 
-def background(c,env,lighting,t,pan=0):
+def background(c,env,lighting,t,pan=0,design="classic"):
     night=lighting in ("night","dramatic")
     top="#152c40" if night else "#c8d7cd"
     bottom="#45616c" if night else "#eee5d0"
+    if design=="psychology" and not night:top="#ddd5c5";bottom="#f5e8ce"
+    if design=="outage":top="#183747" if night else "#9eb6bc";bottom="#496874" if night else "#d8dfd2"
     g=cairo.LinearGradient(0,0,0,900)
     for v,col in [(0,top),(1,bottom)]: g.add_color_stop_rgb(v,*tuple(int(col[i:i+2],16)/255 for i in (1,3,5)))
     c.set_source(g);c.paint()
@@ -40,6 +42,9 @@ def background(c,env,lighting,t,pan=0):
             rect(c,i*130-160,280+(i%3)*60,92,120,"#79a7a4",7,alpha=.18)
             for j in range(3):line(c,[(i*130-143,310+j*22),(i*130-88,310+j*22)],MINT,3,alpha=.27)
         for i in range(8):ellipse(c,140+i*205,390+math.sin(i*2)*90,7,7,MINT,alpha=.7)
+    elif env=="abstract" and design=="psychology":
+        for i in range(5):ellipse(c,150+i*360,420+math.sin(i*2)*70,160,180,"#c2b7a0",alpha=.13)
+        line(c,[(-300,635),(2100,635)],"#b4a793",2,alpha=.3)
     else:
         # Interior verticals, recessed windows and deliberately simple architecture.
         for x in (-200,440,1080,1720):
@@ -62,10 +67,12 @@ def background(c,env,lighting,t,pan=0):
     c.restore()
 
 
-def ground(c,env,t,pan=0):
+def ground(c,env,t,pan=0,design="classic"):
     outdoor=env in OUTDOOR
     fill="#b6bda4" if outdoor else "#d0c9b5"
     if env=="digital":fill="#537780"
+    if design=="psychology":fill="#c9bda1"
+    if design=="outage":fill="#94a8a5" if env!="digital" else "#43616d"
     poly(c,[(-1000,650),(3000,650),(3000,1400),(-1000,1400)],fill)
     line(c,[(-1000,650),(3000,650)],INK,2,alpha=.12)
     for i in range(-3,14):
@@ -78,7 +85,7 @@ def ground(c,env,t,pan=0):
             line(c,[(x,738+(i%3)*24),(x+5,726+(i%3)*24)],"#6d8c75",3,alpha=.45)
 
 
-def foreground(c,env,t,pan=0):
+def foreground(c,env,t,pan=0,design="classic"):
     c.save();c.translate(-pan*1.17,0)
     if env in ("forest","island","abstract"):
         for x in (-60,1640):
@@ -104,4 +111,9 @@ def camera(scene,t,duration,focus_x=650):
     if mode=="wide":zoom=1
     if mode=="close-up":zoom=1.30;cx=focus_x+120;cy=490
     if mode=="over-shoulder":zoom=1.16;cx=focus_x+180;cy=475
+    if scene.design!="classic":
+        if mode=="close-up":zoom=1.85;cx=focus_x+65;cy=520
+        if mode=="over-shoulder":zoom=1.4;cx=focus_x+180;cy=505
+        if mode=="dolly-in":zoom=1.02+.32*e;cx=720+80*e;cy=475
+        if mode=="dolly-out":zoom=1.32-.32*e;cy=475
     return cx,cy,zoom

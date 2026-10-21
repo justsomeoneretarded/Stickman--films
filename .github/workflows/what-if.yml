@@ -1,0 +1,50 @@
+name: What-if Scenarios — Independent Film
+run-name: '${{ inputs.video_title }}'
+on:
+  workflow_dispatch:
+    inputs:
+      video_title:
+        description: 'Title for this niche only'
+        type: string
+        required: true
+        default: "What If the Internet Disappeared for 30 Days? Cash Isn't Enough"
+      video_description:
+        description: 'Independent creative brief for this film'
+        type: string
+        required: true
+        default: "A self-contained fictional five-minute scenario following delivery worker Ada and shopkeeper Milo through thirty days without routable public Internet. Electricity and local networks remain; radio can work, while telephone availability varies by system. Clearly label the premise as hypothetical, not a forecast or a realistic single kill switch. Follow failed orders, payment friction, supply coordination, paper routes, verified notice boards and community radio, then a gradual reconnection. Cool layered city, physical network links and packets, an offline checkout, animated supply chain and radio desk. Suspenseful but humane; the surprise is that coordination matters as much as cash."
+      minutes:
+        description: 'Target duration in minutes; 5 requires a 4–6 minute result'
+        type: string
+        required: true
+        default: '5'
+      quality:
+        description: 'Final production is 1080p60'
+        type: choice
+        default: production
+        options: [production, preview, draft]
+      reviewed_plan_path:
+        description: 'Optional reviewed story JSON; blank writes a new story from your inputs'
+        type: string
+        required: false
+      source_notes_path:
+        description: 'Optional reviewed factual source JSON for a newly written story'
+        type: string
+        required: false
+permissions:
+  contents: read
+concurrency:
+  group: what-if-film-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  what_if:
+    uses: ./.github/workflows/produce-film.yml
+    with:
+      title: ${{ inputs.video_title }}
+      brief: ${{ inputs.video_description }}
+      minutes: ${{ inputs.minutes }}
+      niche: 'What-if & Survival'
+      key: what-if
+      quality: ${{ inputs.quality }}
+      plan: ${{ inputs.reviewed_plan_path }}
+      sources: ${{ inputs.source_notes_path }}

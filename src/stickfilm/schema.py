@@ -9,7 +9,7 @@ NICHES = ["Psychology & Human Behavior", "Relatable Comedy", "Money & Business",
           "History & Geopolitics", "What-if & Survival", "Storytelling & Life Lessons",
           "Science Explained", "Self-improvement", "Technology & Cybersecurity", "Mysteries & Scams"]
 ENVIRONMENTS = ["bedroom", "classroom", "office", "city", "restaurant", "bank", "forest", "desert", "island", "laboratory", "battlefield", "abstract", "digital"]
-ACTIONS = ["idle", "walk", "run", "sprint", "turn", "reach", "pickup", "surprise", "think", "fear", "happy", "angry", "embarrassed", "sad", "excited", "frustrated", "hesitate", "jump", "fall", "stairs", "sit", "stand", "crouch", "point", "celebrate", "shield", "exchange", "inspect", "knock"]
+ACTIONS = ["idle", "walk", "run", "sprint", "turn", "reach", "pickup", "surprise", "think", "fear", "happy", "angry", "embarrassed", "sad", "excited", "frustrated", "hesitate", "jump", "fall", "stairs", "sit", "stand", "crouch", "point", "celebrate", "shield", "exchange", "inspect", "knock", "write", "phone"]
 PROPS = ["none", "phone", "clock", "box", "coin", "book", "plant", "door", "lock", "planet", "flag", "water", "evidence", "ball", "steps", "laptop", "desk", "chair", "letter", "mountain", "bridge", "umbrella", "receipt", "bottle", "shoe", "pump", "boat"]
 CAMERAS = ["wide", "follow", "dolly-in", "dolly-out", "pan", "tilt", "zoom", "reveal", "establishing", "over-shoulder", "close-up", "tracking"]
 
@@ -53,12 +53,21 @@ class Prop(Strict):
         if self.end_at<=self.start_at:raise ValueError("Prop end_at must follow start_at")
         return self
 
+class ActingBeat(Strict):
+    at: float = Field(ge=0,le=1)
+    action: Literal["idle", "think", "surprise", "fear", "happy", "angry", "embarrassed", "sad", "excited", "frustrated", "hesitate", "point", "celebrate", "shield", "write", "phone"]
+    emotion: Literal["neutral", "surprise", "confused", "fear", "happy", "angry", "embarrassed", "sad", "excited", "thinking", "frustrated", "hesitant"] = "neutral"
+
 class Scene(Strict):
     id: str = Field(pattern=r"^[a-zA-Z0-9_-]{1,60}$")
     beat: Literal["hook", "setup", "progression", "conflict", "discovery", "payoff", "closing"]
     narration: str = Field(default="", max_length=1600)
     dialogue: list[str] = Field(default_factory=list, max_length=3)
     label: str = Field(default="", max_length=65)
+    design: Literal["classic","psychology","outage"] = "classic"
+    setpiece: str = "none"
+    setpiece_variant: int = Field(default=0,ge=0,le=3)
+    acting: list[ActingBeat] = Field(default_factory=list,max_length=8)
     environment: str = "abstract"
     actors: list[Actor] = Field(min_length=1, max_length=4)
     prop: Literal[tuple(PROPS)] = "none"
@@ -79,6 +88,12 @@ class Scene(Strict):
     def attached_actors_exist(self):
         if any(p.attach_to!="world" and p.actor_index>=len(self.actors) for p in self.props):raise ValueError("Attached prop references missing actor")
         return self
+    @field_validator("setpiece")
+    @classmethod
+    def setpiece_known(cls,v):
+        from .setpieces import SETPIECES
+        if v not in SETPIECES:raise ValueError("Unknown set piece")
+        return v
     @field_validator("environment")
     @classmethod
     def env_known(cls, v):

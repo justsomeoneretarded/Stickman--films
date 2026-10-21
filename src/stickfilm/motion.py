@@ -85,7 +85,14 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
     locomotion=action in ("walk","run","sprint","stairs") and abs(travel)>0
     bob=(3+4*running)*math.sin(phase*4*math.pi) if locomotion else 1.4*math.sin(t*2.2)
     lean=direction*min(.22,speed/1000) if locomotion else .025*math.sin(t*1.5)
-    hip_y=ground-103+bob
+    rest_height=121-18*smooth(speed/100) if locomotion else 128
+    hip_y=ground-rest_height+bob
+    if locomotion:
+        for side in (0,1):
+            a,_,_=foot(abs(distance),cycle,side,actor.x,ground,direction,stance=.44 if action in ("run","sprint") else .60,lift=(31+22*running)*smooth(speed/45))
+            dx=a[0]-(x+(-9 if side==0 else 9))
+            available=math.sqrt(max(1,131.5**2-dx**2))
+            hip_y=max(hip_y,a[1]-available)
     compression=0
     if action in ("jump","fall"):
         q=smooth((u-.12)/.14)*(1-smooth((u-.72)/.15))
@@ -98,8 +105,8 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
         hip_y+=compression
         lean=.30*math.sin(math.pi*u)**2*facing
     if action=="sit":
-        hip_y+=45*smooth(u/.40); lean=-.08
-    if action=="stand": hip_y+=45*(1-smooth(u/.55))
+        hip_y+=70*smooth(u/.40); lean=-.08
+    if action=="stand": hip_y+=70*(1-smooth(u/.55))
     if action=="stairs": hip_y-=38*smooth(u); ground-=38*smooth(u)
     hip=(x,hip_y)
     neck=(x+lean*155,hip_y-96)
@@ -143,6 +150,11 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
         if action in ("point","shield") and side==1:
             a=smooth(u/.25)
             wrist=(shoulder[0]+facing*mix(25,99,a),shoulder[1]+mix(74,-10,a))
+        if action=="write":
+            wrist=(shoulder[0]+facing*(74+6*math.sin(t*7)) if side==1 else shoulder[0]+facing*38,
+                   shoulder[1]+50+(2*math.sin(t*11) if side==1 else 0))
+        if action=="phone" and side==1:
+            wrist=(neck[0]+facing*32,neck[1]-12)
         if action=="angry": wrist=(shoulder[0]+(-1 if side==0 else 1)*47,shoulder[1]+35)
         if action=="sad": wrist=(shoulder[0]+(-1 if side==0 else 1)*19,shoulder[1]+98)
         elbow,wrist,err=ik(shoulder,wrist,55,56,bend=1 if side==0 else -1)
@@ -152,3 +164,27 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
     if emotion=="neutral": emotion=automatic.get(action,"neutral")
     return Pose((x,hip_y),joints,contacts,facing,lean,emotion,reach_error,
                 joints["wrist_right"],smooth((u-.48)/.12) if action=="pickup" else 0,ground)
+
+
+def scene_poses(scene,t):
+    """The same directed poses are rendered and measured by QA."""
+    poses=[pose(a,t,scene.duration,ground=650+60*a.depth) for a in scene.actors]
+    if scene.acting:
+        # Blend whole IK poses, preserving world root and planted feet for
+        # non-locomotion acting changes. Locomotion stays on its base clip.
+        base=scene.actors[0]
+        if base.action not in ("walk","run","sprint","stairs"):
+            for beat in sorted(scene.acting,key=lambda b:b.at):
+                if t<beat.at*scene.duration:break
+                target=base.model_copy(update={"action":beat.action,"emotion":beat.emotion,"travel":0})
+                q=pose(target,max(0,t-beat.at*scene.duration),max(.5,scene.duration*(1-beat.at)),ground=650+60*base.depth)
+                blend=smooth((t-beat.at*scene.duration)/.65)
+                for key in poses[0].joints:
+                    if key.startswith(("ankle","knee","hip_")) or key in ("hips",):continue
+                    poses[0].joints[key]=tuple(poses[0].joints[key][i]*(1-blend)+q.joints[key][i]*blend for i in (0,1))
+                for side in ('left','right'):
+                    j=poses[0].joints
+                    elbow,wrist,_=ik(j['shoulders'],j['wrist_'+side],55,56,bend=1 if side=='left' else -1)
+                    j['elbow_'+side]=elbow;j['wrist_'+side]=wrist
+                poses[0].emotion=q.emotion;poses[0].prop_hand=poses[0].joints['wrist_right']
+    return poses
