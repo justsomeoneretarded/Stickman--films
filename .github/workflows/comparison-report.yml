@@ -1,0 +1,65 @@
+name: Consolidate Comparison Reports
+on:
+  workflow_dispatch:
+    inputs:
+      primary_run_id:
+        description: 'Run ID of the ten-niche comparison'
+        required: true
+        type: string
+      repair_run_id:
+        description: 'Optional newer run supplying corrected videos'
+        required: false
+        type: string
+permissions:
+  contents: read
+  actions: read
+jobs:
+  consolidate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Download original comparison results
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.primary_run_id }}
+          pattern: cinematic-*
+          path: work/primary
+      - name: Download corrected results
+        if: inputs.repair_run_id != ''
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.repair_run_id }}
+          pattern: cinematic-*
+          path: work/repair
+      - run: pip install pydantic==2.12.3
+      - name: Require all ten measured videos
+        env:
+          PYTHONPATH: src
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          from stickfilm.comparison import compare
+          compare('work','output/comparison.md',require_complete=True)
+          inputs=json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())['inputs']
+          with Path('output/comparison.md').open('a') as f:
+              for key in ('primary_run_id','repair_run_id'):
+                  value=inputs.get(key,'')
+                  if value:
+                      if not value.isdigit():raise ValueError('Run IDs must be numeric')
+                      f.write(f'\n{key}: https://github.com/{os.environ["GITHUB_REPOSITORY"]}/actions/runs/{value}\n')
+          PY
+      - if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: consolidated-ten-niche-report
+          retention-days: 14
+          path: output/comparison.*
+      - if: success()
+        run: cat output/comparison.md >> "$GITHUB_STEP_SUMMARY"

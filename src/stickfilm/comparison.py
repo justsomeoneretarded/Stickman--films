@@ -4,9 +4,9 @@ from pathlib import Path
 from .schema import NICHES
 
 
-def compare(directory,destination):
+def compare(directory,destination,require_complete=False):
     root=Path(directory);reports={}
-    for p in root.rglob('quality-report.json'):
+    for p in sorted(root.rglob('quality-report.json'),key=str):
         try:
             r=json.loads(p.read_text());plan=json.loads((p.parent/'plan.json').read_text())
             reports[plan['niche']]=(r,p.parent)
@@ -18,3 +18,8 @@ def compare(directory,destination):
         lines.append(f'| {niche} | {"PASS" if r["technical_pass"] else "FAIL"} | {r["actual_seconds"]:.2f}s | {r["requested_seconds"]:.2f}s | {r["artistic_review"]["status"]} |')
     lines+=['','## Creative fit (engineering judgment, not an audience study)','','The finite prop/action vocabulary is best suited to small character stories, gentle comedy and practical habit examples. Science, history and cybersecurity need additional bespoke demonstrations, maps and diagrams; a technically valid render does not establish educational accuracy or visual completeness. The fictional history and survival samples are not factual documentaries or safety guidance.','','No niche has been assigned an invented quality score. Review each contact sheet, playback and audio before choosing a channel direction.','','## Review priorities','','1. Inspect foot contact in the benchmark preview and the full 60 FPS file.','2. Listen for pronunciation, missing words, voice fatigue and music balance.','3. Verify important spoken actions actually appear; extend the rig/props where they do not.','4. Review factual claims against the source notes.','5. Review whole scenes for timing and emotional impact; thumbnails cannot establish these.']
     dest=Path(destination);dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text('\n'.join(lines)+'\n')
+
+    summary={niche:{"technical_pass":reports[niche][0]['technical_pass'],"actual_seconds":reports[niche][0]['actual_seconds'],"requested_seconds":reports[niche][0]['requested_seconds'],"source_directory":str(reports[niche][1])} if niche in reports else {"technical_pass":False,"missing":True} for niche in NICHES}
+    dest.with_suffix('.json').write_text(json.dumps(summary,indent=2))
+    if require_complete and not all(v['technical_pass'] for v in summary.values()):
+        raise RuntimeError('Consolidation requires ten passing quality reports; missing/failed entries remain in the report')

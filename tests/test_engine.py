@@ -131,3 +131,20 @@ def test_literal_direction_preserves_door_state_and_actor_identity():
     assert p.scenes[1].prop_motion=='open'
     assert p.scenes[1].actors[0].character=='friend'
     assert p.scenes[2].prop_state=='open'
+
+
+def test_comparison_requires_ten_results_and_prefers_explicit_repairs(tmp_path):
+    from stickfilm.comparison import compare
+    primary=tmp_path/'primary';primary.mkdir()
+    for i,niche in enumerate(NICHES):
+        path=primary/f'{i:02}';path.mkdir()
+        (path/'plan.json').write_text(json.dumps({'niche':niche}))
+        (path/'quality-report.json').write_text(json.dumps({'technical_pass':i!=6,'actual_seconds':75,'requested_seconds':75,'artistic_review':{'status':'pending human review'}}))
+    with pytest.raises(RuntimeError):compare(tmp_path,tmp_path/'result.md',require_complete=True)
+    repair=tmp_path/'repair';repair.mkdir()
+    (repair/'plan.json').write_text(json.dumps({'niche':NICHES[6]}))
+    (repair/'quality-report.json').write_text(json.dumps({'technical_pass':True,'actual_seconds':81.58,'requested_seconds':75,'artistic_review':{'status':'pending human review'}}))
+    compare(tmp_path,tmp_path/'result.md',require_complete=True)
+    data=json.loads((tmp_path/'result.json').read_text())
+    assert len(data)==10 and all(x['technical_pass'] for x in data.values())
+    assert data[NICHES[6]]['actual_seconds']==81.58

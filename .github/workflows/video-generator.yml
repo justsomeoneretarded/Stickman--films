@@ -202,4 +202,4 @@ jobs:
         with:
           name: ten-niche-comparison-report
           retention-days: 14
-          path: output/comparison.md
+          path: output/comparison.*

@@ -9,7 +9,7 @@ VOICE_PROFILES={
  "Psychology & Human Behavior":("af_heart",1.02),"Relatable Comedy":("am_puck",1.08),
  "Money & Business":("am_fenrir",1.00),"History & Geopolitics":("bm_george",.97),
  "What-if & Survival":("am_adam",1.04),"Storytelling & Life Lessons":("af_bella",.97),
- "Science Explained":("af_nicole",1.00),"Self-improvement":("am_michael",1.02),
+ "Science Explained":("af_sarah",1.02),"Self-improvement":("am_michael",1.02),
  "Technology & Cybersecurity":("bf_emma",1.02),"Mysteries & Scams":("bm_daniel",.96)}
 
 
