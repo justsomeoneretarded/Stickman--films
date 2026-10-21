@@ -1,0 +1,84 @@
+{
+  "psychology": {
+    "preset": "draft",
+    "seconds": 315.791667,
+    "technical_pass": true,
+    "checks": {
+      "exists": true,
+      "decodes": true,
+      "resolution": true,
+      "frame_rate": true,
+      "video_codec": true,
+      "pixel_format": true,
+      "audio_codec": true,
+      "audio_rate": true,
+      "stereo": true,
+      "duration": true,
+      "timeline_contiguous": true,
+      "timeline_matches_media": true,
+      "no_black_frames": true,
+      "no_detected_freeze": true,
+      "no_audio_clipping": true,
+      "motion_contacts": true,
+      "narration_present": true
+    },
+    "motion": {
+      "samples_per_second": 24,
+      "max_planted_foot_speed_px_s": 0.0,
+      "max_leg_reach_error_px": 0,
+      "max_ground_penetration_px": 0,
+      "max_leg_length_error_px": 1.4210854715202004e-13,
+      "max_root_speed_px_s": 54.68521907927704,
+      "max_camera_acceleration_design_units_s2": 7.244448464422021,
+      "passes_contact_gate": true,
+      "limitations": [
+        "Limb overlap is artistically reviewed; no general collision solver.",
+        "Camera statistic excludes intentional scene cuts.",
+        "Root speed is measured; speed discontinuities need sequence review.",
+        "Stair, sit and fall clips are simplified; benchmark qualifies level-ground locomotion only."
+      ]
+    },
+    "size_bytes": 13507915
+  },
+  "what-if": {
+    "preset": "draft",
+    "seconds": 324.166667,
+    "technical_pass": true,
+    "checks": {
+      "exists": true,
+      "decodes": true,
+      "resolution": true,
+      "frame_rate": true,
+      "video_codec": true,
+      "pixel_format": true,
+      "audio_codec": true,
+      "audio_rate": true,
+      "stereo": true,
+      "duration": true,
+      "timeline_contiguous": true,
+      "timeline_matches_media": true,
+      "no_black_frames": true,
+      "no_detected_freeze": true,
+      "no_audio_clipping": true,
+      "motion_contacts": true,
+      "narration_present": true
+    },
+    "motion": {
+      "samples_per_second": 24,
+      "max_planted_foot_speed_px_s": 0.0,
+      "max_leg_reach_error_px": 0,
+      "max_ground_penetration_px": 0,
+      "max_leg_length_error_px": 1.5631940186722204e-13,
+      "max_root_speed_px_s": 77.40886999140096,
+      "max_camera_acceleration_design_units_s2": 9.528314849994786,
+      "passes_contact_gate": true,
+      "limitations": [
+        "Limb overlap is artistically reviewed; no general collision solver.",
+        "Camera statistic excludes intentional scene cuts.",
+        "Root speed is measured; speed discontinuities need sequence review.",
+        "Stair, sit and fall clips are simplified; benchmark qualifies level-ground locomotion only."
+      ]
+    },
+    "size_bytes": 13697632
+  }
+}

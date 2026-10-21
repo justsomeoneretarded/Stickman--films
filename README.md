@@ -1,6 +1,6 @@
 # Small Worlds — Cinematic Stickman Engine
 
-An original CPU animation engine with a manually launched GitHub Actions pipeline.
+An original CPU animation engine with two independent, manually launched GitHub Actions workflows.
 It produces real H.264/AAC videos from validated scene plans, local Kokoro voiceover,
 contact-aware skeletal motion, layered environments, procedural sound and measured QA.
 
@@ -9,7 +9,9 @@ The finite action library cannot visualize every arbitrary brief. Technical acce
 and professional artistic acceptance are deliberately separate. See
 [quality standards](docs/quality-standards.md) and [validation results](docs/validation.md).
 
-[Download the benchmark, ten niche videos, automatic-writing example and reports](docs/deliverables.md).
+[The two five-minute films: scripts, storyboards and downloads](docs/episodes/README.md).
+
+[Earlier short examples and engine benchmarks](docs/deliverables.md) are historical development samples.
 
 ## Run the two independent workflows
 
