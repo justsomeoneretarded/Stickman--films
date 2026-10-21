@@ -1,5 +1,8 @@
 # Delivered videos and evaluation
 
+> Historical short samples. The current two independent five-minute films are
+> available in [the film delivery page](episodes/README.md).
+
 All ten final niche videos pass technical QA at **1920×1080, 60 FPS**, H.264/yuv420p,
 stereo AAC 48 kHz. Each requested 75 seconds; all final durations are within ±25%.
 Each artifact includes its actual MP4, six-second preview, contact sheet, measured

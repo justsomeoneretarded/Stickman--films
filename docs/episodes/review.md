@@ -34,7 +34,9 @@ Reviewed all forty directed storyboard frames and four-time-point sequences for
 walking, running, writing, distraction, radio, reconnection and the closing phone call.
 Rendered complete draft MP4s, inspected sampled rendered frames, and ran media decoding,
 black/freeze detection, narration-presence, audio-headroom and motion-contact checks.
-Final production checks and artifact links are recorded in the deliverables page.
+Both final 1080p60 artifacts were downloaded, their individual passing reports checked,
+and four-time-point sequences extracted from each actual MP4 and visually inspected.
+Final production checks and artifact links are recorded in [the film page](README.md).
 
 The visual review is a frame and sequence inspection, not a claim of a complete human
 watch-and-listen session. Technical passing checks do not award a professional artistic

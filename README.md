@@ -86,8 +86,8 @@ threads; larger models may improve writing but are not assumed available on host
 - `voice.py`, `audio.py`: measured speech, narration ducking, original score/foley.
 - `quality.py`: encoding, decode, duration, sound and motion gates; review images.
 - `pipeline.py`, `cli.py`: production, preserved failure state, bounded retries.
-- `.github/workflows/video-generator.yml`: manual production, benchmark, matrix,
-  report aggregation and artifacts. `animation-tests.yml`: unit + real media tests.
+- `.github/workflows/psychology.yml` and `what-if.yml`: independent manual productions.
+  `produce-film.yml`: reusable rendering implementation. `animation-tests.yml`: tests.
 
 [Architecture](docs/architecture.md) · [Setup](docs/setup.md) ·
 [Troubleshooting](docs/troubleshooting.md) · [Licenses](assets/licenses/README.md)

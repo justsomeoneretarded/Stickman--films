@@ -1,5 +1,10 @@
 # Validation record
 
+The current independent productions passed all 90 tests and both final 1080p60
+media gates. See [production validation](episodes/production-validation.json),
+[parallel-run evidence](episodes/parallel-proof.json), and [film downloads](episodes/README.md).
+The earlier results below describe prior engine versions and short samples.
+
 Development: 3-vCPU Linux, Python 3.12.14, FFmpeg 7.1.5. Hosted tests run on
 ubuntu-24.04. Technical acceptance is separate from professional artistic acceptance.
 
