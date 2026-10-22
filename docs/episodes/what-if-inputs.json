@@ -1,8 +1,7 @@
 {
-  "video_title": "What If the Internet Disappeared for 30 Days? Cash Isn't Enough",
-  "video_description": "A self-contained fictional five-minute scenario following delivery worker Ada and shopkeeper Milo through thirty days without routable public Internet. Electricity and local networks remain; radio can work, while telephone availability varies by system. Clearly label the premise as hypothetical, not a forecast or a realistic single kill switch. Follow failed orders, payment friction, supply coordination, paper routes, verified notice boards and community radio, then a gradual reconnection. Cool layered city, physical network links and packets, an offline checkout, animated supply chain and radio desk. Suspenseful but humane; the surprise is that coordination matters as much as cash.",
+  "video_title": "What If Every Lie Left a Mark on Your Face?",
+  "video_description": "An original five-minute speculative animated moral drama. Noah wishes liars could be recognized immediately. In this fictional world an intentional lie draws a magenta crack on the speaker's cheek; admitting it erases it. He exposes a self-serving bully and enjoys the applause. Then he gives a child a cruel but technically true verdict and sees that a clean face can still hurt someone. At a hospital his mother lies that she is not frightened. His own denial of wanting applause marks his face. The resolution is an honest apology and choosing helpful, compassionate truth, rather than policing everyone else. Cool violet city, large faces, dynamic physical acting, ink spreading and clearing, public confrontation, a torn drawing, rain and an intimate hospital reconciliation. Sparse speech, cinematic action and expressive reactions. The premise and consequences are fiction, not psychology claims.",
   "minutes": "5",
   "quality": "production",
-  "reviewed_plan_path": "episodes/what-if.json",
-  "source_notes_path": ""
+  "reviewed_plan_path": "episodes/what-if.json"
 }

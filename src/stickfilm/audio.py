@@ -41,6 +41,9 @@ def sound_mix(plan,segments,out,benchmark=False):
         add(voice,a,scene.start)
         length=round(scene.duration*SR);t=np.arange(length)/SR
         notes,tempo=MOODS[scene.music]
+        if scene.cinema is not None:
+            # Separate harmonic colors for the two stories.
+            notes=[n*(2**(-2/12) if scene.cinema.palette=="amber" else 2**(3/12)) for n in notes]
         score=np.zeros(length,np.float32)
         if scene.music!="silence":
             # Soft sustained harmony and sparse plucked tones; distinct niche moods.
@@ -57,10 +60,31 @@ def sound_mix(plan,segments,out,benchmark=False):
         active=(env>.008).astype(float)
         for i in range(1,len(active)):active[i]=max(active[i],active[i-1]*.96)
         duck=np.repeat(1-.75*active,block)[:length]
+        if scene.cinema is not None:
+            score*=1.7
+            if scene.music!='silence':
+                # A continuous phrase position across cuts, with soft bell harmonics.
+                for beat in np.arange(-1,scene.duration,1.15):
+                    index=int((scene.start+beat)/1.15);note=notes[[0,2,1,3,2,0,1,2][index%8]%len(notes)]*2
+                    z=t-beat;mask=z>=0
+                    score[mask]+=.018*(np.sin(2*np.pi*note*z[mask])+.22*np.sin(2*np.pi*note*2*z[mask]))*np.exp(-z[mask]*2.7)
         add(music,score*duck,scene.start)
         for cue in scene.cues:
             at=scene.start+cue.at*max(.01,scene.duration-scene.pause)
             add(fx,effect(cue.kind,rng,cue.gain),at);events.append({"scene":scene.id,"at":at,"kind":cue.kind,"basis":"authored narration fraction"})
+        if scene.cinema is not None:
+            from .cinema import actor_state
+            for actor in scene.cinema.performers:
+                last_x=actor.keys[0].x;distance=0
+                for frame in range(math.ceil(scene.duration*60)):
+                    at=frame/60;u=at/scene.duration;state=actor_state(actor,u,at)
+                    if any(k.pose in ('walk','run') for k in actor.keys):
+                        distance+=abs(state['x']-last_x)
+                        if distance>85*state['scale']:
+                            add(fx,effect('step',rng,.65),scene.start+at)
+                            events.append({'scene':scene.id,'at':scene.start+at,'kind':'step','basis':'cinematic locomotion distance'})
+                            distance=0
+                    last_x=state['x']
         # Foley from actual contact-state changes, not a separate ticking timer.
         previous={};laststep=-1
         for i in range(math.ceil(scene.duration*60)):
@@ -68,6 +92,7 @@ def sound_mix(plan,segments,out,benchmark=False):
             if benchmark:
                 from .benchmark import benchmark_pose
                 p=benchmark_pose(at)
+            elif scene.cinema is not None:continue # cinematic foley uses explicit action cues
             else:p=pose(scene.actors[0],at,scene.duration)
             for side,contact in p.contacts.items():
                 if contact and previous.get(side) is False and at-laststep>.12:

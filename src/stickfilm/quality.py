@@ -17,6 +17,9 @@ def probe(path):
 
 
 def motion_report(plan,fps=60,benchmark=False):
+    if all(s.cinema is not None for s in plan.scenes):
+        from .cinema import report
+        return report(plan,fps)
     slides=[];reaches=[];jumps=[];scale_errors=[];ground_errors=[];camera_acc=[];intersections=0
     for scene in plan.scenes:
         previous={};prev_camera=None;prev_camera_velocity=None
@@ -91,7 +94,7 @@ def assess(video,plan,out,width,height,fps,segments,benchmark=False):
       "no_black_frames":not any('black_start:' in x for x in detections),
       "no_detected_freeze":not any('freeze_start:' in x for x in detections),
       "no_audio_clipping":bool(peaks) and max(peaks)<-.1,
-      "motion_contacts":motion['passes_contact_gate']}
+      ("directed_action" if "passes_direction_gate" in motion else "motion_contacts"):motion.get("passes_direction_gate",motion.get("passes_contact_gate",False))}
     narr=[]
     for seg in segments:
         samples,sr=read_wav(seg['path']);rms=float(np.sqrt(np.mean(samples*samples)))
@@ -102,7 +105,7 @@ def assess(video,plan,out,width,height,fps,segments,benchmark=False):
       "technical":{"video":v,"audio":a,"size_bytes":Path(video).stat().st_size,"peak_dbfs":max(peaks,default=None),"detections":detections},
       "script":{"provenance":plan.provenance,"factual_status":plan.factual_status,"beats":[s.beat for s in plan.scenes],"words":sum(len(s.narration.split())+sum(len(d.split()) for d in s.dialogue) for s in plan.scenes),"sources":[s.model_dump() for s in plan.sources]},
       "narration":narr,"motion":motion,
-      "sound_sync":"Footsteps follow IK contacts. Authored cues use measured utterance fractions. Word-level alignment is estimated, not forced-aligned.",
+      "sound_sync":("Cinematic footsteps follow locomotion distance crossings; shot cues use directed action times. Sparse dialogue captions are shot-timed, not forced-aligned." if plan.scenes[0].cinema else "Footsteps follow IK contacts. Authored cues use measured utterance fractions. Word-level alignment is estimated, not forced-aligned."),
       "artistic_review":{"status":"pending human review","professional_quality_claimed":False,"limitations":["Finite procedural action and prop vocabulary; complex brief actions need new clips.","Kokoro voices lack reliable emotional control; no listening panel or ASR fidelity gate.","Basic procedural music, not a bespoke composition.","Segment captions use estimated word timing.","No general physics/collision or autonomous fact-checking."]}}
     (out/'quality-report.json').write_text(json.dumps(report,indent=2))
     (out/'audio-analysis.log').write_text(audio.stderr)

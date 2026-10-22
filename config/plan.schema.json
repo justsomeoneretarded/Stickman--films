@@ -134,6 +134,172 @@
       "title": "Actor",
       "type": "object"
     },
+    "CameraKey": {
+      "additionalProperties": false,
+      "properties": {
+        "at": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "At",
+          "type": "number"
+        },
+        "x": {
+          "default": 800,
+          "maximum": 2600,
+          "minimum": -1000,
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "default": 450,
+          "maximum": 1400,
+          "minimum": -500,
+          "title": "Y",
+          "type": "number"
+        },
+        "zoom": {
+          "default": 1,
+          "maximum": 3,
+          "minimum": 0.5,
+          "title": "Zoom",
+          "type": "number"
+        }
+      },
+      "required": [
+        "at"
+      ],
+      "title": "CameraKey",
+      "type": "object"
+    },
+    "Cinema": {
+      "additionalProperties": false,
+      "properties": {
+        "world": {
+          "enum": [
+            "home",
+            "office",
+            "street",
+            "stage",
+            "backstage",
+            "hospital",
+            "square",
+            "cafe",
+            "bedroom",
+            "park",
+            "mirror",
+            "rooftop",
+            "void"
+          ],
+          "title": "World",
+          "type": "string"
+        },
+        "palette": {
+          "default": "amber",
+          "enum": [
+            "amber",
+            "violet"
+          ],
+          "title": "Palette",
+          "type": "string"
+        },
+        "time": {
+          "default": "day",
+          "enum": [
+            "morning",
+            "day",
+            "sunset",
+            "night"
+          ],
+          "title": "Time",
+          "type": "string"
+        },
+        "performers": {
+          "items": {
+            "$ref": "#/$defs/Performer"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Performers",
+          "type": "array"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/Item"
+          },
+          "maxItems": 30,
+          "title": "Items",
+          "type": "array"
+        },
+        "lens": {
+          "items": {
+            "$ref": "#/$defs/CameraKey"
+          },
+          "maxItems": 6,
+          "minItems": 2,
+          "title": "Lens",
+          "type": "array"
+        },
+        "caption": {
+          "default": "",
+          "maxLength": 90,
+          "title": "Caption",
+          "type": "string"
+        },
+        "caption_at": {
+          "default": 0.1,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Caption At",
+          "type": "number"
+        },
+        "caption_end": {
+          "default": 0.9,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Caption End",
+          "type": "number"
+        },
+        "voice": {
+          "default": "narrator",
+          "enum": [
+            "narrator",
+            "father",
+            "daughter",
+            "boss",
+            "colleague",
+            "partner",
+            "witness",
+            "mother",
+            "friend",
+            "bully",
+            "crowd"
+          ],
+          "title": "Voice",
+          "type": "string"
+        },
+        "caption_speaker": {
+          "default": -1,
+          "maximum": 11,
+          "minimum": -1,
+          "title": "Caption Speaker",
+          "type": "integer"
+        },
+        "note": {
+          "maxLength": 1200,
+          "minLength": 10,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "world",
+        "performers",
+        "lens",
+        "note"
+      ],
+      "title": "Cinema",
+      "type": "object"
+    },
     "Cue": {
       "additionalProperties": false,
       "properties": {
@@ -169,6 +335,305 @@
         "kind"
       ],
       "title": "Cue",
+      "type": "object"
+    },
+    "Item": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "paper",
+            "ticket",
+            "box",
+            "star",
+            "bouquet",
+            "cup",
+            "phone",
+            "drawing",
+            "scissors",
+            "chair",
+            "clock",
+            "heart",
+            "thread",
+            "spotlight",
+            "confetti",
+            "mark",
+            "sign",
+            "photo",
+            "cake",
+            "door",
+            "money",
+            "rain",
+            "leaves",
+            "pencil",
+            "balloon",
+            "tear",
+            "curtain",
+            "platform"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "keys": {
+          "items": {
+            "$ref": "#/$defs/ObjectKey"
+          },
+          "maxItems": 12,
+          "minItems": 2,
+          "title": "Keys",
+          "type": "array"
+        },
+        "label": {
+          "default": "",
+          "maxLength": 50,
+          "title": "Label",
+          "type": "string"
+        },
+        "color": {
+          "default": "#eecb79",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "title": "Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "keys"
+      ],
+      "title": "Item",
+      "type": "object"
+    },
+    "Key": {
+      "additionalProperties": false,
+      "properties": {
+        "at": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "At",
+          "type": "number"
+        },
+        "x": {
+          "maximum": 3500,
+          "minimum": -2500,
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "default": 760,
+          "maximum": 2000,
+          "minimum": -1000,
+          "title": "Y",
+          "type": "number"
+        },
+        "scale": {
+          "default": 1.35,
+          "exclusiveMinimum": 0.1,
+          "maximum": 5,
+          "title": "Scale",
+          "type": "number"
+        },
+        "angle": {
+          "default": 0,
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Angle",
+          "type": "number"
+        },
+        "alpha": {
+          "default": 1,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Alpha",
+          "type": "number"
+        },
+        "pose": {
+          "default": "rest",
+          "enum": [
+            "rest",
+            "walk",
+            "run",
+            "reach",
+            "offer",
+            "hold",
+            "clutch",
+            "plead",
+            "angry",
+            "point",
+            "sit",
+            "slump",
+            "kneel",
+            "hug",
+            "cheer",
+            "cover",
+            "write",
+            "push",
+            "wave",
+            "fall",
+            "listen",
+            "sit_offer",
+            "sit_cover",
+            "sit_hold",
+            "kneel_hug",
+            "kneel_hold",
+            "kneel_write",
+            "kneel_reach"
+          ],
+          "title": "Pose",
+          "type": "string"
+        },
+        "emotion": {
+          "default": "neutral",
+          "enum": [
+            "neutral",
+            "joy",
+            "hope",
+            "tired",
+            "sad",
+            "cry",
+            "angry",
+            "shock",
+            "smug",
+            "fear",
+            "tender",
+            "guilty"
+          ],
+          "title": "Emotion",
+          "type": "string"
+        },
+        "facing": {
+          "default": 1,
+          "enum": [
+            -1,
+            1
+          ],
+          "title": "Facing",
+          "type": "integer"
+        },
+        "mark": {
+          "default": 0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Mark",
+          "type": "number"
+        }
+      },
+      "required": [
+        "at",
+        "x"
+      ],
+      "title": "Key",
+      "type": "object"
+    },
+    "ObjectKey": {
+      "additionalProperties": false,
+      "properties": {
+        "at": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "At",
+          "type": "number"
+        },
+        "x": {
+          "maximum": 4000,
+          "minimum": -3000,
+          "title": "X",
+          "type": "number"
+        },
+        "y": {
+          "default": 600,
+          "maximum": 2500,
+          "minimum": -1500,
+          "title": "Y",
+          "type": "number"
+        },
+        "scale": {
+          "default": 1,
+          "exclusiveMinimum": 0.01,
+          "maximum": 8,
+          "title": "Scale",
+          "type": "number"
+        },
+        "angle": {
+          "default": 0,
+          "maximum": 360,
+          "minimum": -360,
+          "title": "Angle",
+          "type": "number"
+        },
+        "alpha": {
+          "default": 1,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Alpha",
+          "type": "number"
+        }
+      },
+      "required": [
+        "at",
+        "x"
+      ],
+      "title": "ObjectKey",
+      "type": "object"
+    },
+    "Performer": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 50,
+          "title": "Name",
+          "type": "string"
+        },
+        "look": {
+          "default": "father",
+          "enum": [
+            "father",
+            "daughter",
+            "boss",
+            "colleague",
+            "partner",
+            "witness",
+            "mother",
+            "friend",
+            "bully",
+            "crowd"
+          ],
+          "title": "Look",
+          "type": "string"
+        },
+        "keys": {
+          "items": {
+            "$ref": "#/$defs/Key"
+          },
+          "maxItems": 14,
+          "minItems": 2,
+          "title": "Keys",
+          "type": "array"
+        },
+        "carry": {
+          "default": "none",
+          "enum": [
+            "none",
+            "paper",
+            "ticket",
+            "box",
+            "star",
+            "bouquet",
+            "cup",
+            "phone",
+            "drawing",
+            "scissors",
+            "money",
+            "pencil"
+          ],
+          "title": "Carry",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "keys"
+      ],
+      "title": "Performer",
       "type": "object"
     },
     "Prop": {
@@ -302,6 +767,24 @@
     "Scene": {
       "additionalProperties": false,
       "properties": {
+        "cinema": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Cinema"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "directed_seconds": {
+          "default": 0,
+          "maximum": 45,
+          "minimum": 0,
+          "title": "Directed Seconds",
+          "type": "number"
+        },
         "id": {
           "pattern": "^[a-zA-Z0-9_-]{1,60}$",
           "title": "Id",

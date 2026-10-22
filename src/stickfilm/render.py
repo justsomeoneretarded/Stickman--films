@@ -18,6 +18,9 @@ PRESETS={"draft":(640,360,24),"preview":(1280,720,24),"production":(1920,1080,60
 
 
 def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
+    if scene.cinema is not None:
+        from .cinema import draw
+        return draw(scene,t,width,height)
     surface=cairo.ImageSurface(cairo.FORMAT_ARGB32,width,height)
     c=cairo.Context(surface);c.scale(width/1600,height/900)
     duration=scene.duration;u=min(1,t/max(duration,.001))
@@ -98,7 +101,7 @@ def draw_frame(scene,t,width,height,*,benchmark=False,previous=None):
 def render_scene(scene,path,width,height,fps,benchmark=False,revision="v1"):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
     # Revision also hashes renderer sources: edits cannot reuse stale scene files.
-    source_hash=hashlib.sha256(b"".join((Path(__file__).parent/n).read_bytes() for n in ["render.py","drawing.py","world.py","motion.py","benchmark.py","setpieces.py"])).hexdigest()
+    source_hash=hashlib.sha256(b"".join((Path(__file__).parent/n).read_bytes() for n in ["render.py","drawing.py","world.py","motion.py","benchmark.py","setpieces.py","cinema.py","cinema_schema.py"])).hexdigest()
     key=hashlib.sha256(json.dumps([scene.model_dump(),width,height,fps,benchmark,revision,source_hash],sort_keys=True).encode()).hexdigest()
     meta=path.with_suffix(".cache.json")
     if path.exists() and meta.exists() and json.loads(meta.read_text()).get("key")==key:

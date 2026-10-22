@@ -58,7 +58,11 @@ class ActingBeat(Strict):
     action: Literal["idle", "think", "surprise", "fear", "happy", "angry", "embarrassed", "sad", "excited", "frustrated", "hesitate", "point", "celebrate", "shield", "write", "phone"]
     emotion: Literal["neutral", "surprise", "confused", "fear", "happy", "angry", "embarrassed", "sad", "excited", "thinking", "frustrated", "hesitant"] = "neutral"
 
+from .cinema_schema import Cinema
+
 class Scene(Strict):
+    cinema: Cinema | None = None
+    directed_seconds: float = Field(default=0,ge=0,le=45)
     id: str = Field(pattern=r"^[a-zA-Z0-9_-]{1,60}$")
     beat: Literal["hook", "setup", "progression", "conflict", "discovery", "payoff", "closing"]
     narration: str = Field(default="", max_length=1600)

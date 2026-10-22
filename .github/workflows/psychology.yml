@@ -7,12 +7,12 @@ on:
         description: 'Title for this niche only'
         type: string
         required: true
-        default: "Your Brain Isn't Lazy\u2014Your Goals Might Be the Problem"
+        default: "They Loved Him More When He Was Useful"
       video_description:
         description: 'Independent creative brief for this film'
         type: string
         required: true
-        default: "An original, research-informed five-minute story about Milo, who mistakes borrowed ambitions for personal failure. Ada helps him question a wall of impossible goals, choose one meaningful project and build a specific first step. Warm, tactile 2.5D visual metaphors: a goal wall, a backpack of expectations, a rope tied to a mountain, notifications, a tiny staircase and a forgiving progress calendar. Empathetic, provocative, never diagnostic; distinguish poor goal fit from time, health and material constraints. End with one imperfect page, not a miraculous life transformation."
+        default: "A five-minute original fictional animated drama about Eli, a compulsive people-pleaser, and June, his daughter. A reserved seat at her school performance becomes the emotional anchor. Colleagues praise Eli while piling favors into his arms; each yes becomes a visible red thread. He misses June's performance while earning applause for a boss who takes his work. At home, a child's drawing shows the empty chair. The climax is a costly refusal, followed by repairing June's cardboard stage together. Sparse dialogue, original large expressive rigs, warm layered rooms, physical object exchanges and major staging changes in every shot. The psychology is dramatized as fiction, never a diagnosis. No reuse of the earlier goal-wall explainer."
       minutes:
         description: 'Target duration in minutes; 5 requires a 4–6 minute result'
         type: string
@@ -24,9 +24,10 @@ on:
         default: production
         options: [production, preview, draft]
       reviewed_plan_path:
-        description: 'Optional reviewed story JSON; blank writes a new story from your inputs'
+        description: 'Directed story plan. Clear only when writing a different story from new inputs'
         type: string
         required: false
+        default: episodes/psychology.json
       source_notes_path:
         description: 'Optional reviewed factual source JSON for a newly written story'
         type: string

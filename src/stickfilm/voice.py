@@ -63,14 +63,19 @@ def narrate(plan,model_dir,out,fps=60,rate_factor=1.):
     out=Path(out);n=Narrator(model_dir);voice,base_speed=VOICE_PROFILES[plan.niche]
     segments=[];offset=0
     for scene in plan.scenes:
-        samples,sr=n.speak(voice_text(scene),out/f'{scene.id}.wav',voice,base_speed*rate_factor)
+        scene_voice,scene_speed=voice,base_speed
+        if scene.cinema is not None and scene.cinema.voice!='narrator':
+            cast={'father':('am_michael',1.0),'daughter':('af_bella',1.08),'boss':('am_fenrir',1.0),'colleague':('am_puck',1.04),'partner':('af_sarah',1.0),'witness':('am_adam',1.04),'mother':('af_heart',.98),'friend':('af_sarah',1.0),'bully':('am_fenrir',1.03),'crowd':('am_puck',1.0)}
+            scene_voice,scene_speed=cast[scene.cinema.voice]
+        samples,sr=n.speak(voice_text(scene),out/f'{scene.id}.wav',scene_voice,scene_speed*rate_factor)
         audio_seconds=len(samples)/sr
         # Authored action-only sequences retain their directed timing.
         # They are not filler and do not inherit a fake narration duration.
         timing=scene.duration if not voice_text(scene) and scene.duration>0 else audio_seconds+scene.pause
+        timing=max(timing,scene.directed_seconds)
         scene.duration=round(timing*fps)/fps
         if scene.duration>45:raise ValueError(f"Scene {scene.id} too long ({scene.duration:.1f}s); split its narration")
         scene.start=offset;scene.end=offset+scene.duration;offset=scene.end
-        segments.append({"scene":scene.id,"start":scene.start,"audio_seconds":audio_seconds,"end":scene.end,"voice":voice,"speed":base_speed*rate_factor,"text":voice_text(scene),"path":str(out/f'{scene.id}.wav')})
+        segments.append({"scene":scene.id,"start":scene.start,"audio_seconds":audio_seconds,"end":scene.end,"voice":scene_voice,"speed":scene_speed*rate_factor,"text":voice_text(scene),"path":str(out/f'{scene.id}.wav')})
     (out/'manifest.json').write_text(json.dumps(segments,indent=2))
     return segments

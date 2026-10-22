@@ -31,7 +31,17 @@ def production():
     if float(os.environ['FILM_MINUTES'])==5 and not 240<=p.scenes[-1].end<=360:
         raise ValueError('A requested five-minute film must finish between four and six minutes')
     (out/'script.md').write_text('# '+p.title+'\n\n'+'\n\n'.join(f'**{s.start:.2f}–{s.end:.2f}s / {s.label}**\n\n{s.narration}' for s in p.scenes)+'\n\nSources:\n'+ '\n'.join(f'- {s.url}: {s.claim}' for s in p.sources))
-    (out/'storyboard.md').write_text('# Directed storyboard\n\n'+ '\n\n'.join(f'**{s.id} / {s.start:.2f}–{s.end:.2f}s**\n\n{s.environment}; {s.lighting}; camera: {s.camera}; set: {s.setpiece}; characters: '+', '.join(f'{a.character}: {a.action}' for a in s.actors)+f'; music: {s.music}.\n\n{s.label}' for s in p.scenes))
+    boards=['# Directed storyboard','']
+    for s in p.scenes:
+        if s.cinema:
+            boards += [f'**{s.id} / {s.start:.2f}–{s.end:.2f}s**',s.cinema.note,
+                       f'Set: {s.cinema.world}; palette: {s.cinema.palette}; light: {s.cinema.time}; music: {s.music}.',
+                       'Actors: '+', '.join(f'{a.name}: '+ ' → '.join(k.pose+' / '+k.emotion for k in a.keys) for a in s.cinema.performers),'']
+        else:boards += [f'**{s.id}**',f'{s.environment}; {s.lighting}; {s.camera}; {s.setpiece}.','']
+    (out/'storyboard.md').write_text('\n\n'.join(boards))
+    if p.scenes[0].cinema:
+        from stickfilm.cinema import report
+        (out/'direction-audit.json').write_text(json.dumps(report(p),indent=2))
     manifest=dict(title=p.title,niche=p.niche,seconds=p.scenes[-1].end,independent=True,run_id=os.getenv('GITHUB_RUN_ID'),workflow=os.getenv('GITHUB_WORKFLOW'),reviewed_plan=os.getenv('FILM_PLAN') or None)
     (out/'episode.json').write_text(json.dumps(manifest,indent=2))
 
