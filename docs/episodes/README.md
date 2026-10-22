@@ -26,5 +26,35 @@ For another reviewed cinematic story, supply a plan with the matching title and 
 Clearing the plan path invokes the experimental small local writer; it does not promise
 the same quality of authored cinematic direction.
 
-Final 1080p60 artifact links will be added after render review. Earlier links and
-validation files in this folder refer to the rejected first versions and are historical.
+## Finished replacements
+
+Both independent production workflows completed successfully and the final artifacts
+were downloaded and checked. Each film is **5:00, 1920×1080, 60 FPS**, with stereo
+48 kHz AAC audio.
+
+| Film | Duration | Video |
+|---|---:|---|
+| They Loved Him More When He Was Useful | 5:00 | [Download final video package](https://github.com/justsomeoneretarded/Stickman--films/actions/runs/39750075506/artifacts/12414227176) |
+| What If Every Lie Left a Mark on Your Face? | 5:00 | [Download final video package](https://github.com/justsomeoneretarded/Stickman--films/actions/runs/39750079590/artifacts/12414401752) |
+
+Each ZIP contains the title-named final MP4, its measured script and storyboard,
+a six-second preview, contact sheet, direction audit, media QA and resource reports.
+Artifacts are retained for 30 days. Exact expiry, file hashes, start/end times and
+passing checks are in [v2-production-validation.json](v2-production-validation.json).
+[Parallel-run evidence](v2-parallel-proof.json) confirms separate jobs running together.
+
+All 94 tests passed in GitHub CI. All final media and directed-action gates passed.
+The cinematic direction gate does not claim legacy zero-sliding qualification.
+Both downloaded final files also passed independent format, frame-rate, duration
+and audio checks. See the [review scope and limitations](v2-review.md).
+
+[Public video descriptions](v2-descriptions.md) · [Revised-draft validation](v2-draft-validation.json)
+
+### Samples extracted from the actual final MP4s
+
+![Psychology: reactions, running, refusal and embrace](psychology-v2-production-review.jpg)
+
+![What-if: exposure, tears, fear and confession](what-if-v2-production-review.jpg)
+
+Earlier links and validation files without the v2 designation refer to the rejected
+first versions and remain historical. These downloads are the rebuilt films.

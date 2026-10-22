@@ -17,9 +17,9 @@ or [what-if-inputs.json](episodes/what-if-inputs.json). Each file supplies all t
 workflow fields, including `minutes: "5"`, production quality, and its own reviewed plan.
 The finished duration for a requested five-minute film must be four to six minutes.
 
-For a new episode, enter its own title and creative brief and leave
-`reviewed_plan_path` blank. The free local CPU writer will generate a new story and
-executable scene plan. Supply reviewed source notes for factual claims; otherwise
+The current defaults reproduce the authored 50-shot films. For a new episode, enter its own title and creative brief and leave
+`reviewed_plan_path` blank. The experimental local CPU writer will generate a new story and
+executable scene plan; it does not promise the same shot direction as the reviewed films. Supply reviewed source notes for factual claims; otherwise
 it writes labelled fiction. The first two stories are separately authored review
 plans, not claims that the small local model independently authored these scripts.
 

@@ -33,10 +33,12 @@ and change meaning across scenes. New physical interiors and exterior layers sup
 close-ups, tracking, reaction cuts, depth and lighting changes. Continuous headings
 and paragraph captions are removed. Dialogue appears only in its directed window.
 
-The first complete drafts passed media checks at exactly 300 seconds. Frame review
+The first complete drafts and the revised character-voice drafts passed media checks at exactly 300 seconds. All 94 tests passed locally and in GitHub CI. Frame review
 led to correcting seated gestures, the father's kneeling embrace, caption widths,
-movement-facing direction and the height of the child's home stage. Final artifact
-checks and extracted sequence images are recorded separately after completion.
+movement-facing direction and the height of the child's home stage. Both final 1080p60 artifacts were then downloaded. Their individual passing reports
+were checked, formats independently probed, and six four-frame sequences extracted
+from each actual MP4 and visually inspected. Final checks are in
+[v2-production-validation.json](v2-production-validation.json).
 
 ## Honest qualification
 
@@ -51,3 +53,15 @@ A technical pass verifies the media, timing and authored direction. It cannot ce
 a great script, emotional impact or reference-level artistry. Review covers all
 storyboard shots, complete draft renders, and sampled sequences from final MP4s;
 it is not represented as a complete human watch-and-listen session.
+
+## Measurable change from the rejected versions
+
+| Film | Earlier narrated words / shots | Rebuilt spoken words / shots |
+|---|---:|---:|
+| Psychology | 832 / 20 | 128 / 50 |
+| What-if | 905 / 20 | 214 / 50 |
+
+The rebuilt films each have a complete 300-second timeline. Silent time contains
+directed action and reactions rather than narration stretched to reach a duration.
+The revised drafts use six distinct character/narrator voices for psychology and
+five for what-if. These counts describe the implementation, not an artistic score.

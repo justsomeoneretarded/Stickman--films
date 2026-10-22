@@ -1,8 +1,12 @@
 # Small Worlds — Cinematic Stickman Engine
 
 An original CPU animation engine with two independent, manually launched GitHub Actions workflows.
-It produces real H.264/AAC videos from validated scene plans, local Kokoro voiceover,
-contact-aware skeletal motion, layered environments, procedural sound and measured QA.
+It produces H.264/AAC videos from validated scene plans, local character voices,
+keyframed acting, layered physical sets, procedural sound and measured QA.
+
+The current films are original five-minute visual dramas with **50 directed shots each**,
+large expressive characters, sparse dialogue and consequential physical action.
+They replace the earlier narrated explainers after feedback about static visuals.
 
 **Status: working development engine, not professionally qualified autonomous filmmaking.**
 The finite action library cannot visualize every arbitrary brief. Technical acceptance
@@ -80,6 +84,7 @@ threads; larger models may improve writing but are not assumed available on host
 
 - `src/stickfilm/schema.py`: strict production IR and JSON schema.
 - `motion.py`, `benchmark.py`: two-bone IK, distance gait, continuous benchmark.
+- `cinema.py`, `cinema_schema.py`: cinematic cutout rigs, keyed acting and objects, physical sets and shot cameras.
 - `drawing.py`, `world.py`, `render.py`: original rounded characters, 13 settings,
   three depth layers, camera tools, direct Cairo → FFmpeg stream, scene cache.
 - `writer.py`: local-model JSON generation; `examples/plans`: authored fixtures.

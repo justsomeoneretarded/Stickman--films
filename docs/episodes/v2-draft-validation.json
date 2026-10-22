@@ -1,0 +1,827 @@
+{
+  "psychology": {
+    "seconds": 300.0,
+    "technical_pass": true,
+    "checks": {
+      "exists": true,
+      "decodes": true,
+      "resolution": true,
+      "frame_rate": true,
+      "video_codec": true,
+      "pixel_format": true,
+      "audio_codec": true,
+      "audio_rate": true,
+      "stereo": true,
+      "duration": true,
+      "timeline_contiguous": true,
+      "timeline_matches_media": true,
+      "no_black_frames": true,
+      "no_detected_freeze": true,
+      "no_audio_clipping": true,
+      "directed_action": true,
+      "narration_present": true
+    },
+    "spoken_words": 128,
+    "voices": [
+      "af_bella",
+      "af_heart",
+      "af_sarah",
+      "am_fenrir",
+      "am_michael",
+      "am_puck"
+    ],
+    "direction": {
+      "samples_per_second": 24,
+      "passes_direction_gate": true,
+      "contact_gate_applicable": false,
+      "qualification": "Cinematic cutout rigs use keyframed physical acting. Legacy planted-foot gate is not applicable; no no-sliding claim is inferred.",
+      "shots": 50,
+      "expression_states": [
+        "angry",
+        "cry",
+        "fear",
+        "guilty",
+        "hope",
+        "joy",
+        "neutral",
+        "sad",
+        "shock",
+        "smug",
+        "tender",
+        "tired"
+      ],
+      "largest_actor_travel": 1050.0,
+      "moving_object_tracks": 27,
+      "shots_without_authored_change": [],
+      "shot_details": [
+        {
+          "id": "psychology-v2-01",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-02",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-03",
+          "seconds": 6.0,
+          "largest_actor_travel": 310.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-04",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-05",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-06",
+          "seconds": 6.0,
+          "largest_actor_travel": 890.0,
+          "acting_changes": 0,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-07",
+          "seconds": 6.0,
+          "largest_actor_travel": 310.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-08",
+          "seconds": 6.0,
+          "largest_actor_travel": 470.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-09",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-10",
+          "seconds": 6.0,
+          "largest_actor_travel": 430.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-11",
+          "seconds": 6.0,
+          "largest_actor_travel": 530.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-12",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-13",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-14",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-15",
+          "seconds": 6.0,
+          "largest_actor_travel": 130.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-16",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-17",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-18",
+          "seconds": 6.0,
+          "largest_actor_travel": 410.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-19",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 2
+        },
+        {
+          "id": "psychology-v2-20",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-21",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-22",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-23",
+          "seconds": 6.0,
+          "largest_actor_travel": 1050.0,
+          "acting_changes": 0,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-24",
+          "seconds": 6.0,
+          "largest_actor_travel": 650.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-25",
+          "seconds": 6.0,
+          "largest_actor_travel": 160.0,
+          "acting_changes": 1,
+          "moving_objects": 2
+        },
+        {
+          "id": "psychology-v2-26",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-27",
+          "seconds": 6.0,
+          "largest_actor_travel": 360.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-28",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-29",
+          "seconds": 6.0,
+          "largest_actor_travel": 220.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-30",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-31",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-32",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-33",
+          "seconds": 6.0,
+          "largest_actor_travel": 360.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-34",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-35",
+          "seconds": 6.0,
+          "largest_actor_travel": 570.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-36",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-37",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-38",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-39",
+          "seconds": 6.0,
+          "largest_actor_travel": 990.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-40",
+          "seconds": 6.0,
+          "largest_actor_travel": 300.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-41",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-42",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-43",
+          "seconds": 6.0,
+          "largest_actor_travel": 200.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-44",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-45",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "psychology-v2-46",
+          "seconds": 6.0,
+          "largest_actor_travel": 70.0,
+          "acting_changes": 3,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-47",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-48",
+          "seconds": 6.0,
+          "largest_actor_travel": 260.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-49",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "psychology-v2-50",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        }
+      ],
+      "limitations": [
+        "No general collision solver.",
+        "Keyframed cutout locomotion uses cyclic IK; it is not the legacy contact-qualified gait.",
+        "Narrative and emotional readability require visual review."
+      ]
+    }
+  },
+  "what-if": {
+    "seconds": 300.0,
+    "technical_pass": true,
+    "checks": {
+      "exists": true,
+      "decodes": true,
+      "resolution": true,
+      "frame_rate": true,
+      "video_codec": true,
+      "pixel_format": true,
+      "audio_codec": true,
+      "audio_rate": true,
+      "stereo": true,
+      "duration": true,
+      "timeline_contiguous": true,
+      "timeline_matches_media": true,
+      "no_black_frames": true,
+      "no_detected_freeze": true,
+      "no_audio_clipping": true,
+      "directed_action": true,
+      "narration_present": true
+    },
+    "spoken_words": 214,
+    "voices": [
+      "af_bella",
+      "af_heart",
+      "af_sarah",
+      "am_adam",
+      "am_fenrir"
+    ],
+    "direction": {
+      "samples_per_second": 24,
+      "passes_direction_gate": true,
+      "contact_gate_applicable": false,
+      "qualification": "Cinematic cutout rigs use keyframed physical acting. Legacy planted-foot gate is not applicable; no no-sliding claim is inferred.",
+      "shots": 50,
+      "expression_states": [
+        "angry",
+        "cry",
+        "fear",
+        "guilty",
+        "hope",
+        "joy",
+        "neutral",
+        "sad",
+        "shock",
+        "smug",
+        "tender",
+        "tired"
+      ],
+      "largest_actor_travel": 1100.0,
+      "moving_object_tracks": 19,
+      "shots_without_authored_change": [],
+      "shot_details": [
+        {
+          "id": "what-if-v2-01",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-02",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-03",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-04",
+          "seconds": 6.0,
+          "largest_actor_travel": 400.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-05",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-06",
+          "seconds": 6.0,
+          "largest_actor_travel": 150.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-07",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-08",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-09",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-10",
+          "seconds": 6.0,
+          "largest_actor_travel": 1040.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-11",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-12",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-13",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-14",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-15",
+          "seconds": 6.0,
+          "largest_actor_travel": 450.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-16",
+          "seconds": 6.0,
+          "largest_actor_travel": 210.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-17",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-18",
+          "seconds": 6.0,
+          "largest_actor_travel": 230.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-19",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-20",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-21",
+          "seconds": 6.0,
+          "largest_actor_travel": 700.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-22",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-23",
+          "seconds": 6.0,
+          "largest_actor_travel": 220.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-24",
+          "seconds": 6.0,
+          "largest_actor_travel": 970.0,
+          "acting_changes": 0,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-25",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-26",
+          "seconds": 6.0,
+          "largest_actor_travel": 1100.0,
+          "acting_changes": 0,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-27",
+          "seconds": 6.0,
+          "largest_actor_travel": 420.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-28",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-29",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-30",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-31",
+          "seconds": 7.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-32",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-33",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-34",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-35",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-36",
+          "seconds": 6.0,
+          "largest_actor_travel": 930.0,
+          "acting_changes": 0,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-37",
+          "seconds": 6.0,
+          "largest_actor_travel": 280.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-38",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-39",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-40",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-41",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-42",
+          "seconds": 6.0,
+          "largest_actor_travel": 130.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-43",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-44",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-45",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-46",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 1,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-47",
+          "seconds": 6.0,
+          "largest_actor_travel": 290.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        },
+        {
+          "id": "what-if-v2-48",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-49",
+          "seconds": 6.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 1
+        },
+        {
+          "id": "what-if-v2-50",
+          "seconds": 5.0,
+          "largest_actor_travel": 0.0,
+          "acting_changes": 2,
+          "moving_objects": 0
+        }
+      ],
+      "limitations": [
+        "No general collision solver.",
+        "Keyframed cutout locomotion uses cyclic IK; it is not the legacy contact-qualified gait.",
+        "Narrative and emotional readability require visual review."
+      ]
+    }
+  }
+}
