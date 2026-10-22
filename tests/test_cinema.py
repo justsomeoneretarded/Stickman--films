@@ -31,7 +31,7 @@ def test_cinematic_direction_does_not_claim_legacy_contact_qualification():
     assert 'passes_contact_gate' not in r
     p.scenes=p.scenes[:1];s=p.scenes[0];s.cinema.items=[]
     for a in s.cinema.performers:
-        a.keys[1]=a.keys[0].model_copy(update={'at':1})
+        a.keys=[a.keys[0].model_copy(update={'at':kf.at}) for kf in a.keys]
     assert not report(p)['passes_direction_gate']
 
 def test_large_crossings_are_continuous():
