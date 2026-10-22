@@ -46,4 +46,11 @@ def production():
     (out/'episode.json').write_text(json.dumps(manifest,indent=2))
 
 
-if __name__=='__main__':production()
+if __name__=='__main__':
+    from stickfilm.workflow import validate_inputs,failure_report
+    try:
+        validate_inputs(os.environ)
+        production()
+    except BaseException as error:
+        failure_report('output/film',error)
+        raise

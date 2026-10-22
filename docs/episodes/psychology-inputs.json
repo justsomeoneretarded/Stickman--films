@@ -3,5 +3,6 @@
   "video_description": "A five-minute original fictional animated drama about Eli, a compulsive people-pleaser, and June, his daughter. A reserved seat at her school performance becomes the emotional anchor. Colleagues praise Eli while piling favors into his arms; each yes becomes a visible red thread. He misses June's performance while earning applause for a boss who takes his work. At home, a child's drawing shows the empty chair. The climax is a costly refusal, followed by repairing June's cardboard stage together. Sparse dialogue, original large expressive rigs, warm layered rooms, physical object exchanges and major staging changes in every shot. The psychology is dramatized as fiction, never a diagnosis. No reuse of the earlier goal-wall explainer.",
   "minutes": "5",
   "quality": "production",
-  "reviewed_plan_path": "episodes/psychology.json"
+  "reviewed_plan_path": "episodes/psychology.json",
+  "story_mode": "Reviewed plan"
 }

@@ -20,10 +20,10 @@ separate titles, briefs, niche, run, concurrency group and video artifact. They 
 rendering code and verified local models, never creative inputs or output folders.
 Run both independently to process both at once.
 
-The defaults now reproduce the new directed film for that niche. Exact inputs are
+The default **story_mode: New story** writes from your title and brief. Choose **Reviewed plan** to reproduce the directed film for that niche. Exact inputs are
 [psychology-inputs.json](psychology-inputs.json) and [what-if-inputs.json](what-if-inputs.json).
 For another reviewed cinematic story, supply a plan with the matching title and brief.
-Clearing the plan path invokes the experimental small local writer; it does not promise
+Selecting New story invokes the experimental small local writer; it does not promise
 the same quality of authored cinematic direction.
 
 ## Finished replacements

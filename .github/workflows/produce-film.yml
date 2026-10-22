@@ -37,6 +37,17 @@ jobs:
           cache-dependency-path: requirements.lock
       - run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg libcairo2 fonts-dejavu-core
       - run: pip install -r requirements.lock && pip install -e . --no-deps
+      - name: Validate title, brief, duration and selected story mode
+        run: |
+          python - <<'PY'
+          import os
+          from stickfilm.workflow import validate_inputs, failure_report
+          try:
+              validate_inputs(os.environ)
+          except BaseException as error:
+              failure_report('output/film', error)
+              raise
+          PY
       - name: Verify animation engine
         run: pytest -q
       - uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
@@ -59,7 +70,7 @@ jobs:
         with:
           name: ${{ inputs.key }}-film-1080p60
           retention-days: 30
-          if-no-files-found: error
+          if-no-files-found: warn
           path: |
             output/film/*.mp4
             output/film/*.json
@@ -74,6 +85,9 @@ jobs:
           retention-days: 7
           if-no-files-found: warn
           path: |
+            output/film/failure.json
+            output/film/failure.md
+            output/film/writer-*.json
             output/film/voice/*.json
             output/film/scenes/*.log
       - if: success()

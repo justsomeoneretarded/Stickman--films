@@ -32,10 +32,10 @@ storyboard, contact sheet, motion excerpt and technical QA report.
 
 1. Enter this workflow's **video_title**, **video_description**, and **minutes** (default `5`).
 2. Keep **quality: production** for the final render.
-3. For a new story, leave **reviewed_plan_path** blank: the free local Qwen writer creates
+3. For a new story, choose **story_mode: New story**: the free local Qwen writer creates
    a new plan from those inputs. Supply reviewed **source_notes_path** for factual scripts;
    otherwise the generated story is labelled fiction. Small-model writing needs review.
-4. To reproduce the first directed film, use `episodes/psychology.json` in the psychology
+4. To reproduce the first directed film, choose **story_mode: Reviewed plan** and use `episodes/psychology.json` in the psychology
    workflow, or `episodes/what-if.json` in the what-if workflow. Keep that plan's exact
    title and description; the engine rejects mismatched inputs instead of relabelling it.
 5. Download that run's film artifact at the bottom of its run page. Retention is 30 days.

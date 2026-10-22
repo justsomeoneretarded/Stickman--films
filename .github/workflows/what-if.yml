@@ -23,11 +23,15 @@ on:
         type: choice
         default: production
         options: [production, preview, draft]
+      story_mode:
+        description: 'New story uses your title and brief; Reviewed plan reproduces a directed film'
+        type: choice
+        default: New story
+        options: [New story, Reviewed plan]
       reviewed_plan_path:
-        description: 'Directed story plan. Clear only when writing a different story from new inputs'
+        description: 'Only used in Reviewed plan mode; leave blank for this niche’s directed film'
         type: string
         required: false
-        default: episodes/what-if.json
       source_notes_path:
         description: 'Optional reviewed factual source JSON for a newly written story'
         type: string
@@ -47,5 +51,5 @@ jobs:
       niche: 'What-if & Survival'
       key: what-if
       quality: ${{ inputs.quality }}
-      plan: ${{ inputs.reviewed_plan_path }}
+      plan: ${{ inputs.story_mode == 'Reviewed plan' && (inputs.reviewed_plan_path || 'episodes/what-if.json') || '' }}
       sources: ${{ inputs.source_notes_path }}
