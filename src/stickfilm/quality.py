@@ -17,6 +17,16 @@ def probe(path):
 
 
 def motion_report(plan,fps=60,benchmark=False):
+    cinematic=[s for s in plan.scenes if s.cinema is not None]
+    legacy=[s for s in plan.scenes if s.cinema is None]
+    if cinematic and legacy:
+        # Mixed plans must satisfy both engines, rather than measuring only
+        # placeholder legacy actors in the cinematic shots.
+        from .cinema import report
+        result=motion_report(plan.model_copy(update={'scenes':legacy}),fps,benchmark)
+        directed=report(plan.model_copy(update={'scenes':cinematic}),fps)
+        result.update(passes_direction_gate=directed['passes_direction_gate'],cinematic=directed)
+        return result
     if all(s.cinema is not None for s in plan.scenes):
         from .cinema import report
         return report(plan,fps)
@@ -59,6 +69,11 @@ def motion_report(plan,fps=60,benchmark=False):
       "limitations":["Limb overlap is artistically reviewed; no general collision solver.","Camera statistic excludes intentional scene cuts.","Root speed is measured; speed discontinuities need sequence review.","Stair, sit and fall clips are simplified; benchmark qualifies level-ground locomotion only."]}
 
 
+def motion_passes(report):
+    gates=[report[k] for k in ('passes_contact_gate','passes_direction_gate') if k in report]
+    return bool(gates) and all(gates)
+
+
 def review_images(video,out,duration):
     out=Path(out);frames=out/'frames';frames.mkdir(exist_ok=True)
     stamps=np.linspace(.2,max(.2,duration-.3),12)
@@ -96,6 +111,8 @@ def assess(video,plan,out,width,height,fps,segments,benchmark=False):
       "no_audio_clipping":bool(peaks) and max(peaks)<-.1,
       ("directed_action" if "passes_direction_gate" in motion else "motion_contacts"):motion.get("passes_direction_gate",motion.get("passes_contact_gate",False))}
     narr=[]
+    if 'passes_contact_gate' in motion:checks['motion_contacts']=motion['passes_contact_gate']
+    if 'passes_direction_gate' in motion:checks['directed_action']=motion['passes_direction_gate']
     for seg in segments:
         samples,sr=read_wav(seg['path']);rms=float(np.sqrt(np.mean(samples*samples)))
         valid=not seg['text'].strip() or (rms>.001 and seg['audio_seconds']<=seg['end']-seg['start']+.01)

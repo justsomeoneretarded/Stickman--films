@@ -68,8 +68,14 @@ def foot(distance, cycle, side, x0, ground, direction=1, stance=.60, lift=31):
 def pose(actor, t, duration, ground=710, motion_sample=None):
     action=actor.action
     u=min(1.,max(0.,t/max(duration,1e-6)))
-    travel=actor.travel
+    # Stationary acting clips cannot carry root travel: that would drag both
+    # planted feet. Aerial clips travel only between takeoff and landing.
+    travel=actor.travel if action in ('walk','run','sprint','stairs','jump','fall') else 0
     distance,velocity=trajectory(t,duration,travel)
+    airborne_u=min(1.,max(0.,(u-.23)/.49))
+    if action in ('jump','fall'):
+        distance,velocity=trajectory(airborne_u,1,travel)
+        velocity=velocity/max(duration*.49,1e-6)
     if motion_sample is not None: distance,velocity = motion_sample[:2]
     x=actor.x+distance
     direction=1 if travel>=0 else -1
@@ -87,16 +93,27 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
     lean=direction*min(.22,speed/1000) if locomotion else .025*math.sin(t*1.5)
     rest_height=121-18*smooth(speed/100) if locomotion else 128
     hip_y=ground-rest_height+bob
+    if action=='stairs' and locomotion:hip_y-=38*smoother(u)
+    def gait_foot(side):
+        ankle,contact,k=foot(abs(distance),cycle,side,actor.x,ground,direction,
+                             stance=.44 if action in ('run','sprint') else .60,
+                             lift=(31+22*running)*smooth(speed/45))
+        if action=='stairs':
+            # Each stance anchor has its own height. Moving the entire ground
+            # plane every frame used to slide every planted foot vertically.
+            elevation=38*min(1.,max(0.,direction*(ankle[0]-actor.x)/max(abs(travel),1e-6)))
+            ankle=(ankle[0],ankle[1]-elevation)
+        return ankle,contact,k
     if locomotion:
         for side in (0,1):
-            a,_,_=foot(abs(distance),cycle,side,actor.x,ground,direction,stance=.44 if action in ("run","sprint") else .60,lift=(31+22*running)*smooth(speed/45))
+            a,_,_=gait_foot(side)
             dx=a[0]-(x+(-9 if side==0 else 9))
             available=math.sqrt(max(1,131.5**2-dx**2))
             hip_y=max(hip_y,a[1]-available)
     compression=0
     if action in ("jump","fall"):
         q=smooth((u-.12)/.14)*(1-smooth((u-.72)/.15))
-        arc=math.sin(math.pi*min(1,max(0,(u-.23)/.49)))
+        arc=math.sin(math.pi*airborne_u)
         compression=18*math.sin(math.pi*min(1,u/.23)) if u<.23 else 0
         hip_y+=compression-100*max(0,arc)
         lean=-.15*arc if action=="fall" else .05
@@ -107,7 +124,6 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
     if action=="sit":
         hip_y+=70*smooth(u/.40); lean=-.08
     if action=="stand": hip_y+=70*(1-smooth(u/.55))
-    if action=="stairs": hip_y-=38*smooth(u); ground-=38*smooth(u)
     hip=(x,hip_y)
     neck=(x+lean*155,hip_y-96)
     shoulder=(mix(hip[0],neck[0],.83),mix(hip[1],neck[1],.83))
@@ -117,16 +133,17 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
         offset=(-1 if side==0 else 1)*9
         h=(hip[0]+offset,hip[1])
         if locomotion:
-            ankle,contact,_=foot(abs(distance),cycle,side,actor.x,ground,direction,
-                                 stance=.44 if action in ("run","sprint") else .60,
-                                 lift=(31+22*running)*smooth(speed/45))
+            ankle,contact,_=gait_foot(side)
             # A run has a genuine flight interval. Lift amplitude goes to zero
             # with speed, so an idle/start/stop never holds a foot in the air.
             contact=contact or speed<.001
         else:
             ankle=(x+(-24 if side==0 else 27),ground)
-            contact=action not in ("jump","fall") or not .24<u<.73
-            if not contact: ankle=(ankle[0]+(-8 if side==0 else 12),ankle[1]-max(0,(ground-103)-hip_y))
+            contact=action not in ("jump","fall") or not 0<airborne_u<1
+            if not contact:
+                # Carry the same leg pose through the flight arc; feet return
+                # to the floor exactly when contact resumes, without IK snaps.
+                ankle=(ankle[0],ankle[1]-100*max(0,arc))
         # Keep the standing foot anchors while the hips descend into a seat.
         # Moving the feet forward on the first frame exceeded leg reach before
         # the knees bent, so IK clamping visibly slid the planted ankles.

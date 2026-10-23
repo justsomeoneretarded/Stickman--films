@@ -11,7 +11,8 @@ from .schema import Plan,slug
 from .render import PRESETS,render_scene,assemble
 from .voice import narrate,write_wav
 from .audio import sound_mix
-from .quality import assess,motion_report
+from .quality import assess
+from .motion_recovery import prepare_motion
 from .resources import Monitor
 import numpy as np
 
@@ -42,15 +43,7 @@ def produce(plan: Plan,out,model_dir,preset="production",benchmark=False):
         (out/'plan.json').write_text(plan.model_dump_json(indent=2))
         # Preserve measured segment information even when a later scene fails.
         (out/'narration-manifest.json').write_text(json.dumps(segments,indent=2))
-        motion=motion_report(plan,fps,benchmark)
-        (out/'motion-preflight.json').write_text(json.dumps(motion,indent=2))
-        if not motion.get('passes_direction_gate',motion.get('passes_contact_gate',False)):
-            failed=[]
-            for scene in plan.scenes:
-                result=motion_report(plan.model_copy(update={'scenes':[scene]}),fps,benchmark)
-                if not result.get('passes_direction_gate',result.get('passes_contact_gate',False)):
-                    failed.append(scene.id)
-            raise RuntimeError(f'Motion preflight failed in {", ".join(failed)}; inspect {out}/motion-preflight.json. Rendering has not started.')
+        prepare_motion(plan,out,fps,benchmark)
         audio=sound_mix(plan,segments,out,benchmark)
         files=[];times=[]
         for s in plan.scenes:

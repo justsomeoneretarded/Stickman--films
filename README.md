@@ -82,8 +82,21 @@ threads; larger models may improve writing but are not assumed available on host
 
 ## Design
 
+Both film workflows automatically check motion at the selected output frame rate
+after voice timing and before rendering. Stationary clips cannot drag planted
+feet; jumps/falls travel between takeoff and landing; stair stance anchors retain
+their height. A failing traversal gets at most three smaller-distance attempts,
+keeping its action, narration, setting and timing. Every accepted repair must
+pass the original motion gates, and the finished video still undergoes full QA.
+
+Artifacts include `motion-preflight.json` and `motion-repairs.json`; repaired
+productions also retain `motion-original-plan.json`. Unsupported failures stop
+before rendering with scene IDs and attempted adjustments. This covers supported
+motion recovery, not every possible animation, audio, encoding or artistic issue.
+
 - `src/stickfilm/schema.py`: strict production IR and JSON schema.
 - `motion.py`, `benchmark.py`: two-bone IK, distance gait, continuous benchmark.
+- `motion_recovery.py`: bounded, audited movement repair before rendering.
 - `cinema.py`, `cinema_schema.py`: cinematic cutout rigs, keyed acting and objects, physical sets and shot cameras.
 - `drawing.py`, `world.py`, `render.py`: original rounded characters, 13 settings,
   three depth layers, camera tools, direct Cairo → FFmpeg stream, scene cache.
