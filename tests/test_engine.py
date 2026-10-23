@@ -68,6 +68,17 @@ def test_clips_have_stable_contacts(action,direction):
     r=motion_report(p)
     assert r['passes_contact_gate'],r
 
+
+@pytest.mark.parametrize('duration',[4,8.5,9,12])
+@pytest.mark.parametrize('action',['sit','stand'])
+def test_seated_transition_keeps_feet_planted_and_legs_reachable(duration,action):
+    p=benchmark_plan();s=p.scenes[0]
+    s.duration=duration;s.end=duration;s.actors=[Actor(action=action)]
+    r=motion_report(p)
+    assert r['max_planted_foot_speed_px_s']<.001,r
+    assert r['max_leg_reach_error_px']==0,r
+    assert r['passes_contact_gate'],r
+
 @pytest.mark.parametrize('action',ACTIONS)
 def test_every_action_draws_without_missing_assets(action):
     scene=Scene(id='test',beat='hook',label='TEST',duration=4,actors=[Actor(action=action,travel=300 if action in ('run','walk') else 0)],narration='An original scene with a visible action.')

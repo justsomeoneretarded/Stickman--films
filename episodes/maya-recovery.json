@@ -1,0 +1,1912 @@
+{
+  "version": 1,
+  "title": "Why You Chase People Who Make You Feel Worthless",
+  "brief": "Create a fictional animated story about Maya, who repeatedly cancels her own plans for a friend who only contacts her when they need something. Open with Maya waiting alone beside a birthday cake while her friend posts photos from another party. Build through three escalating favors, a broken promise, and Maya finally refusing another request. Make her conflicted: she fears losing the friendship and keeps mistaking being needed for being loved. End with her attending an art class she previously abandoned, where someone saves her a seat without asking for anything. Use expressive faces, physical interactions, changing locations, close-up reactions, awkward humor, and an emotionally satisfying payoff. Show consequences through action. Keep narration concise. Avoid diagnoses, invented research, and a lecture-style ending.",
+  "niche": "Psychology & Human Behavior",
+  "requested_minutes": 7.0,
+  "seed": 42,
+  "provenance": "local-model",
+  "factual_status": "fiction",
+  "sources": [],
+  "scenes": [
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s001",
+      "beat": "hook",
+      "narration": "Maya stands alone beside a birthday cake, watching her friend post photos from a party she didn’t attend.",
+      "dialogue": [],
+      "label": "FICTIONAL STORY / Hook: She’s left out",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "bottle",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s002",
+      "beat": "setup",
+      "narration": "Her phone buzzes—Milo texts: 'Laptop broke, can you fix it?' Maya agrees instantly, fingers flying over the screen.",
+      "dialogue": [],
+      "label": "Favor begins",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "phone",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s003",
+      "beat": "conflict",
+      "narration": "She bursts into his apartment—screen cracked, sparking like a dying firefly in the dark corner of the room.",
+      "dialogue": [],
+      "label": "Dangerous fix",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "crouch",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "laptop",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "silence",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s004",
+      "beat": "conflict",
+      "narration": "Milo’s voice is shaky as he thanks her, but never asks if she can take time off. 'Just need you,' he says.",
+      "dialogue": [],
+      "label": "No boundaries",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "shield",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s005",
+      "beat": "conflict",
+      "narration": "Maya cancels her dinner with Ada—sitting in the chair, she tells herself it’s just a favor, not love or loss.",
+      "dialogue": [],
+      "label": "Self-deception",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "phone",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        },
+        {
+          "character": "friend",
+          "action": "think",
+          "x": 1220.0,
+          "travel": 0.0,
+          "facing": -1,
+          "emotion": "neutral",
+          "depth": 0.87
+        }
+      ],
+      "prop": "clock",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s006",
+      "beat": "conflict",
+      "narration": "Next day, Milo asks for help with a garden hose—Maya shows up in gloves and tools, still smiling like it’s nothing.",
+      "dialogue": [],
+      "label": "Escalation",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "water",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s007",
+      "beat": "conflict",
+      "narration": "She spills coffee on the hose, steam curling like smoke from a broken promise; he laughs nervously as she stares at the mess.",
+      "dialogue": [],
+      "label": "ESCALATION: new obstacle",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "coin",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "silence",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s008",
+      "beat": "conflict",
+      "narration": "'I’ll pay you back,' he says, but the words feel like sandpaper on her skin—no second chance for rest or peace.",
+      "dialogue": [],
+      "label": "ESCALATION: new obstacle",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s009",
+      "beat": "conflict",
+      "narration": "Maya skips her yoga class, promising she’ll never miss another favor again—her breath is shallow, her hands clenched.",
+      "dialogue": [],
+      "label": "ESCALATION: new obstacle",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "shoe",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s010",
+      "beat": "conflict",
+      "narration": "Milo texts: 'My dog ate my phone — can you help me get it replaced?' Maya replies, 'Yes.' Her fingers hover over the screen.",
+      "dialogue": [],
+      "label": "ESCALATION: new obstacle",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "phone",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s011",
+      "beat": "conflict",
+      "narration": "She spends three hours at the store, returning with a phone and a crumpled receipt—her eyes are tired, her hands shake.",
+      "dialogue": [],
+      "label": "ESCALATION: new obstacle",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "receipt",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "tracking",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s012",
+      "beat": "conflict",
+      "narration": "He thanks her with a smile but says he’s sorry for not asking earlier—she feels guilty, like she failed herself.",
+      "dialogue": [],
+      "label": "ESCALATION: new obstacle",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sit",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "chair",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "silence",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s013",
+      "beat": "conflict",
+      "narration": "Milo texts back: 'I’ll never pay you back — just promise to help next time.' His words hang like smoke in the silence.",
+      "dialogue": [],
+      "label": "New obstacle: unpaid favors",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "phone",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s014",
+      "beat": "conflict",
+      "narration": "She flips through a faded photo album — 12-year-old her, laughing under an old oak tree with Milo, bare feet in dirt, sunlight spilling like honey.",
+      "dialogue": [],
+      "label": "Memory gap: forgotten joy",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "flag",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s015",
+      "beat": "conflict",
+      "narration": "Her phone buzzes — 'Fix my printer? I can’t work without it.' The message feels like a trap, already digging deeper.",
+      "dialogue": [],
+      "label": "New request: compulsion",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "turn",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s016",
+      "beat": "conflict",
+      "narration": "She bursts into his apartment — printer jammed, smoke curling from the vents like a slow breath of fire.",
+      "dialogue": [],
+      "label": "Danger: malfunction",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "shield",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "clock",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "silence",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s017",
+      "beat": "conflict",
+      "narration": "Milo stares at her, eyes wide — says nothing, but doesn’t ask for anything else. The silence is heavier than before.",
+      "dialogue": [],
+      "label": "No follow-up: emptiness",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "laboratory",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "surprise",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "chair",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "comic",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s018",
+      "beat": "conflict",
+      "narration": "She avoids the art class — her fingers tap 'too many obligations' on a sticky note, then delete it before she can read it.",
+      "dialogue": [],
+      "label": "Avoidance: self-deception",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "office",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "fear",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "silence",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s019",
+      "beat": "conflict",
+      "narration": "Maya sits alone, the birthday cake cooling, her hands trembling as she watches the friend’s party in a glittering photo.",
+      "dialogue": [],
+      "label": "Alone with silence",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sad",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "bottle",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s020",
+      "beat": "conflict",
+      "narration": "Milo texts: ‘I can’t find my keys. Can you check my apartment?’ Maya replies instantly, her fingers dancing like she’s running from something.",
+      "dialogue": [],
+      "label": "Keys in need",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s021",
+      "beat": "conflict",
+      "narration": "She finds the keys tucked behind a book, cold and forgotten — he never says thanks, just ‘Thanks for being there.’",
+      "dialogue": [],
+      "label": "No reply after help",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "fear",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "silence",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s022",
+      "beat": "discovery",
+      "narration": "A week later, Milo sends a photo: a dog with floppy ears, named Maya — no message, just a caption like it’s an afterthought.",
+      "dialogue": [],
+      "label": "Dog named after her",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "shield",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "wonder",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s023",
+      "beat": "discovery",
+      "narration": "Maya stares at the photo, then deletes it — her fingers pause, as if they’re afraid to touch what she’s not ready for.",
+      "dialogue": [],
+      "label": "She won’t reply",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "fear",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s024",
+      "beat": "discovery",
+      "narration": "She opens the art class app, scrolls past ‘Advanced Sketching’ and finds ‘Beginner’s Painting’ — she taps enroll. Her hands are still shaking.",
+      "dialogue": [],
+      "label": "First step forward",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "digital",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "hesitate",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s025",
+      "beat": "discovery",
+      "narration": "The class starts and Maya sits in a corner, hands trembling, eyes down, as if the room itself is holding its breath.",
+      "dialogue": [],
+      "label": "Consequences settle",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sit",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "flag",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s026",
+      "beat": "discovery",
+      "narration": "A young girl with messy hair offers her seat to Maya when the teacher calls for volunteers — no one asked, just a quiet gesture.",
+      "dialogue": [],
+      "label": "Unasked kindness",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "classroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "reach",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "chair",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s027",
+      "beat": "discovery",
+      "narration": "Maya looks up, confused — no one asked her anything. The silence feels like a puzzle she never solved before.",
+      "dialogue": [],
+      "label": "No request, just presence",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "classroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "book",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "curious",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s028",
+      "beat": "discovery",
+      "narration": "She smiles slightly, then slowly begins painting without looking away — the brush moves like a breath she forgot how to take.",
+      "dialogue": [],
+      "label": "First real movement",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "classroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "bridge",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s029",
+      "beat": "discovery",
+      "narration": "The instructor asks if anyone wants to share their work; Maya raises her hand hesitantly, like she’s afraid the world will judge her silence.",
+      "dialogue": [],
+      "label": "Hesitant voice",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "classroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "reach",
+          "x": 940.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "pump",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s030",
+      "beat": "discovery",
+      "narration": "She paints a cracked laptop and a birthday cake — both from memory, not obligation. The colors bleed like old wounds healing.",
+      "dialogue": [],
+      "label": "Memory over duty",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "classroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "point",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "pump",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s031",
+      "beat": "discovery",
+      "narration": "A quiet laugh escapes as she sees the girl’s drawing of two people with hands linked — one wearing glasses like hers.",
+      "dialogue": [],
+      "label": "She laughs at her own reflection in a child's art",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "abstract",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "happy",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "door",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s032",
+      "beat": "discovery",
+      "narration": "Maya finally looks at herself in the mirror: her face is calm, not empty. No need to prove anything to anyone.",
+      "dialogue": [],
+      "label": "Mirror moment",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "turn",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s033",
+      "beat": "discovery",
+      "narration": "She walks out early, stops by a bakery, buys a cake for someone else instead of herself. No one asked — but it feels like home.",
+      "dialogue": [],
+      "label": "Cake for someone else",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 480.0,
+          "travel": 350.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s034",
+      "beat": "discovery",
+      "narration": "The class ends; Maya sits on the steps outside, watching people walk past without feeling lonely. The silence is full.",
+      "dialogue": [],
+      "label": "Silent step",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "sit",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "shoe",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "dolly-in",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s035",
+      "beat": "discovery",
+      "narration": "A stranger waves at her from across the street — she smiles back, not because they asked, but because it’s possible now.",
+      "dialogue": [],
+      "label": "Smile without reason",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "umbrella",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s036",
+      "beat": "discovery",
+      "narration": "She places a small brush gently in her bag and walks toward home with light feet. The paint is not for him.",
+      "dialogue": [],
+      "label": "Brush in hand",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "walk",
+          "x": 480.0,
+          "travel": 350.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "box",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "tracking",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s037",
+      "beat": "discovery",
+      "narration": "The sun sets behind buildings; Maya breathes deeply for the first time in months. Her chest feels open, like a door finally unlocked.",
+      "dialogue": [],
+      "label": "Sunset Breath",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s038",
+      "beat": "discovery",
+      "narration": "Her phone buzzes: Milo texts — 'Hey. I just saw your drawing of us at the park.' The words feel like a ghost from before, soft and familiar.",
+      "dialogue": [],
+      "label": "Text from Milo",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "phone",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s039",
+      "beat": "discovery",
+      "narration": "Maya doesn’t reply immediately. Then she sends: ‘I didn’t need you to fix me. I needed only this moment.’ Her fingers pause, then type it slowly.",
+      "dialogue": [],
+      "label": "Message sent",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "phone",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s040",
+      "beat": "discovery",
+      "narration": "She looks out her window — birds fly in formation, silent and steady. For the first time, she smiles again without thinking.",
+      "dialogue": [],
+      "label": "Birds fly",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "city",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "think",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "over-shoulder",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s041",
+      "beat": "discovery",
+      "narration": "The next morning, Maya wakes up — doesn’t check her phone first. Her hand drifts to the window instead, where sunlight spills like honey.",
+      "dialogue": [],
+      "label": "No phone check",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "write",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "none",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "wide",
+      "transition": "dissolve",
+      "lighting": "day",
+      "music": "tense",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "chime",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "cinema": null,
+      "directed_seconds": 0.0,
+      "id": "s042",
+      "beat": "payoff",
+      "narration": "She opens the art class app and clicks ‘mark as completed’ with a smile. The screen lights up, soft and bright — like something real at last.",
+      "dialogue": [],
+      "label": "Mark complete",
+      "design": "classic",
+      "setpiece": "none",
+      "setpiece_variant": 0,
+      "acting": [],
+      "environment": "bedroom",
+      "actors": [
+        {
+          "character": "hero",
+          "action": "phone",
+          "x": 480.0,
+          "travel": 0.0,
+          "facing": 1,
+          "emotion": "neutral",
+          "depth": 1.0
+        }
+      ],
+      "prop": "phone",
+      "props": [],
+      "prop_state": "closed",
+      "prop_motion": "still",
+      "prop_label": "",
+      "camera": "close-up",
+      "transition": "cut",
+      "lighting": "day",
+      "music": "warm",
+      "cues": [
+        {
+          "at": 0.5,
+          "kind": "click",
+          "gain": 0.15
+        }
+      ],
+      "pause": 0.45,
+      "duration": 0.0,
+      "start": 0.0,
+      "end": 0.0
+    }
+  ]
+}

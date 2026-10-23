@@ -127,7 +127,9 @@ def pose(actor, t, duration, ground=710, motion_sample=None):
             ankle=(x+(-24 if side==0 else 27),ground)
             contact=action not in ("jump","fall") or not .24<u<.73
             if not contact: ankle=(ankle[0]+(-8 if side==0 else 12),ankle[1]-max(0,(ground-103)-hip_y))
-        if action=="sit": ankle=(x+35+side*35,ground)
+        # Keep the standing foot anchors while the hips descend into a seat.
+        # Moving the feet forward on the first frame exceeded leg reach before
+        # the knees bent, so IK clamping visibly slid the planted ankles.
         knee,ankle_solved,err=ik(h,ankle,66,66,bend=-actor.facing)
         reach_error=max(reach_error,err)
         joints[f"hip_{name}"]=h; joints[f"knee_{name}"]=knee
